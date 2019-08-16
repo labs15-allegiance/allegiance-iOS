@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
 		FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A447422FCC53800410EC3 /* AppDelegate.swift */; };
 		FC6A447A22FCC53800410EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447822FCC53800410EC3 /* Main.storyboard */; };
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FC6A447122FCC53700410EC3 /* AllegiancePractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllegiancePractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A447422FCC53800410EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6A447922FCC53800410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC05C8CA23076FDA00255D7B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A447822FCC53800410EC3 /* Main.storyboard */,
+				FC05C8C823076F7700255D7B /* Authentication.storyboard */,
+				FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		FC6A446822FCC53700410EC3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,10 +82,9 @@
 			children = (
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
-				FC6A447822FCC53800410EC3 /* Main.storyboard */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
-				FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */,
+				FC05C8CA23076FDA00255D7B /* Storyboards */,
 				FC6A448022FCC53900410EC3 /* Info.plist */,
 			);
 			path = AllegiancePractise;
@@ -151,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */,
 				FC6A447F22FCC53900410EC3 /* LaunchScreen.storyboard in Resources */,
 				FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */,
 				FC6A447A22FCC53800410EC3 /* Main.storyboard in Resources */,
