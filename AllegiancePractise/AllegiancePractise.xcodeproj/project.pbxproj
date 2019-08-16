@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BC6F91E2307363D00854C7B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6F91D2307363D00854C7B /* Network.swift */; };
 		FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A447422FCC53800410EC3 /* AppDelegate.swift */; };
 		FC6A447A22FCC53800410EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447822FCC53800410EC3 /* Main.storyboard */; };
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BC6F91D2307363D00854C7B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FC6A447122FCC53700410EC3 /* AllegiancePractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllegiancePractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A447422FCC53800410EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6A447922FCC53800410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
 				FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */,
 				FC6A448022FCC53900410EC3 /* Info.plist */,
+				1BC6F91D2307363D00854C7B /* Network.swift */,
 			);
 			path = AllegiancePractise;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC6F91E2307363D00854C7B /* Network.swift in Sources */,
 				FC6A448B23049EAC00410EC3 /* User.swift in Sources */,
 				FC6A448922FDC9DF00410EC3 /* Group.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
@@ -322,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = AllegiancePractise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = AllegiancePractise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

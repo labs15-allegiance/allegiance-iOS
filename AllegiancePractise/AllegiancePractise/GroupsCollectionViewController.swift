@@ -19,6 +19,13 @@ class GroupsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let network = Network()
+        network.fetch { (error) in
+            if let error = error {
+                print("Error actually calling the network function: \(error)")
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
