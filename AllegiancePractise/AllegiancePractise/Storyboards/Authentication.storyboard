@@ -288,7 +288,7 @@
                     </view>
                     <connections>
                         <segue destination="KVb-y4-FEy" kind="show" identifier="SwipeRight4" id="akm-lu-Zod"/>
-                        <segue destination="fMi-Ox-6qS" kind="show" identifier="SwipeLeft4" id="ZXO-5s-IsQ"/>
+                        <segue destination="1bp-HP-Ygz" kind="show" identifier="SwipeLeft4" id="ZXO-5s-IsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWY-Wf-Ay1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,7 +300,7 @@
             </objects>
             <point key="canvasLocation" x="3828.985507246377" y="738.61607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Find a Group-->
         <scene sceneID="d5g-ZD-Yo1">
             <objects>
                 <viewController id="fMi-Ox-6qS" sceneMemberID="viewController">
@@ -354,8 +354,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bDD-vf-jhB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Find a Group" id="k4o-Xw-KV1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmp-SR-Bds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5543.4782608695659" y="739.95535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h1c-qi-OmM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bp-HP-Ygz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Z4L-wT-9s4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fMi-Ox-6qS" kind="relationship" relationship="rootViewController" id="LA9-HY-CUy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEM-xQ-IOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4633.3333333333339" y="739.95535714285711"/>
         </scene>
