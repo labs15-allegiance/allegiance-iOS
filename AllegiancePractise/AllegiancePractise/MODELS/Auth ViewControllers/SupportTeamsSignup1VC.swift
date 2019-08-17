@@ -15,8 +15,8 @@ class SupportTeamsSignup1VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipedTheView(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipedTheView(_:)))
         
         leftSwipe.direction = .left
         rightSwipe.direction = .right
@@ -27,20 +27,13 @@ class SupportTeamsSignup1VC: UIViewController {
     
     @IBAction func swipedTheView(_ sender: UISwipeGestureRecognizer) {
         
-        if (sender.direction == .left)
-        {
-            performSegue(withIdentifier: "SwipeLeft1", sender: nil)
-            print("Swipe Left")
-            
+        if (sender.direction == .left) {
             // Goto "findFansVC" storyboardID viewController
+            performSegue(withIdentifier: "SwipeLeft1", sender: nil)
         }
-        
-        if (sender.direction == .right)
-        {
-            performSegue(withIdentifier: "SwipeRight1", sender: nil)
-            print("Swipe Right")
-            
+        if (sender.direction == .right) {
             // goto "logoVC" storyboardID viewController
+            performSegue(withIdentifier: "SwipeRight1", sender: nil)
         }
     }
     
@@ -49,6 +42,8 @@ class SupportTeamsSignup1VC: UIViewController {
     
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer)
     {
+        
+        print("called the wrong function!")
     }
     
 

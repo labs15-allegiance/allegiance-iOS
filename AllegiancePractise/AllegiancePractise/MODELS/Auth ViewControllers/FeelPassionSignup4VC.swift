@@ -9,22 +9,32 @@
 import UIKit
 
 class FeelPassionSignup4VC: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler(_:)))
+        
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func swipeHandler(_ sender: UISwipeGestureRecognizer) {
+        
+        if (sender.direction == .left) {
+            // Goto "enterZipcodeVC" storyboardID viewController
+            performSegue(withIdentifier: "SwipeLeft4", sender: nil)
+        }
+        if (sender.direction == .right) {
+            // goto "buildCommunityVC" storyboardID viewController
+            performSegue(withIdentifier: "SwipeRight4", sender: nil)
+        }
+        
     }
-    */
-
 }
