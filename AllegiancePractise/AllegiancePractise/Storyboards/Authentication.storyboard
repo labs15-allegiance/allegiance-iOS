@@ -73,7 +73,7 @@
         <!--View Controller-->
         <scene sceneID="lr8-5a-aJf">
             <objects>
-                <viewController id="cWO-dY-sRW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logoVC" id="cWO-dY-sRW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOk-Sd-wVN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,11 +131,16 @@
                         </connections>
                     </view>
                     <connections>
-                        <segue destination="fmp-33-tDQ" kind="show" identifier="swipeLeft1" id="83U-BI-fBR"/>
+                        <outlet property="swipeRecognizer" destination="SCC-cs-gXd" id="yHW-6b-hPp"/>
+                        <segue destination="fmp-33-tDQ" kind="show" identifier="SwipeLeft1" id="83U-BI-fBR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMj-Kw-J0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="SCC-cs-gXd"/>
+                <swipeGestureRecognizer direction="right" id="SCC-cs-gXd">
+                    <connections>
+                        <action selector="swipedTheView:" destination="brJ-Ot-cRd" id="AD3-tz-U98"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1568" y="739"/>
         </scene>
@@ -226,7 +231,6 @@
         <image name="allegianceIcon-1024" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="83U-BI-fBR"/>
         <segue reference="hyO-df-E2k"/>
     </inferredMetricsTieBreakers>
 </document>

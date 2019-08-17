@@ -10,8 +10,8 @@ import UIKit
 
 class SupportTeamsSignup1VC: UIViewController {
     
+    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,21 +25,30 @@ class SupportTeamsSignup1VC: UIViewController {
         view.addGestureRecognizer(rightSwipe)
     }
     
-    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer)
-    {
+    @IBAction func swipedTheView(_ sender: UISwipeGestureRecognizer) {
+        
         if (sender.direction == .left)
         {
+            performSegue(withIdentifier: "SwipeLeft1", sender: nil)
             print("Swipe Left")
             
-            // show the view from the right side
+            // Goto "findFansVC" storyboardID viewController
         }
         
         if (sender.direction == .right)
         {
+            performSegue(withIdentifier: "SwipeRight1", sender: nil)
             print("Swipe Right")
             
-            // show the view from the left side
+            // goto "logoVC" storyboardID viewController
         }
+    }
+    
+    
+    
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer)
+    {
     }
     
 
