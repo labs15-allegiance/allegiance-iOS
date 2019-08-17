@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
+		FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */; };
+		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
+		FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */; };
+		FC05C8D32307842400255D7B /* FeelPassionSignup4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */; };
 		FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A447422FCC53800410EC3 /* AppDelegate.swift */; };
 		FC6A447A22FCC53800410EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447822FCC53800410EC3 /* Main.storyboard */; };
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTeamsSignup1VC.swift; sourceTree = "<group>"; };
+		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
+		FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildCommunitiesSignup3VC.swift; sourceTree = "<group>"; };
+		FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelPassionSignup4VC.swift; sourceTree = "<group>"; };
 		FC6A447122FCC53700410EC3 /* AllegiancePractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllegiancePractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A447422FCC53800410EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6A447922FCC53800410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +67,17 @@
 				FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FC05C8CF230783B300255D7B /* Auth ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */,
+				FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */,
+				FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */,
+				FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */,
+			);
+			path = "Auth ViewControllers";
 			sourceTree = "<group>";
 		};
 		FC6A446822FCC53700410EC3 = {
@@ -100,6 +119,7 @@
 				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
 				FC6A448822FDC9DF00410EC3 /* Group.swift */,
 				FC6A448A23049EAC00410EC3 /* User.swift */,
+				FC05C8CF230783B300255D7B /* Auth ViewControllers */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -177,12 +197,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6A448B23049EAC00410EC3 /* User.swift in Sources */,
+				FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */,
 				FC6A448922FDC9DF00410EC3 /* Group.swift in Sources */,
+				FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
 				FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */,
 				FC6A448722FCD49100410EC3 /* GroupsCollectionViewController.swift in Sources */,
+				FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */,
 				FC6A448F2304A0FB00410EC3 /* Post.swift in Sources */,
 				FC6A448D23049F6800410EC3 /* Allegiance.swift in Sources */,
+				FC05C8D32307842400255D7B /* FeelPassionSignup4VC.swift in Sources */,
 				FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */,
 				FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */,
 			);
