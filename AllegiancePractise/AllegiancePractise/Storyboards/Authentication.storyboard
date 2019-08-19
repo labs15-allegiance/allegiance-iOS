@@ -365,8 +365,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bp-HP-Ygz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="Z4L-wT-9s4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Z4L-wT-9s4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -396,7 +396,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="akm-lu-Zod"/>
         <segue reference="83U-BI-fBR"/>
-        <segue reference="hyO-df-E2k"/>
-        <segue reference="5pT-Pl-ZQv"/>
+        <segue reference="dA3-MP-TYJ"/>
+        <segue reference="cun-TO-FpM"/>
     </inferredMetricsTieBreakers>
 </document>
