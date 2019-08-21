@@ -24,6 +24,7 @@
 		FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */; };
 		FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44922304B3B900410EC3 /* GroupsUsers.swift */; };
 		FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */; };
+		FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAllegiances.swift; sourceTree = "<group>"; };
 		FC6A44922304B3B900410EC3 /* GroupsUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsUsers.swift; sourceTree = "<group>"; };
 		FC6A44952304DD4B00410EC3 /* AllegiancePractise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllegiancePractise.xcdatamodel; sourceTree = "<group>"; };
+		FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */,
 				FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */,
 				FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */,
+				FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */,
 			);
 			path = "Auth ViewControllers";
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			files = (
 				FC6A448B23049EAC00410EC3 /* User.swift in Sources */,
 				FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */,
+				FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */,
 				FC6A448922FDC9DF00410EC3 /* Group.swift in Sources */,
 				FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
