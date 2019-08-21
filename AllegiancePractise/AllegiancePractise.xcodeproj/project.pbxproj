@@ -80,7 +80,8 @@
 				FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */,
 				FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */,
 			);
-			path = "Auth ViewControllers";
+			name = "Auth ViewControllers";
+			path = "MODELS/Auth ViewControllers";
 			sourceTree = "<group>";
 		};
 		FC6A446822FCC53700410EC3 = {
@@ -106,6 +107,7 @@
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
+				FC05C8CF230783B300255D7B /* Auth ViewControllers */,
 				FC05C8CA23076FDA00255D7B /* Storyboards */,
 				FC6A448022FCC53900410EC3 /* Info.plist */,
 			);
@@ -122,7 +124,6 @@
 				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
 				FC6A448822FDC9DF00410EC3 /* Group.swift */,
 				FC6A448A23049EAC00410EC3 /* User.swift */,
-				FC05C8CF230783B300255D7B /* Auth ViewControllers */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";

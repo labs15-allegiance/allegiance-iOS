@@ -42,9 +42,9 @@
         <relationship name="posts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="user" inverseEntity="Post" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Group" positionX="-10.72265625" positionY="-1045.609375" width="128" height="178"/>
-        <element name="User" positionX="190.71875" positionY="-1016" width="128" height="208"/>
+        <element name="Group" positionX="-10.96875" positionY="-986.15625" width="128" height="178"/>
+        <element name="User" positionX="205.87109375" positionY="-1189.4140625" width="128" height="208"/>
         <element name="Allegiance" positionX="-190.8046875" positionY="-1120.640625" width="128" height="133"/>
-        <element name="Post" positionX="-62.9453125" positionY="-787.4765625" width="128" height="148"/>
+        <element name="Post" positionX="-63.33203125" positionY="-754.0390625" width="128" height="148"/>
     </elements>
 </model>

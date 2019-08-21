@@ -13,6 +13,6 @@ class SplashSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "SoccerFireSky")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "SoccerGreenGreen")!)  // "Allegiance Background" for official photo from Figma
     }
 }
