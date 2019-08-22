@@ -28,7 +28,7 @@
         <!--Signup View Controller-->
         <scene sceneID="t8P-1b-KmF">
             <objects>
-                <viewController storyboardIdentifier="SignupVC" title="Signup View Controller" id="UDr-xs-ffa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" title="Signup View Controller" id="UDr-xs-ffa" customClass="SplashSignupViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8r4-vJ-EWe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-IN-lFu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <state key="normal" backgroundImage="allegianceIcon-1024"/>
+                                <state key="normal" backgroundImage="AllegianceScreenSplashLogo"/>
                                 <connections>
                                     <segue destination="brJ-Ot-cRd" kind="presentation" id="dA3-MP-TYJ"/>
                                 </connections>
@@ -390,7 +390,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="allegianceIcon-1024" width="1024" height="1024"/>
+        <image name="AllegianceScreenSplashLogo" width="195" height="406"/>
         <image name="allegianceIcon-60" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
