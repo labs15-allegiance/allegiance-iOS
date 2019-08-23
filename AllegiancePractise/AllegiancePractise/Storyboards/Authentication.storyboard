@@ -13,13 +13,70 @@
         <!--Login View Controller-->
         <scene sceneID="SLa-R2-M3b">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" title="Login View Controller" id="zYu-30-5Y0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="Login View Controller" id="zYu-30-5Y0" customClass="AuthenticationViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t5W-Nz-TBH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0OV-ve-in0">
+                                <rect key="frame" x="8" y="76" width="398" height="208"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" translatesAutoresizingMaskIntoConstraints="NO" id="MpL-9f-Ha4">
+                                        <rect key="frame" x="134.5" y="0.0" width="129" height="29"/>
+                                        <segments>
+                                            <segment title="Register"/>
+                                            <segment title="Sign In"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="registerOrLoginSelected:" destination="zYu-30-5Y0" eventType="valueChanged" id="NnL-LS-Nyu"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSJ-YZ-fg1">
+                                        <rect key="frame" x="0.0" y="52" width="398" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jP-Rl-LiN">
+                                        <rect key="frame" x="0.0" y="106" width="398" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSS-Z7-gTG">
+                                        <rect key="frame" x="48" y="160" width="302" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="vw5-wd-EsK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dSS-Z7-gTG" secondAttribute="trailing" constant="48" id="tky-L4-iU8"/>
+                                    <constraint firstAttribute="trailing" secondItem="TSJ-YZ-fg1" secondAttribute="trailing" id="vun-bB-3ae"/>
+                                    <constraint firstAttribute="trailing" secondItem="3jP-Rl-LiN" secondAttribute="trailing" id="x8d-tX-hYk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0OV-ve-in0" firstAttribute="centerX" secondItem="t5W-Nz-TBH" secondAttribute="centerX" id="SEa-Dc-lTU"/>
+                            <constraint firstItem="NPc-fh-HwA" firstAttribute="trailing" secondItem="0OV-ve-in0" secondAttribute="trailing" constant="8" id="SMM-jU-7qq"/>
+                            <constraint firstItem="0OV-ve-in0" firstAttribute="leading" secondItem="NPc-fh-HwA" secondAttribute="leading" constant="8" id="hGx-Uy-sG1"/>
+                            <constraint firstItem="0OV-ve-in0" firstAttribute="top" secondItem="NPc-fh-HwA" secondAttribute="top" constant="32" id="q5c-a5-NXm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NPc-fh-HwA"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="TSJ-YZ-fg1" id="c9f-WO-8UA"/>
+                        <outlet property="registerLoginButton" destination="dSS-Z7-gTG" id="JQR-Ca-dzJ"/>
+                        <outlet property="segmentedControl" destination="MpL-9f-Ha4" id="vPh-gD-fhf"/>
+                        <outlet property="usernameTextField" destination="TSJ-YZ-fg1" id="fv9-jp-Qfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K94-Ko-gCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +116,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zYu-30-5Y0" kind="presentation" identifier="RegisterLogin" id="rsp-F8-R4w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4j-MJ-BCn">
                                 <rect key="frame" x="128" y="719" width="158" height="33"/>
@@ -390,7 +450,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AllegianceScreenSplashLogo" width="195" height="406"/>
+        <image name="AllegianceScreenSplashLogo" width="97.5" height="203"/>
         <image name="allegianceIcon-60" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>

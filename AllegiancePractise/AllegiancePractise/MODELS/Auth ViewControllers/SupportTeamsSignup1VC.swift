@@ -10,7 +10,9 @@ import UIKit
 
 class SupportTeamsSignup1VC: UIViewController {
     
+    // I don't think this outlet is even required, everything worked fine on the next few pages of similar utility without it.
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class SupportTeamsSignup1VC: UIViewController {
         view.addGestureRecognizer(rightSwipe)
     }
     
+    
     @IBAction func swipedTheView(_ sender: UISwipeGestureRecognizer) {
         
         if (sender.direction == .left) {
@@ -36,28 +39,4 @@ class SupportTeamsSignup1VC: UIViewController {
             performSegue(withIdentifier: "SwipeRight1", sender: nil)
         }
     }
-    
-    
-    
-    
-    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer)
-    {
-        
-        print("called the wrong function!")
-    }
-    
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
