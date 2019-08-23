@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEB7481E9C91E9E8CB85EA48 /* Pods_AllegiancePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */; };
 		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
 		FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */; };
 		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
@@ -29,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A61FB73C6D952836A494B5D /* Pods-AllegiancePractise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllegiancePractise.release.xcconfig"; path = "Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise.release.xcconfig"; sourceTree = "<group>"; };
+		4246965173825A033C572575 /* Pods-AllegiancePractise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllegiancePractise.debug.xcconfig"; path = "Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise.debug.xcconfig"; sourceTree = "<group>"; };
+		44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllegiancePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTeamsSignup1VC.swift; sourceTree = "<group>"; };
 		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
@@ -57,12 +61,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB7481E9C91E9E8CB85EA48 /* Pods_AllegiancePractise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22BDDC21F2EBAF3980F2BFE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C5F4318A6280324CC009768 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4246965173825A033C572575 /* Pods-AllegiancePractise.debug.xcconfig */,
+				1A61FB73C6D952836A494B5D /* Pods-AllegiancePractise.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FC05C8CA23076FDA00255D7B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +115,8 @@
 			children = (
 				FC6A447322FCC53700410EC3 /* AllegiancePractise */,
 				FC6A447222FCC53700410EC3 /* Products */,
+				7C5F4318A6280324CC009768 /* Pods */,
+				22BDDC21F2EBAF3980F2BFE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6A448322FCC53900410EC3 /* Build configuration list for PBXNativeTarget "AllegiancePractise" */;
 			buildPhases = (
+				721A1411E1A5CA749B03C1A8 /* [CP] Check Pods Manifest.lock */,
 				FC6A446D22FCC53700410EC3 /* Sources */,
 				FC6A446E22FCC53700410EC3 /* Frameworks */,
 				FC6A446F22FCC53700410EC3 /* Resources */,
+				D3B6EDC72B7A1DA54F6AB257 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +224,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		721A1411E1A5CA749B03C1A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllegiancePractise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B6EDC72B7A1DA54F6AB257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC6A446D22FCC53700410EC3 /* Sources */ = {
@@ -361,6 +430,7 @@
 		};
 		FC6A448422FCC53900410EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4246965173825A033C572575 /* Pods-AllegiancePractise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -381,6 +451,7 @@
 		};
 		FC6A448522FCC53900410EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A61FB73C6D952836A494B5D /* Pods-AllegiancePractise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
