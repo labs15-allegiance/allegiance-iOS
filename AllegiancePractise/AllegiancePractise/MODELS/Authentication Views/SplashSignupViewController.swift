@@ -8,11 +8,16 @@
 
 import UIKit
 
+
 class SplashSignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "CowboyBlonde")!)  // "
+        
+        
+        
+        
     }
 }

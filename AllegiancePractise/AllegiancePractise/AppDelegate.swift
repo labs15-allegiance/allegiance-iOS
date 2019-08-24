@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Auth0
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    
+    //This function allows Auth0 to handle authentication callbacks: (a suggested fix was implemented related to deprecation of the key below which is now UIApplication.OpenURLOptionsKey
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        return Auth0.resumeAuth(url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

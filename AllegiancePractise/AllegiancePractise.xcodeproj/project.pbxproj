@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44922304B3B900410EC3 /* GroupsUsers.swift */; };
 		FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */; };
 		FC7F0496231066C0000722BB /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7F0495231066C0000722BB /* AuthenticationViewController.swift */; };
+		FC7F04982310A4A8000722BB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC7F04972310A4A8000722BB /* Auth0.plist */; };
 		FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		FC6A44922304B3B900410EC3 /* GroupsUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsUsers.swift; sourceTree = "<group>"; };
 		FC6A44952304DD4B00410EC3 /* AllegiancePractise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllegiancePractise.xcdatamodel; sourceTree = "<group>"; };
 		FC7F0495231066C0000722BB /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		FC7F04972310A4A8000722BB /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,6 @@
 				4246965173825A033C572575 /* Pods-AllegiancePractise.debug.xcconfig */,
 				1A61FB73C6D952836A494B5D /* Pods-AllegiancePractise.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,7 +97,7 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FC05C8CF230783B300255D7B /* Auth ViewControllers */ = {
+		FC05C8CF230783B300255D7B /* Authentication Views */ = {
 			isa = PBXGroup;
 			children = (
 				FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */,
@@ -106,8 +107,8 @@
 				FC7F0495231066C0000722BB /* AuthenticationViewController.swift */,
 				FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */,
 			);
-			name = "Auth ViewControllers";
-			path = "MODELS/Auth ViewControllers";
+			name = "Authentication Views";
+			path = "MODELS/Authentication Views";
 			sourceTree = "<group>";
 		};
 		FC6A446822FCC53700410EC3 = {
@@ -135,9 +136,10 @@
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
-				FC05C8CF230783B300255D7B /* Auth ViewControllers */,
+				FC05C8CF230783B300255D7B /* Authentication Views */,
 				FC05C8CA23076FDA00255D7B /* Storyboards */,
 				FC6A448022FCC53900410EC3 /* Info.plist */,
+				FC7F04972310A4A8000722BB /* Auth0.plist */,
 			);
 			path = AllegiancePractise;
 			sourceTree = "<group>";
@@ -216,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7F04982310A4A8000722BB /* Auth0.plist in Resources */,
 				FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */,
 				FC6A447F22FCC53900410EC3 /* LaunchScreen.storyboard in Resources */,
 				FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */,

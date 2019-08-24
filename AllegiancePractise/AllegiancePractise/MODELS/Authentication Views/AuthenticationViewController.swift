@@ -4,9 +4,15 @@
 //
 //  Created by John Pitts on 8/23/19.
 //  Copyright © 2019 johnpitts. All rights reserved.
-//
+
+// NOTES:
+//OpenID Connect (OIDC**) is an authentication layer on top of OAuth 2.0, an authorization framework. The standard is controlled by the OpenID Foundation
+
+
+// Auth0 clientID =  mZFvU0TMKMpEi6lUkNTCxUuz986y4luR called "Default App" GENERIC
 
 import UIKit
+import Auth0
 
 class AuthenticationViewController: UIViewController {
     
@@ -19,8 +25,26 @@ class AuthenticationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // This code was copied and pasted to display Auth0's HOSTED login page, not sure it's in the right spot actually
+        Auth0
+            .webAuth()
+            .audience("https://dev-iunfzciz.auth0.com/userinfo")
+            .start { result in
+                switch result {
+                case .success(let credentials):
+                    print("Obtained credentials: \(credentials)")
+                case .failure(let error):
+                    print("Failed with \(error)")
+                }
+                // snipped above "sets the audience to ensure OIDC** responses.
+                
+        }
+        //var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+        //credentialsManager.enableBiometrics(withTitle: "Touch to Login")
+        //credentialsManager.store(credentials: credentials)
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BaseballNight")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BaseballNight")!)
     }
     
     
