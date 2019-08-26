@@ -9,11 +9,22 @@
 import UIKit
 
 class GroupSearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var favoriteTeamTextField: UITextField!
+    @IBOutlet weak var zipcodeTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func useLocationButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func findGroupsButtonTapped(_ sender: Any) {
     }
     
 
