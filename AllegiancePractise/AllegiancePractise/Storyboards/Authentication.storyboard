@@ -331,8 +331,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you feel the passion Michael Flowers??" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-5D-GTc">
-                                <rect key="frame" x="46" y="385" width="322" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start a conversation about your favorite player, create an event, or keep up with the latest news.  Sports are better together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-5D-GTc">
+                                <rect key="frame" x="46" y="396" width="348" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -363,7 +363,7 @@
         <!--Find a Group-->
         <scene sceneID="d5g-ZD-Yo1">
             <objects>
-                <viewController id="fMi-Ox-6qS" sceneMemberID="viewController">
+                <viewController id="fMi-Ox-6qS" customClass="GroupSearchViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WK6-lc-4LK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,6 +404,9 @@
                                         <integer key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4fa-5Q-mE6" kind="show" id="9b8-Mo-guY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65R-Jv-Xhx">
                                 <rect key="frame" x="121" y="432" width="127" height="53"/>
@@ -419,6 +422,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmp-SR-Bds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5543.4782608695659" y="739.95535714285711"/>
+        </scene>
+        <!--Find a Group-->
+        <scene sceneID="xkB-Qe-lf1">
+            <objects>
+                <viewController id="4fa-5Q-mE6" customClass="GroupsExistViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fx8-bE-s80">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN0-JN-tfJ">
+                                <rect key="frame" x="80" y="718" width="254" height="48"/>
+                                <color key="backgroundColor" red="0.88821648320000002" green="0.32062744069999999" blue="0.31437832110000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Wda-EJ-QbQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Create a Group">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createGroupButton:" destination="4fa-5Q-mE6" eventType="touchUpInside" id="vaY-F8-jYG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't see a group for you? Create your own, invite your friends, and start supporting your favorite teams today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-XL-AZB">
+                                <rect key="frame" x="24" y="576" width="366" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="EBn-5F-Y97"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s3Y-2E-Pa6">
+                                <rect key="frame" x="24" y="280" width="366" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="60z-G2-YN7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IMH-jn-noq">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gdj-S7-5Fh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check out some Golden State Warriors groups near you!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55E-GV-Nnx">
+                                <rect key="frame" x="24" y="120" width="366" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="PfB-Yk-xaj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kqL-vI-GQD" firstAttribute="trailing" secondItem="55E-GV-Nnx" secondAttribute="trailing" constant="24" id="0Ij-PH-kuG"/>
+                            <constraint firstItem="kqL-vI-GQD" firstAttribute="trailing" secondItem="s3Y-2E-Pa6" secondAttribute="trailing" constant="24" id="0fk-7u-hqw"/>
+                            <constraint firstItem="HZR-XL-AZB" firstAttribute="top" secondItem="s3Y-2E-Pa6" secondAttribute="bottom" constant="56" id="3ga-Hw-78B"/>
+                            <constraint firstItem="s3Y-2E-Pa6" firstAttribute="leading" secondItem="kqL-vI-GQD" secondAttribute="leading" constant="24" id="8n7-95-XdR"/>
+                            <constraint firstItem="kqL-vI-GQD" firstAttribute="trailing" secondItem="HZR-XL-AZB" secondAttribute="trailing" constant="24" id="F2m-vt-XsM"/>
+                            <constraint firstItem="55E-GV-Nnx" firstAttribute="leading" secondItem="kqL-vI-GQD" secondAttribute="leading" constant="24" id="K7z-FP-FNR"/>
+                            <constraint firstItem="FN0-JN-tfJ" firstAttribute="top" secondItem="HZR-XL-AZB" secondAttribute="bottom" constant="32" id="N9G-xb-rlt"/>
+                            <constraint firstItem="55E-GV-Nnx" firstAttribute="top" secondItem="kqL-vI-GQD" secondAttribute="top" constant="32" id="PRv-Ac-cDu"/>
+                            <constraint firstItem="kqL-vI-GQD" firstAttribute="trailing" secondItem="FN0-JN-tfJ" secondAttribute="trailing" constant="80" id="PU0-a8-QhK"/>
+                            <constraint firstItem="HZR-XL-AZB" firstAttribute="leading" secondItem="kqL-vI-GQD" secondAttribute="leading" constant="24" id="ZXZ-09-EKu"/>
+                            <constraint firstItem="s3Y-2E-Pa6" firstAttribute="top" secondItem="55E-GV-Nnx" secondAttribute="bottom" constant="80" id="lTi-6l-yXw"/>
+                            <constraint firstItem="FN0-JN-tfJ" firstAttribute="leading" secondItem="kqL-vI-GQD" secondAttribute="leading" constant="80" id="mIo-BT-4Zh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kqL-vI-GQD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Find a Group" id="Se1-YB-qj6"/>
+                    <connections>
+                        <outlet property="groupsFoundLabel" destination="55E-GV-Nnx" id="zYn-l5-0i0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcM-yA-JFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6327.5362318840589" y="738.61607142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1c-qi-OmM">
