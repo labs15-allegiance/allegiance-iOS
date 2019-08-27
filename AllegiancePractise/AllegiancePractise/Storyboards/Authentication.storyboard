@@ -191,16 +191,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Support Your Teams" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au5-OK-Dbu">
-                                <rect key="frame" x="59" y="84" width="296" height="276"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support Your Teams" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au5-OK-Dbu">
+                                <rect key="frame" x="64" y="108" width="286" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Fbr-Yt-4Ws"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="66"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show your pride for your favorite clubs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TY-MG-lh1">
-                                <rect key="frame" x="59" y="419" width="263" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show your pride for your favorite clubs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TY-MG-lh1">
+                                <rect key="frame" x="72" y="406" width="270" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="o7M-4Q-Bii"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -208,6 +212,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yOD-HC-SQE" firstAttribute="trailing" secondItem="Au5-OK-Dbu" secondAttribute="trailing" constant="64" id="4yx-43-hgz"/>
+                            <constraint firstItem="Au5-OK-Dbu" firstAttribute="top" secondItem="yOD-HC-SQE" secondAttribute="top" constant="64" id="DQY-oP-FjL"/>
+                            <constraint firstItem="yOD-HC-SQE" firstAttribute="trailing" secondItem="0TY-MG-lh1" secondAttribute="trailing" constant="72" id="dbX-wE-ptr"/>
+                            <constraint firstItem="Au5-OK-Dbu" firstAttribute="leading" secondItem="yOD-HC-SQE" secondAttribute="leading" constant="64" id="mp3-LZ-3tH"/>
+                            <constraint firstItem="0TY-MG-lh1" firstAttribute="leading" secondItem="yOD-HC-SQE" secondAttribute="leading" constant="72" id="ric-lz-rvU"/>
+                            <constraint firstItem="0TY-MG-lh1" firstAttribute="top" secondItem="Au5-OK-Dbu" secondAttribute="bottom" constant="58" id="w9Q-Xv-r7f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yOD-HC-SQE"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="SCC-cs-gXd" appends="YES" id="qD8-zs-7aT"/>
@@ -236,16 +248,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find the Fans" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-Kv-npp">
-                                <rect key="frame" x="49" y="96" width="276" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Fans" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-Kv-npp">
+                                <rect key="frame" x="72" y="108" width="270" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="2LB-CG-ADL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with people who share your allegiances." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-Pt-eGE">
-                                <rect key="frame" x="29" y="411" width="316" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with people who share your allegiances." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-Pt-eGE">
+                                <rect key="frame" x="32" y="392" width="350" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="0N5-bY-Ti2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -253,6 +269,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="Whl-Kv-npp" secondAttribute="trailing" constant="72" id="1S8-eK-BLh"/>
+                            <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="XRk-Pt-eGE" secondAttribute="trailing" constant="32" id="Dn8-YV-LFc"/>
+                            <constraint firstItem="XRk-Pt-eGE" firstAttribute="top" secondItem="Whl-Kv-npp" secondAttribute="bottom" constant="104" id="QY0-zl-Dap"/>
+                            <constraint firstItem="Whl-Kv-npp" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="72" id="Xsn-c2-HXN"/>
+                            <constraint firstItem="Whl-Kv-npp" firstAttribute="top" secondItem="nIO-VI-24I" secondAttribute="top" constant="64" id="mwa-OF-x9f"/>
+                            <constraint firstItem="XRk-Pt-eGE" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="32" id="p2Q-PN-BJZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nIO-VI-24I"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="mCd-Tj-Tdp" appends="YES" id="NGj-X7-Xdq"/>
@@ -280,16 +304,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Build your Communities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX8-Cd-UR6">
-                                <rect key="frame" x="34" y="130" width="347" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build your Communities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX8-Cd-UR6">
+                                <rect key="frame" x="32" y="108" width="350" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="FeA-kP-o1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join groups to support your favorite team or create your own." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6j-4R-ezb">
-                                <rect key="frame" x="34" y="370" width="347" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join groups to support your favorite team or create your own." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6j-4R-ezb">
+                                <rect key="frame" x="32" y="396" width="350" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="wH3-6c-LBE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -297,6 +325,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="LX8-Cd-UR6" firstAttribute="top" secondItem="NMn-SH-ni5" secondAttribute="top" constant="64" id="OV3-q6-ba0"/>
+                            <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="z6j-4R-ezb" secondAttribute="trailing" constant="32" id="UdA-iE-lIy"/>
+                            <constraint firstItem="z6j-4R-ezb" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="32" id="VZ9-xY-i9Z"/>
+                            <constraint firstItem="z6j-4R-ezb" firstAttribute="top" secondItem="LX8-Cd-UR6" secondAttribute="bottom" constant="104" id="jhz-gW-a3R"/>
+                            <constraint firstItem="LX8-Cd-UR6" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="32" id="pJj-v6-YUa"/>
+                            <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="LX8-Cd-UR6" secondAttribute="trailing" constant="32" id="xQb-xw-EQW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NMn-SH-ni5"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="9FF-9x-e0b" appends="YES" id="ZRF-5P-uIU"/>
@@ -324,23 +360,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feel the Passion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-9w-cAE">
-                                <rect key="frame" x="72" y="111" width="270" height="184"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel the Passion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-9w-cAE">
+                                <rect key="frame" x="72" y="108" width="270" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="f3o-aX-iNk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start a conversation about your favorite player, create an event, or keep up with the latest news.  Sports are better together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-5D-GTc">
-                                <rect key="frame" x="46" y="396" width="348" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start a conversation about your favorite player, create an event, or keep up with the latest news.  Sports are better together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-5D-GTc">
+                                <rect key="frame" x="32" y="396" width="350" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="0sV-T5-IDb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="LpX-5D-GTc" secondAttribute="trailing" constant="32" id="R4J-uv-7xx"/>
+                            <constraint firstItem="LpX-5D-GTc" firstAttribute="top" secondItem="FKm-9w-cAE" secondAttribute="bottom" constant="104" id="gNa-Vt-cGC"/>
+                            <constraint firstItem="FKm-9w-cAE" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="72" id="n4X-xZ-DgD"/>
+                            <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="FKm-9w-cAE" secondAttribute="trailing" constant="72" id="nad-gT-P7C"/>
+                            <constraint firstItem="LpX-5D-GTc" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="32" id="yi7-HC-1Pt"/>
+                            <constraint firstItem="FKm-9w-cAE" firstAttribute="top" secondItem="gBz-3W-Oue" secondAttribute="top" constant="64" id="z2B-eq-PYv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gBz-3W-Oue"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="aJY-je-T0w" appends="YES" id="Y5f-oe-eTJ"/>
@@ -587,9 +635,10 @@
         <image name="allegianceIcon-60" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hKy-WA-9Ax"/>
         <segue reference="akm-lu-Zod"/>
         <segue reference="83U-BI-fBR"/>
-        <segue reference="dA3-MP-TYJ"/>
-        <segue reference="cun-TO-FpM"/>
+        <segue reference="hyO-df-E2k"/>
+        <segue reference="5pT-Pl-ZQv"/>
     </inferredMetricsTieBreakers>
 </document>
