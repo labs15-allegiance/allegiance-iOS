@@ -8,17 +8,36 @@
 
 import UIKit
 
-class GroupsExistViewController: UIViewController {
+class GroupsExistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBOutlet weak var groupsExistCollectionV: UICollectionView!
     @IBOutlet weak var groupsFoundLabel: UILabel!
     var favoriteTeam: String?
     var zipcode: Int?
+    var groupsMatched: Group? // = example group
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.groupsExistCollectionV.dataSource = self
+        self.groupsExistCollectionV.delegate = self
         updateViews()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6   // eventually you'll return the groupsMatched.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupsExistCell", for: indexPath) as! GroupsExistCELL
+        
+        var sampleImage = UIImage(named: "allegianceIcon-76")!        //will be groupsMatched[indexPath.row].profilePhoto when data included
+        cell.displayCellContent(image: sampleImage, groupName: "Gashouse Gorillaz", members: "10zn")  // will be groupsMatched[indexPath.row].name & .count
+        
+        return cell
     }
     
     
@@ -26,6 +45,7 @@ class GroupsExistViewController: UIViewController {
         
         guard let userTeamEntry = favoriteTeam else {print("user entered nil for group search, segue back to previous view?"); return}
         groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
+        groupsExistCollectionV.reloadData()
     }
    
     // not sure this is even needed given the button can be made to segue to Create Groups controller via interface builder drag/drop

@@ -249,7 +249,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Fans" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-Kv-npp">
-                                <rect key="frame" x="72" y="108" width="270" height="180"/>
+                                <rect key="frame" x="64" y="108" width="286" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="2LB-CG-ADL"/>
                                 </constraints>
@@ -270,10 +270,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="Whl-Kv-npp" secondAttribute="trailing" constant="72" id="1S8-eK-BLh"/>
+                            <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="Whl-Kv-npp" secondAttribute="trailing" constant="64" id="1S8-eK-BLh"/>
                             <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="XRk-Pt-eGE" secondAttribute="trailing" constant="32" id="Dn8-YV-LFc"/>
                             <constraint firstItem="XRk-Pt-eGE" firstAttribute="top" secondItem="Whl-Kv-npp" secondAttribute="bottom" constant="104" id="QY0-zl-Dap"/>
-                            <constraint firstItem="Whl-Kv-npp" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="72" id="Xsn-c2-HXN"/>
+                            <constraint firstItem="Whl-Kv-npp" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="64" id="Xsn-c2-HXN"/>
                             <constraint firstItem="Whl-Kv-npp" firstAttribute="top" secondItem="nIO-VI-24I" secondAttribute="top" constant="64" id="mwa-OF-x9f"/>
                             <constraint firstItem="XRk-Pt-eGE" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="32" id="p2Q-PN-BJZ"/>
                         </constraints>
@@ -314,9 +314,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join groups to support your favorite team or create your own." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6j-4R-ezb">
-                                <rect key="frame" x="32" y="396" width="350" height="152"/>
+                                <rect key="frame" x="16" y="396" width="382" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="wH3-6c-LBE"/>
+                                    <constraint firstAttribute="height" constant="120" id="wH3-6c-LBE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -327,8 +327,8 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="LX8-Cd-UR6" firstAttribute="top" secondItem="NMn-SH-ni5" secondAttribute="top" constant="64" id="OV3-q6-ba0"/>
-                            <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="z6j-4R-ezb" secondAttribute="trailing" constant="32" id="UdA-iE-lIy"/>
-                            <constraint firstItem="z6j-4R-ezb" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="32" id="VZ9-xY-i9Z"/>
+                            <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="z6j-4R-ezb" secondAttribute="trailing" constant="16" id="UdA-iE-lIy"/>
+                            <constraint firstItem="z6j-4R-ezb" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="16" id="VZ9-xY-i9Z"/>
                             <constraint firstItem="z6j-4R-ezb" firstAttribute="top" secondItem="LX8-Cd-UR6" secondAttribute="bottom" constant="104" id="jhz-gW-a3R"/>
                             <constraint firstItem="LX8-Cd-UR6" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="32" id="pJj-v6-YUa"/>
                             <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="LX8-Cd-UR6" secondAttribute="trailing" constant="32" id="xQb-xw-EQW"/>
@@ -370,7 +370,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start a conversation about your favorite player, create an event, or keep up with the latest news.  Sports are better together!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-5D-GTc">
-                                <rect key="frame" x="32" y="396" width="350" height="168"/>
+                                <rect key="frame" x="24" y="396" width="366" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="0sV-T5-IDb"/>
                                 </constraints>
@@ -382,11 +382,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="LpX-5D-GTc" secondAttribute="trailing" constant="32" id="R4J-uv-7xx"/>
+                            <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="LpX-5D-GTc" secondAttribute="trailing" constant="24" id="R4J-uv-7xx"/>
                             <constraint firstItem="LpX-5D-GTc" firstAttribute="top" secondItem="FKm-9w-cAE" secondAttribute="bottom" constant="104" id="gNa-Vt-cGC"/>
                             <constraint firstItem="FKm-9w-cAE" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="72" id="n4X-xZ-DgD"/>
                             <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="FKm-9w-cAE" secondAttribute="trailing" constant="72" id="nad-gT-P7C"/>
-                            <constraint firstItem="LpX-5D-GTc" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="32" id="yi7-HC-1Pt"/>
+                            <constraint firstItem="LpX-5D-GTc" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="24" id="yi7-HC-1Pt"/>
                             <constraint firstItem="FKm-9w-cAE" firstAttribute="top" secondItem="gBz-3W-Oue" secondAttribute="top" constant="64" id="z2B-eq-PYv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gBz-3W-Oue"/>
@@ -506,7 +506,7 @@
             </objects>
             <point key="canvasLocation" x="5543.4782608695659" y="739.95535714285711"/>
         </scene>
-        <!--Find a Group-->
+        <!--Select or Create a Group-->
         <scene sceneID="xkB-Qe-lf1">
             <objects>
                 <viewController id="4fa-5Q-mE6" customClass="GroupsExistViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
@@ -531,6 +531,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createGroupButton:" destination="4fa-5Q-mE6" eventType="touchUpInside" id="vaY-F8-jYG"/>
+                                    <segue destination="adj-0g-5Ie" kind="show" id="7HT-5a-7fo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't see a group for you? Create your own, invite your friends, and start supporting your favorite teams today!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-XL-AZB">
@@ -548,20 +549,46 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="60z-G2-YN7"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IMH-jn-noq">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="IMH-jn-noq">
+                                    <size key="itemSize" width="112" height="112"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gdj-S7-5Fh">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupsExistCell" id="gdj-S7-5Fh" customClass="GroupsExistCELL" customModule="AllegiancePractise" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="112" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="allegianceIcon-76" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-r9-7P9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-l9-1ML">
+                                                    <rect key="frame" x="0.0" y="80" width="56" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-Bg-L0o">
+                                                    <rect key="frame" x="56" y="80" width="56" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <size key="customSize" width="112" height="112"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="9Y6-r9-7P9" id="eEz-OH-RJ6"/>
+                                            <outlet property="groupNameLabel" destination="Cmq-l9-1ML" id="795-A5-yD3"/>
+                                            <outlet property="membersLabel" destination="4O5-Bg-L0o" id="4ip-mc-W7a"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -592,14 +619,191 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kqL-vI-GQD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Find a Group" id="Se1-YB-qj6"/>
+                    <navigationItem key="navigationItem" title="Select or Create a Group" id="Se1-YB-qj6"/>
                     <connections>
+                        <outlet property="groupsExistCollectionV" destination="s3Y-2E-Pa6" id="69d-c3-EhW"/>
                         <outlet property="groupsFoundLabel" destination="55E-GV-Nnx" id="zYn-l5-0i0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcM-yA-JFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6327.5362318840589" y="738.61607142857144"/>
+        </scene>
+        <!--Create a Group-->
+        <scene sceneID="7HL-K2-p5n">
+            <objects>
+                <viewController id="adj-0g-5Ie" customClass="CreateGroupViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jj5-eg-AF2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-ZI-U2o">
+                                <rect key="frame" x="32" y="112" width="250" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-vO-JkM">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <size key="titleShadowOffset" width="4" height="4"/>
+                                        <state key="normal" image="AddProfilePhoto128x128">
+                                            <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="32"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yLK-ES-t4i">
+                                        <rect key="frame" x="80" y="0.0" width="170" height="64"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your group" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-Nx-cuY">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group slogan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0j-5h-52S">
+                                                <rect key="frame" x="0.0" y="34" width="139.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpz-sa-TLe">
+                                <rect key="frame" x="32" y="606" width="65.5" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVITE MEMBERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsd-YJ-3Vj">
+                                <rect key="frame" x="32" y="216" width="129" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Kv-f5q">
+                                <rect key="frame" x="20" y="688" width="42" height="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Man-f1-6G1">
+                                <rect key="frame" x="20" y="764" width="38" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Z0S-qK-JF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-g0-T5i">
+                                <rect key="frame" x="111" y="667" width="214" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="qsQ-5H-0sV"/>
+                                </constraints>
+                                <string key="text">Private groups are by invitation only. Like the same teams? Have different allegiances?  It's all fair game. Invite your friends and start the conversation!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public groups can be joined by anyone who has the same allegiance or is in the same location." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxE-SW-Xqa">
+                                <rect key="frame" x="111" y="743" width="214" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="JYs-Tt-ov8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-fB-jb3">
+                                <rect key="frame" x="356" y="682" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="gxc-Ng-Wk9"/>
+                                    <constraint firstAttribute="height" constant="16" id="sBr-nG-hfX"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal" backgroundImage="allegianceIcon-20">
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5Z-qEj">
+                                <rect key="frame" x="356" y="761" width="16" height="16"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal" backgroundImage="allegianceIcon-20">
+                                    <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BvS-Eb-60t">
+                                <rect key="frame" x="32" y="258" width="128" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr6-JF-S3h">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                        <state key="normal" title="Snapchat"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-Xj-qwF">
+                                        <rect key="frame" x="0.0" y="54" width="48" height="30"/>
+                                        <state key="normal" title="Twitter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP8-Nm-9oT">
+                                        <rect key="frame" x="0.0" y="108" width="69" height="30"/>
+                                        <state key="normal" title="Instagram"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrI-Qb-Sl3">
+                                        <rect key="frame" x="0.0" y="162" width="67" height="30"/>
+                                        <state key="normal" title="Facebook"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6L-Q4-qlB">
+                                        <rect key="frame" x="0.0" y="216" width="62" height="30"/>
+                                        <state key="normal" title="Contacts"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGz-oA-o5J">
+                                        <rect key="frame" x="0.0" y="270" width="37" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Tic-iQ-b0O"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tzm-ZI-U2o" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="2RQ-kQ-fxv"/>
+                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="bottom" secondItem="gxE-SW-Xqa" secondAttribute="bottom" constant="58" id="2sU-hd-dhy"/>
+                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="bottom" secondItem="aGR-5Z-qEj" secondAttribute="bottom" constant="85" id="5Vh-L3-wha"/>
+                            <constraint firstItem="aGR-5Z-qEj" firstAttribute="top" secondItem="iC8-fB-jb3" secondAttribute="bottom" constant="63" id="FSw-Wv-xRw"/>
+                            <constraint firstItem="iC8-fB-jb3" firstAttribute="trailing" secondItem="aGR-5Z-qEj" secondAttribute="trailing" id="Hos-Mv-6MU"/>
+                            <constraint firstItem="gxE-SW-Xqa" firstAttribute="leading" secondItem="Man-f1-6G1" secondAttribute="trailing" constant="53" id="IHC-xQ-Uzc"/>
+                            <constraint firstItem="gxE-SW-Xqa" firstAttribute="top" secondItem="FpI-g0-T5i" secondAttribute="bottom" constant="15" id="IHP-S7-0cu"/>
+                            <constraint firstItem="Hpz-sa-TLe" firstAttribute="top" secondItem="BvS-Eb-60t" secondAttribute="bottom" constant="48" id="LcE-WQ-e9H"/>
+                            <constraint firstItem="FpI-g0-T5i" firstAttribute="trailing" secondItem="gxE-SW-Xqa" secondAttribute="trailing" id="NJy-rl-Hr8"/>
+                            <constraint firstItem="Jsd-YJ-3Vj" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="PT8-N2-tvo"/>
+                            <constraint firstItem="iC8-fB-jb3" firstAttribute="leading" secondItem="aGR-5Z-qEj" secondAttribute="leading" id="Quf-Gu-Vbt"/>
+                            <constraint firstItem="tzm-ZI-U2o" firstAttribute="top" secondItem="8ul-q8-8Yz" secondAttribute="top" constant="24" id="R1N-S9-xH0"/>
+                            <constraint firstItem="iC8-fB-jb3" firstAttribute="top" secondItem="8ul-q8-8Yz" secondAttribute="top" constant="594" id="ToR-S6-FfH"/>
+                            <constraint firstItem="FpI-g0-T5i" firstAttribute="leading" secondItem="gxE-SW-Xqa" secondAttribute="leading" id="a8m-kN-66U"/>
+                            <constraint firstItem="Jsd-YJ-3Vj" firstAttribute="top" secondItem="tzm-ZI-U2o" secondAttribute="bottom" constant="40" id="akb-m3-38e"/>
+                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="trailing" secondItem="iC8-fB-jb3" secondAttribute="trailing" constant="42" id="blj-GK-033"/>
+                            <constraint firstItem="Man-f1-6G1" firstAttribute="top" secondItem="9W8-Kv-f5q" secondAttribute="bottom" constant="61" id="j3f-Vl-5k7"/>
+                            <constraint firstItem="BvS-Eb-60t" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="sOI-Ie-y9o"/>
+                            <constraint firstItem="Hpz-sa-TLe" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="tH1-dg-j5T"/>
+                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="leading" secondItem="jj5-eg-AF2" secondAttribute="leadingMargin" id="tuu-gv-EO4"/>
+                            <constraint firstItem="iC8-fB-jb3" firstAttribute="leading" secondItem="FpI-g0-T5i" secondAttribute="trailing" constant="31" id="xQd-hI-fce"/>
+                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="leading" secondItem="Man-f1-6G1" secondAttribute="leading" id="yz7-BM-5Zc"/>
+                            <constraint firstItem="BvS-Eb-60t" firstAttribute="top" secondItem="Jsd-YJ-3Vj" secondAttribute="bottom" constant="24" id="zEf-uh-ayC"/>
+                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="top" secondItem="Hpz-sa-TLe" secondAttribute="bottom" constant="64" id="zHB-vz-nV2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ul-q8-8Yz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create a Group" id="PNd-aC-vIU">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="q2t-yj-gsN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-Wp-1UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7111.594202898551" y="739.95535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1c-qi-OmM">
@@ -631,13 +835,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddProfilePhoto128x128" width="64" height="64"/>
         <image name="AllegianceScreenSplashLogo" width="97.5" height="203"/>
+        <image name="allegianceIcon-20" width="20" height="20"/>
         <image name="allegianceIcon-60" width="60" height="60"/>
+        <image name="allegianceIcon-76" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hKy-WA-9Ax"/>
         <segue reference="akm-lu-Zod"/>
-        <segue reference="83U-BI-fBR"/>
+        <segue reference="nzN-SP-Go2"/>
         <segue reference="hyO-df-E2k"/>
         <segue reference="5pT-Pl-ZQv"/>
     </inferredMetricsTieBreakers>
