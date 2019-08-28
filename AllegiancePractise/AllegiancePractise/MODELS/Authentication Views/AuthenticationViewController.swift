@@ -62,7 +62,7 @@ class AuthenticationViewController: UIViewController {
         //credentialsManager.enableBiometrics(withTitle: "Touch to Login")
         //credentialsManager.store(credentials: credentials)
 
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BaseballNight")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BaseballNight")!)
     }
     
     

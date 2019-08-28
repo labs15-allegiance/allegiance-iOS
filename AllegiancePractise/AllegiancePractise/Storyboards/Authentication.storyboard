@@ -640,7 +640,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-ZI-U2o">
                                 <rect key="frame" x="32" y="112" width="250" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-vO-JkM">
+                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-vO-JkM" userLabel="Add Group Photo Button">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <size key="titleShadowOffset" width="4" height="4"/>
                                         <state key="normal" image="AddProfilePhoto128x128">
@@ -684,13 +684,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Kv-f5q">
-                                <rect key="frame" x="20" y="688" width="42" height="15"/>
+                                <rect key="frame" x="20" y="688" width="41.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Man-f1-6G1">
-                                <rect key="frame" x="20" y="764" width="38" height="15"/>
+                                <rect key="frame" x="20" y="763.5" width="38" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="Z0S-qK-JF9"/>
                                 </constraints>
@@ -717,7 +717,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-fB-jb3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-fB-jb3" userLabel="Private Group checked button">
                                 <rect key="frame" x="356" y="682" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="gxc-Ng-Wk9"/>
@@ -727,13 +727,19 @@
                                 <state key="normal" backgroundImage="allegianceIcon-20">
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="privateGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="lHS-eW-WCI"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5Z-qEj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5Z-qEj" userLabel="Public Group checked button">
                                 <rect key="frame" x="356" y="761" width="16" height="16"/>
                                 <size key="titleShadowOffset" width="4" height="4"/>
                                 <state key="normal" backgroundImage="allegianceIcon-20">
                                     <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="publicGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="qgz-fq-slB"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BvS-Eb-60t">
                                 <rect key="frame" x="32" y="258" width="128" height="300"/>
@@ -741,6 +747,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr6-JF-S3h">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
                                         <state key="normal" title="Snapchat"/>
+                                        <connections>
+                                            <action selector="inviteSnapchattersTapped:" destination="adj-0g-5Ie" eventType="touchUpInside" id="UzL-sA-Iri"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-Xj-qwF">
                                         <rect key="frame" x="0.0" y="54" width="48" height="30"/>
@@ -768,7 +777,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tzm-ZI-U2o" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="2RQ-kQ-fxv"/>
                             <constraint firstItem="8ul-q8-8Yz" firstAttribute="bottom" secondItem="gxE-SW-Xqa" secondAttribute="bottom" constant="58" id="2sU-hd-dhy"/>
@@ -798,12 +807,30 @@
                         <viewLayoutGuide key="safeArea" id="8ul-q8-8Yz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create a Group" id="PNd-aC-vIU">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="q2t-yj-gsN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="q2t-yj-gsN">
+                            <connections>
+                                <action selector="createGroupButtonTapped:" destination="adj-0g-5Ie" id="7Ya-cQ-XZ9"/>
+                                <segue destination="FMU-kf-kCk" kind="show" identifier="TabBarSegue" id="gZY-OS-7aZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="PMV-vO-JkM" id="EWY-kr-VwP"/>
+                        <outlet property="nameTextField" destination="lbh-Nx-cuY" id="R8N-oH-ble"/>
+                        <outlet property="sloganTextField" destination="X0j-5h-52S" id="sKd-F9-sNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-Wp-1UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7111.594202898551" y="739.95535714285711"/>
+        </scene>
+        <!--GroupsCollectionViewController-->
+        <scene sceneID="Gwh-Co-LiO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="GroupsCollectionViewController" id="FMU-kf-kCk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXm-HX-5HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7850" y="595"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1c-qi-OmM">

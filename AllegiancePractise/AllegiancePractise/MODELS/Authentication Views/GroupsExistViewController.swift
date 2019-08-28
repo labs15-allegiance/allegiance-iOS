@@ -34,8 +34,11 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupsExistCell", for: indexPath) as! GroupsExistCELL
         
-        var sampleImage = UIImage(named: "allegianceIcon-76")!        //will be groupsMatched[indexPath.row].profilePhoto when data included
-        cell.displayCellContent(image: sampleImage, groupName: "Gashouse Gorillaz", members: "10zn")  // will be groupsMatched[indexPath.row].name & .count
+        if let sampleImage = UIImage(named: "allegianceIcon-76"), //will be groupsMatched[indexPath.row].profilePhoto when data included
+            let name = favoriteTeam {
+            
+            cell.displayCellContent(image: sampleImage, groupName: name, members: "none")  // will be groupsMatched[indexPath.row].name & .count
+        }
         
         return cell
     }

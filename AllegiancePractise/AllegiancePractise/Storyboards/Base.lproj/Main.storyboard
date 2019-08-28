@@ -13,7 +13,7 @@
         <!--Groups-->
         <scene sceneID="Y3F-vF-PUG">
             <objects>
-                <collectionViewController id="efU-Ie-amg" customClass="GroupsCollectionViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="GroupsCollectionViewController" id="efU-Ie-amg" customClass="GroupsCollectionViewController" customModule="AllegiancePractise" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kfF-y5-6hc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
