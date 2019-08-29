@@ -27,7 +27,7 @@
             <string>auth0</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>$(com.lambdaSchool.AllegiancePractise.jtaylor)</string>
+                <string>com.lambdaSchool.AllegiancePractise.jtaylor</string>
             </array>
         </dict>
     </array>

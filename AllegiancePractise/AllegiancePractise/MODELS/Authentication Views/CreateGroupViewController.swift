@@ -27,7 +27,7 @@ class CreateGroupViewController: UIViewController {
 //        // add nameTextField.text and sloganTextField.text and addPhotoButton.image and isPrivate to a newly created Group
 //
 //        // SEGUE to Tab-Bar-Controller Groups tab
-//        performSegue(withIdentifier: "TabBarSegue", sender: Any?.self)
+//        self.performSegue(withIdentifier: "TabBarSegue", sender: self)
 //    }
     
     @IBAction func inviteSnapchattersTapped(_ sender: Any) {

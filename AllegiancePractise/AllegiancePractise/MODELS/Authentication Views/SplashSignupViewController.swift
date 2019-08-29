@@ -20,6 +20,7 @@ class SplashSignupViewController: UIViewController {
     
     @IBAction func signInButtonPressed(_ sender: Any) {
         
+        // This Login call is performed with a background thread, so you must DispatchMain for UI actions directly afterwards
         Auth0
             .webAuth()
             .scope("openid profile")
@@ -32,15 +33,20 @@ class SplashSignupViewController: UIViewController {
                     
                     // Do something with credentials e.g.: save them.
                     //userController.createUser(credentials: credentials)
-                    
-                    
-                    // Auth0 will automatically dismiss the login page
                     print("Credentials: \(credentials)")
-                }
-        }
+                    
+                    
+                    // Auth0 will automatically dismiss the login page; write code to direct app to advanced view with which the user would interact if he wasn't a newb to the app.
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "UserAlreadyHasLoginCredentials", sender: self)
+                    }
+                  }
+              }
     }
     
     
     
-    
+    @IBAction func inviteCodeButtonPressed(_ sender: Any) {
+        print("Invite Codes will be implemented in a later release")
+    }
 }

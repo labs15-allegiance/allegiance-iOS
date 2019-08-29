@@ -87,7 +87,7 @@
         <!--Groups-->
         <scene sceneID="Dam-68-sFt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2lE-yh-Ujf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GroupsNavController" automaticallyAdjustsScrollViewInsets="NO" id="2lE-yh-Ujf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Groups" id="FYS-8G-1Qf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tjw-Fz-LXR">

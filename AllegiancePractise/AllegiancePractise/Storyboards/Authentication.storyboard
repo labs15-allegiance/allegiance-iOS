@@ -80,7 +80,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K94-Ko-gCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="80"/>
+            <point key="canvasLocation" x="-552" y="76"/>
+        </scene>
+        <!--GroupsNavController-->
+        <scene sceneID="7TS-nL-U58">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="GroupsNavController" id="Ntv-aW-xFI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bT-v9-nDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="214"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="t8P-1b-KmF">
@@ -125,6 +133,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Have an invite code?"/>
+                                <connections>
+                                    <action selector="inviteCodeButtonPressed:" destination="UDr-xs-ffa" eventType="touchUpInside" id="Fvs-mq-OAl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The social network for sports fans" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5K-JK-OcI">
                                 <rect key="frame" x="54" y="233" width="306" height="263"/>
@@ -148,6 +159,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yYZ-hT-By2"/>
                     </view>
+                    <connections>
+                        <segue destination="Ntv-aW-xFI" kind="presentation" identifier="UserAlreadyHasLoginCredentials" id="Lcb-OT-gAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9R-XD-zLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,64 +697,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Kv-f5q">
-                                <rect key="frame" x="20" y="688" width="41.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Man-f1-6G1">
-                                <rect key="frame" x="20" y="763.5" width="38" height="14.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-A7-pko">
+                                <rect key="frame" x="32" y="728" width="350" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Man-f1-6G1">
+                                        <rect key="frame" x="0.0" y="25" width="161.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Public groups can be joined by anyone who has the same allegiance or is in the same location." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxE-SW-Xqa">
+                                        <rect key="frame" x="203.5" y="10.5" width="88.5" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5Z-qEj" userLabel="Public Group checked button">
+                                        <rect key="frame" x="334" y="24" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="b9y-eS-rNi"/>
+                                            <constraint firstAttribute="height" constant="16" id="rEA-TT-z5c"/>
+                                        </constraints>
+                                        <size key="titleShadowOffset" width="4" height="4"/>
+                                        <state key="normal" backgroundImage="allegianceIcon-20">
+                                            <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="publicGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="qgz-fq-slB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="Z0S-qK-JF9"/>
+                                    <constraint firstAttribute="height" constant="64" id="aFu-QS-ttN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-g0-T5i">
-                                <rect key="frame" x="111" y="667" width="214" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="qsQ-5H-0sV"/>
-                                </constraints>
-                                <string key="text">Private groups are by invitation only. Like the same teams? Have different allegiances?  It's all fair game. Invite your friends and start the conversation!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public groups can be joined by anyone who has the same allegiance or is in the same location." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxE-SW-Xqa">
-                                <rect key="frame" x="111" y="743" width="214" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="JYs-Tt-ov8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-fB-jb3" userLabel="Private Group checked button">
-                                <rect key="frame" x="356" y="682" width="16" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="16" id="gxc-Ng-Wk9"/>
-                                    <constraint firstAttribute="height" constant="16" id="sBr-nG-hfX"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="4" height="4"/>
-                                <state key="normal" backgroundImage="allegianceIcon-20">
-                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="privateGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="lHS-eW-WCI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5Z-qEj" userLabel="Public Group checked button">
-                                <rect key="frame" x="356" y="761" width="16" height="16"/>
-                                <size key="titleShadowOffset" width="4" height="4"/>
-                                <state key="normal" backgroundImage="allegianceIcon-20">
-                                    <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="publicGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="qgz-fq-slB"/>
-                                </connections>
-                            </button>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BvS-Eb-60t">
                                 <rect key="frame" x="32" y="258" width="128" height="300"/>
                                 <subviews>
@@ -776,33 +766,58 @@
                                     <constraint firstAttribute="width" constant="128" id="Tic-iQ-b0O"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xoq-TU-lfb">
+                                <rect key="frame" x="32" y="656" width="350" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Kv-f5q">
+                                        <rect key="frame" x="0.0" y="25" width="206.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-g0-T5i">
+                                        <rect key="frame" x="214.5" y="0.0" width="111.5" height="64"/>
+                                        <string key="text">Private groups are by invitation only. Like the same teams? Have different allegiances?  It's all fair game. Invite your friends and start the conversation!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC8-fB-jb3" userLabel="Private Group checked button">
+                                        <rect key="frame" x="334" y="24" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="4HF-ds-5Ua"/>
+                                            <constraint firstAttribute="height" constant="16" id="YTh-9v-M2Z"/>
+                                        </constraints>
+                                        <size key="titleShadowOffset" width="4" height="4"/>
+                                        <state key="normal" backgroundImage="allegianceIcon-20">
+                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="privateGroupButtonChecked:" destination="adj-0g-5Ie" eventType="touchUpInside" id="lHS-eW-WCI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="K5H-Xi-EuQ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tzm-ZI-U2o" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="2RQ-kQ-fxv"/>
-                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="bottom" secondItem="gxE-SW-Xqa" secondAttribute="bottom" constant="58" id="2sU-hd-dhy"/>
-                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="bottom" secondItem="aGR-5Z-qEj" secondAttribute="bottom" constant="85" id="5Vh-L3-wha"/>
-                            <constraint firstItem="aGR-5Z-qEj" firstAttribute="top" secondItem="iC8-fB-jb3" secondAttribute="bottom" constant="63" id="FSw-Wv-xRw"/>
-                            <constraint firstItem="iC8-fB-jb3" firstAttribute="trailing" secondItem="aGR-5Z-qEj" secondAttribute="trailing" id="Hos-Mv-6MU"/>
-                            <constraint firstItem="gxE-SW-Xqa" firstAttribute="leading" secondItem="Man-f1-6G1" secondAttribute="trailing" constant="53" id="IHC-xQ-Uzc"/>
-                            <constraint firstItem="gxE-SW-Xqa" firstAttribute="top" secondItem="FpI-g0-T5i" secondAttribute="bottom" constant="15" id="IHP-S7-0cu"/>
                             <constraint firstItem="Hpz-sa-TLe" firstAttribute="top" secondItem="BvS-Eb-60t" secondAttribute="bottom" constant="48" id="LcE-WQ-e9H"/>
-                            <constraint firstItem="FpI-g0-T5i" firstAttribute="trailing" secondItem="gxE-SW-Xqa" secondAttribute="trailing" id="NJy-rl-Hr8"/>
+                            <constraint firstItem="oYd-A7-pko" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="Nyv-ay-bSF"/>
                             <constraint firstItem="Jsd-YJ-3Vj" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="PT8-N2-tvo"/>
-                            <constraint firstItem="iC8-fB-jb3" firstAttribute="leading" secondItem="aGR-5Z-qEj" secondAttribute="leading" id="Quf-Gu-Vbt"/>
                             <constraint firstItem="tzm-ZI-U2o" firstAttribute="top" secondItem="8ul-q8-8Yz" secondAttribute="top" constant="24" id="R1N-S9-xH0"/>
-                            <constraint firstItem="iC8-fB-jb3" firstAttribute="top" secondItem="8ul-q8-8Yz" secondAttribute="top" constant="594" id="ToR-S6-FfH"/>
-                            <constraint firstItem="FpI-g0-T5i" firstAttribute="leading" secondItem="gxE-SW-Xqa" secondAttribute="leading" id="a8m-kN-66U"/>
+                            <constraint firstItem="xoq-TU-lfb" firstAttribute="top" secondItem="Hpz-sa-TLe" secondAttribute="bottom" constant="32" id="UUk-Kj-8D5"/>
+                            <constraint firstAttribute="trailing" secondItem="oYd-A7-pko" secondAttribute="trailing" constant="32" id="ahh-jh-8u5"/>
                             <constraint firstItem="Jsd-YJ-3Vj" firstAttribute="top" secondItem="tzm-ZI-U2o" secondAttribute="bottom" constant="40" id="akb-m3-38e"/>
-                            <constraint firstItem="8ul-q8-8Yz" firstAttribute="trailing" secondItem="iC8-fB-jb3" secondAttribute="trailing" constant="42" id="blj-GK-033"/>
-                            <constraint firstItem="Man-f1-6G1" firstAttribute="top" secondItem="9W8-Kv-f5q" secondAttribute="bottom" constant="61" id="j3f-Vl-5k7"/>
+                            <constraint firstAttribute="trailing" secondItem="xoq-TU-lfb" secondAttribute="trailing" constant="32" id="g9e-pV-JQC"/>
+                            <constraint firstItem="oYd-A7-pko" firstAttribute="top" secondItem="xoq-TU-lfb" secondAttribute="bottom" constant="8" id="mtc-1I-aO6"/>
+                            <constraint firstItem="xoq-TU-lfb" firstAttribute="leading" secondItem="jj5-eg-AF2" secondAttribute="leading" constant="32" id="r9b-Cc-uaA"/>
                             <constraint firstItem="BvS-Eb-60t" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="sOI-Ie-y9o"/>
                             <constraint firstItem="Hpz-sa-TLe" firstAttribute="leading" secondItem="8ul-q8-8Yz" secondAttribute="leading" constant="32" id="tH1-dg-j5T"/>
-                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="leading" secondItem="jj5-eg-AF2" secondAttribute="leadingMargin" id="tuu-gv-EO4"/>
-                            <constraint firstItem="iC8-fB-jb3" firstAttribute="leading" secondItem="FpI-g0-T5i" secondAttribute="trailing" constant="31" id="xQd-hI-fce"/>
-                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="leading" secondItem="Man-f1-6G1" secondAttribute="leading" id="yz7-BM-5Zc"/>
                             <constraint firstItem="BvS-Eb-60t" firstAttribute="top" secondItem="Jsd-YJ-3Vj" secondAttribute="bottom" constant="24" id="zEf-uh-ayC"/>
-                            <constraint firstItem="9W8-Kv-f5q" firstAttribute="top" secondItem="Hpz-sa-TLe" secondAttribute="bottom" constant="64" id="zHB-vz-nV2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ul-q8-8Yz"/>
                     </view>
