@@ -12,6 +12,7 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     
     
     @IBOutlet weak var groupsExistCollectionV: UICollectionView!
+    
     @IBOutlet weak var groupsFoundLabel: UILabel!
     var favoriteTeam: String?
     var zipcode: Int?

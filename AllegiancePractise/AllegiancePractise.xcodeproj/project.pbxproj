@@ -17,6 +17,8 @@
 		FC3C2A4523147BDA00FE65AF /* GroupsExistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4423147BDA00FE65AF /* GroupsExistViewController.swift */; };
 		FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A462315B5CE00FE65AF /* GroupsExistCELL.swift */; };
 		FC3C2A4923160F8900FE65AF /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4823160F8900FE65AF /* CreateGroupViewController.swift */; };
+		FC3C2A4D2316FD6400FE65AF /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4C2316FD6400FE65AF /* UserController.swift */; };
+		FC3C2A4F231714CC00FE65AF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */; };
 		FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A447422FCC53800410EC3 /* AppDelegate.swift */; };
 		FC6A447A22FCC53800410EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447822FCC53800410EC3 /* Main.storyboard */; };
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		FC3C2A4423147BDA00FE65AF /* GroupsExistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsExistViewController.swift; sourceTree = "<group>"; };
 		FC3C2A462315B5CE00FE65AF /* GroupsExistCELL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsExistCELL.swift; sourceTree = "<group>"; };
 		FC3C2A4823160F8900FE65AF /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		FC3C2A4C2316FD6400FE65AF /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FC6A447122FCC53700410EC3 /* AllegiancePractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllegiancePractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A447422FCC53800410EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6A447922FCC53800410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,7 +163,9 @@
 		FC6A44972304E0E800410EC3 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
+				FC3C2A4C2316FD6400FE65AF /* UserController.swift */,
 				FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */,
+				FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */,
 				FC6A448C23049F6800410EC3 /* Allegiance.swift */,
 				FC6A448E2304A0FB00410EC3 /* Post.swift */,
 				FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */,
@@ -303,7 +309,9 @@
 				FC3C2A4323147BA900FE65AF /* GroupSearchViewController.swift in Sources */,
 				FC05C8D32307842400255D7B /* FeelPassionSignup4VC.swift in Sources */,
 				FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */,
+				FC3C2A4F231714CC00FE65AF /* CoreDataStack.swift in Sources */,
 				FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */,
+				FC3C2A4D2316FD6400FE65AF /* UserController.swift in Sources */,
 				FC3C2A4923160F8900FE65AF /* CreateGroupViewController.swift in Sources */,
 				FC3C2A4523147BDA00FE65AF /* GroupsExistViewController.swift in Sources */,
 			);

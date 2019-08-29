@@ -24,25 +24,13 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var signInType: SignInType = .login
+    var credentials: Credentials?                            // assuming this is still needed even tho Credentials seems to be a public variable (whole project)
+    var userController = UserController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Auth0
-            .webAuth()
-            .scope("openid profile")
-            .audience("https://dev-iunfzciz.auth0.com/userinfo")
-            .start {
-                switch $0 {
-                case .failure(let error):
-                    // Handle the error
-                    print("Error: \(error)")
-                case .success(let credentials):
-                    // Do something with credentials e.g.: save them.
-                    // Auth0 will automatically dismiss the login page
-                    print("Credentials: \(credentials)")
-                }
-        }
+
         
         // This code was copied and pasted to display Auth0's HOSTED login page, not sure it's in the right spot actually
 //        Auth0
