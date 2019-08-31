@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDr-xs-ffa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hl4-bX-EeT">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,9 +112,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cWO-dY-sRW" kind="popoverPresentation" popoverAnchorView="heL-Zo-hYh" id="cun-TO-FpM">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="cWO-dY-sRW" kind="showDetail" id="cun-TO-FpM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrD-dU-idq">
@@ -159,13 +157,15 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yYZ-hT-By2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="QY3-wC-xZd"/>
                     <connections>
+                        <outlet property="signInButton" destination="vrD-dU-idq" id="kDd-Mt-vi3"/>
                         <segue destination="Ntv-aW-xFI" kind="presentation" identifier="UserAlreadyHasLoginCredentials" id="Lcb-OT-gAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9R-XD-zLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79.710144927536234" y="738.61607142857144"/>
+            <point key="canvasLocation" x="989.85507246376824" y="738.61607142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lr8-5a-aJf">
@@ -179,7 +179,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <state key="normal" backgroundImage="AllegianceScreenSplashLogo"/>
                                 <connections>
-                                    <segue destination="brJ-Ot-cRd" kind="presentation" id="dA3-MP-TYJ"/>
+                                    <segue destination="brJ-Ot-cRd" kind="showDetail" id="7Jk-Ku-Bvo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0W-J2-SzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="739"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="738.61607142857144"/>
         </scene>
         <!--Support Teams Signup1VC-->
         <scene sceneID="2Fr-hL-YhC">
@@ -223,12 +223,18 @@
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="NsQ-El-j2W">
+                                <rect key="frame" x="179.5" y="825" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="yOD-HC-SQE" firstAttribute="trailing" secondItem="Au5-OK-Dbu" secondAttribute="trailing" constant="64" id="4yx-43-hgz"/>
+                            <constraint firstItem="NsQ-El-j2W" firstAttribute="bottom" secondItem="yOD-HC-SQE" secondAttribute="bottom" id="6vO-f1-R9B"/>
                             <constraint firstItem="Au5-OK-Dbu" firstAttribute="top" secondItem="yOD-HC-SQE" secondAttribute="top" constant="64" id="DQY-oP-FjL"/>
+                            <constraint firstItem="NsQ-El-j2W" firstAttribute="centerX" secondItem="KRi-cv-CYy" secondAttribute="centerX" id="FiK-14-aOb"/>
                             <constraint firstItem="yOD-HC-SQE" firstAttribute="trailing" secondItem="0TY-MG-lh1" secondAttribute="trailing" constant="72" id="dbX-wE-ptr"/>
                             <constraint firstItem="Au5-OK-Dbu" firstAttribute="leading" secondItem="yOD-HC-SQE" secondAttribute="leading" constant="64" id="mp3-LZ-3tH"/>
                             <constraint firstItem="0TY-MG-lh1" firstAttribute="leading" secondItem="yOD-HC-SQE" secondAttribute="leading" constant="72" id="ric-lz-rvU"/>
@@ -241,8 +247,8 @@
                     </view>
                     <connections>
                         <outlet property="swipeRecognizer" destination="SCC-cs-gXd" id="yHW-6b-hPp"/>
-                        <segue destination="fmp-33-tDQ" kind="show" identifier="SwipeLeft1" id="83U-BI-fBR"/>
                         <segue destination="cWO-dY-sRW" kind="show" identifier="SwipeRight1" id="5pT-Pl-ZQv"/>
+                        <segue destination="fmp-33-tDQ" kind="showDetail" identifier="SwipeLeft1" id="2Pj-7x-JLt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMj-Kw-J0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,7 +258,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1566.6666666666667" y="738.61607142857144"/>
+            <point key="canvasLocation" x="2476.811594202899" y="738.61607142857144"/>
         </scene>
         <!--Find Fans Signup2VC-->
         <scene sceneID="sbV-j3-NFU">
@@ -280,12 +286,17 @@
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="y2A-LH-kpg">
+                                <rect key="frame" x="179.5" y="825" width="55" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="Whl-Kv-npp" secondAttribute="trailing" constant="64" id="1S8-eK-BLh"/>
+                            <constraint firstItem="y2A-LH-kpg" firstAttribute="centerX" secondItem="DS3-ou-Akq" secondAttribute="centerX" id="65H-WK-1gi"/>
                             <constraint firstItem="nIO-VI-24I" firstAttribute="trailing" secondItem="XRk-Pt-eGE" secondAttribute="trailing" constant="32" id="Dn8-YV-LFc"/>
+                            <constraint firstItem="y2A-LH-kpg" firstAttribute="bottom" secondItem="nIO-VI-24I" secondAttribute="bottom" id="Gso-Re-vB4"/>
                             <constraint firstItem="XRk-Pt-eGE" firstAttribute="top" secondItem="Whl-Kv-npp" secondAttribute="bottom" constant="104" id="QY0-zl-Dap"/>
                             <constraint firstItem="Whl-Kv-npp" firstAttribute="leading" secondItem="nIO-VI-24I" secondAttribute="leading" constant="64" id="Xsn-c2-HXN"/>
                             <constraint firstItem="Whl-Kv-npp" firstAttribute="top" secondItem="nIO-VI-24I" secondAttribute="top" constant="64" id="mwa-OF-x9f"/>
@@ -298,7 +309,7 @@
                     </view>
                     <connections>
                         <segue destination="brJ-Ot-cRd" kind="show" identifier="SwipeRight2" id="hyO-df-E2k"/>
-                        <segue destination="KVb-y4-FEy" kind="show" identifier="SwipeLeft2" id="n8W-Zd-Pdl"/>
+                        <segue destination="KVb-y4-FEy" kind="showDetail" identifier="SwipeLeft2" id="n8W-Zd-Pdl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OP-Ud-qag" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,7 +319,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2286.9565217391305" y="738.61607142857144"/>
+            <point key="canvasLocation" x="3197.1014492753625" y="738.61607142857144"/>
         </scene>
         <!--Build Communities Signup3VC-->
         <scene sceneID="4TY-Ty-ZKL">
@@ -336,6 +347,9 @@
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="1T0-xj-aWx">
+                                <rect key="frame" x="179.5" y="825" width="55" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -343,6 +357,8 @@
                             <constraint firstItem="LX8-Cd-UR6" firstAttribute="top" secondItem="NMn-SH-ni5" secondAttribute="top" constant="64" id="OV3-q6-ba0"/>
                             <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="z6j-4R-ezb" secondAttribute="trailing" constant="16" id="UdA-iE-lIy"/>
                             <constraint firstItem="z6j-4R-ezb" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="16" id="VZ9-xY-i9Z"/>
+                            <constraint firstItem="1T0-xj-aWx" firstAttribute="centerX" secondItem="eGZ-o4-ddz" secondAttribute="centerX" id="Y2a-Lg-1rU"/>
+                            <constraint firstItem="1T0-xj-aWx" firstAttribute="bottom" secondItem="NMn-SH-ni5" secondAttribute="bottom" id="jgd-SU-qaG"/>
                             <constraint firstItem="z6j-4R-ezb" firstAttribute="top" secondItem="LX8-Cd-UR6" secondAttribute="bottom" constant="104" id="jhz-gW-a3R"/>
                             <constraint firstItem="LX8-Cd-UR6" firstAttribute="leading" secondItem="NMn-SH-ni5" secondAttribute="leading" constant="32" id="pJj-v6-YUa"/>
                             <constraint firstItem="NMn-SH-ni5" firstAttribute="trailing" secondItem="LX8-Cd-UR6" secondAttribute="trailing" constant="32" id="xQb-xw-EQW"/>
@@ -353,7 +369,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <segue destination="Xfl-ns-K4d" kind="show" identifier="SwipeLeft3" id="hKy-WA-9Ax"/>
+                        <segue destination="Xfl-ns-K4d" kind="showDetail" identifier="SwipeLeft3" id="hKy-WA-9Ax"/>
                         <segue destination="fmp-33-tDQ" kind="show" identifier="SwipeRight3" id="nzN-SP-Go2"/>
                     </connections>
                 </viewController>
@@ -364,7 +380,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3042.0289855072465" y="738.61607142857144"/>
+            <point key="canvasLocation" x="3952.1739130434785" y="738.61607142857144"/>
         </scene>
         <!--Feel Passion Signup4VC-->
         <scene sceneID="VJu-Xq-7TX">
@@ -392,6 +408,9 @@
                                 <color key="textColor" red="0.79215686269999996" green="0.78823529410000004" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="IIu-qw-vlP">
+                                <rect key="frame" x="179.5" y="825" width="55" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -400,8 +419,10 @@
                             <constraint firstItem="LpX-5D-GTc" firstAttribute="top" secondItem="FKm-9w-cAE" secondAttribute="bottom" constant="104" id="gNa-Vt-cGC"/>
                             <constraint firstItem="FKm-9w-cAE" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="72" id="n4X-xZ-DgD"/>
                             <constraint firstItem="gBz-3W-Oue" firstAttribute="trailing" secondItem="FKm-9w-cAE" secondAttribute="trailing" constant="72" id="nad-gT-P7C"/>
+                            <constraint firstItem="IIu-qw-vlP" firstAttribute="centerX" secondItem="SqY-WL-HTc" secondAttribute="centerX" id="sBL-fE-Brc"/>
                             <constraint firstItem="LpX-5D-GTc" firstAttribute="leading" secondItem="gBz-3W-Oue" secondAttribute="leading" constant="24" id="yi7-HC-1Pt"/>
                             <constraint firstItem="FKm-9w-cAE" firstAttribute="top" secondItem="gBz-3W-Oue" secondAttribute="top" constant="64" id="z2B-eq-PYv"/>
+                            <constraint firstItem="IIu-qw-vlP" firstAttribute="bottom" secondItem="gBz-3W-Oue" secondAttribute="bottom" id="zjk-k1-DnM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gBz-3W-Oue"/>
                         <connections>
@@ -410,7 +431,7 @@
                     </view>
                     <connections>
                         <segue destination="KVb-y4-FEy" kind="show" identifier="SwipeRight4" id="akm-lu-Zod"/>
-                        <segue destination="1bp-HP-Ygz" kind="show" identifier="SwipeLeft4" id="ZXO-5s-IsQ"/>
+                        <segue destination="1bp-HP-Ygz" kind="showDetail" identifier="SwipeLeft4" animates="NO" id="ZXO-5s-IsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWY-Wf-Ay1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,7 +441,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3828.985507246377" y="738.61607142857144"/>
+            <point key="canvasLocation" x="4739.130434782609" y="738.61607142857144"/>
         </scene>
         <!--Find a Group-->
         <scene sceneID="d5g-ZD-Yo1">
@@ -518,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmp-SR-Bds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5543.4782608695659" y="739.95535714285711"/>
+            <point key="canvasLocation" x="6453.6231884057979" y="739.95535714285711"/>
         </scene>
         <!--Select or Create a Group-->
         <scene sceneID="xkB-Qe-lf1">
@@ -641,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcM-yA-JFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6327.5362318840589" y="738.61607142857144"/>
+            <point key="canvasLocation" x="7237.68115942029" y="738.61607142857144"/>
         </scene>
         <!--Create a Group-->
         <scene sceneID="7HL-K2-p5n">
@@ -825,7 +846,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Create" id="q2t-yj-gsN">
                             <connections>
                                 <action selector="createGroupButtonTapped:" destination="adj-0g-5Ie" id="7Ya-cQ-XZ9"/>
-                                <segue destination="FMU-kf-kCk" kind="show" identifier="TabBarSegue" id="gZY-OS-7aZ"/>
+                                <segue destination="FMU-kf-kCk" kind="presentation" identifier="TabBarSegue" id="gZY-OS-7aZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -837,15 +858,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-Wp-1UD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7111.594202898551" y="739.95535714285711"/>
+            <point key="canvasLocation" x="8021.739130434783" y="739.95535714285711"/>
         </scene>
-        <!--GroupsCollectionViewController-->
+        <!--TabBarC-->
         <scene sceneID="Gwh-Co-LiO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="GroupsCollectionViewController" id="FMU-kf-kCk" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarC" id="FMU-kf-kCk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXm-HX-5HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7850" y="595"/>
+            <point key="canvasLocation" x="8759.4202898550739" y="594.64285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1c-qi-OmM">
@@ -873,7 +894,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEM-xQ-IOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4633.3333333333339" y="739.95535714285711"/>
+            <point key="canvasLocation" x="5543.4782608695659" y="739.95535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p0g-Rp-Xe1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hl4-bX-EeT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ypX-UF-uHu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UDr-xs-ffa" kind="relationship" relationship="rootViewController" id="5Ww-yr-L9V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oT-Cg-vdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="739"/>
         </scene>
     </scenes>
     <resources>
@@ -884,9 +923,9 @@
         <image name="allegianceIcon-76" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="akm-lu-Zod"/>
-        <segue reference="nzN-SP-Go2"/>
+        <segue reference="n8W-Zd-Pdl"/>
+        <segue reference="2Pj-7x-JLt"/>
         <segue reference="hyO-df-E2k"/>
-        <segue reference="cun-TO-FpM"/>
+        <segue reference="5pT-Pl-ZQv"/>
     </inferredMetricsTieBreakers>
 </document>

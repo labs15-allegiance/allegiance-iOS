@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class GroupsExistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class GroupsExistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate {
     
     
     @IBOutlet weak var groupsExistCollectionV: UICollectionView!
@@ -17,6 +18,16 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     var favoriteTeam: String?
     var zipcode: Int?
     var groupsMatched: Group? // = example group
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<Group> = {
+        let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
+        let moc = CoreDataStack.shared.mainContext
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "groupName", ascending: true), NSSortDescriptor(key: "location", ascending: true)]
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "groupName", cacheName: nil)
+        frc.delegate = self
+        try! frc.performFetch()
+        return frc
+    }()
     
     
     override func viewDidLoad() {
@@ -27,19 +38,24 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         updateViews()
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return fetchedResultsController.sections?.count ?? 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6   // eventually you'll return the groupsMatched.count
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupsExistCell", for: indexPath) as! GroupsExistCELL
         
-        if let sampleImage = UIImage(named: "allegianceIcon-76"), //will be groupsMatched[indexPath.row].profilePhoto when data included
-            let name = favoriteTeam {
+        let group = fetchedResultsController.object(at: indexPath)
+        let name = group.groupName
+        let sampleImage = UIImage(named: "allegianceIcon-76")!
+        //let members = group.users.numberOfObjects
             
-            cell.displayCellContent(image: sampleImage, groupName: name, members: "none")  // will be groupsMatched[indexPath.row].name & .count
-        }
+        cell.displayCellContent(image: sampleImage, groupName: name!, members: "One")  // will be groupsMatched[indexPath.row].name & .count
         
         return cell
     }
@@ -55,6 +71,49 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     // not sure this is even needed given the button can be made to segue to Create Groups controller via interface builder drag/drop
     @IBAction func createGroupButton(_ sender: Any) {
         
+    }
+    
+    
+    //MARK: - NSFetchedResultsControllerDelegate methods
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        groupsExistCollectionV.performBatchUpdates(<#T##updates: (() -> Void)?##(() -> Void)?##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        groupsExistCollectionV.end
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            groupsExistCollectionV.insertSections(IndexSet(integer: sectionIndex))
+        case .delete:
+            groupsExistCollectionV.deleteSections(IndexSet(integer: sectionIndex))
+        default:
+            break
+        }
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            guard let newIndexPath = newIndexPath else {return}
+            groupsExistCollectionV.insertItems(at: [newIndexPath])
+        case .update:
+            guard let indexPath = indexPath else {return}
+            groupsExistCollectionV.reloadItems(at: [indexPath])
+        case .move:
+            guard let oldIndexPath = indexPath,
+                let newIndexPath = newIndexPath else {return}
+            groupsExistCollectionV.deleteItems(at: [oldIndexPath])
+            groupsExistCollectionV.insertItems(at: [newIndexPath])
+        case .delete:
+            guard let indexPath = indexPath else {return}
+            groupsExistCollectionV.deleteItems(at: [indexPath])
+        default:
+            break
+        }
     }
     
 }

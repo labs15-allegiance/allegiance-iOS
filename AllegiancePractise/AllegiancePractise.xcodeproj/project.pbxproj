@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EEB7481E9C91E9E8CB85EA48 /* Pods_AllegiancePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */; };
+		FC0109C62319B57100DA93D2 /* Group+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109C52319B57100DA93D2 /* Group+Convenience.swift */; };
+		FC0109C82319D6D900DA93D2 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109C72319D6D900DA93D2 /* GroupController.swift */; };
 		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
 		FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */; };
 		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
@@ -24,7 +26,6 @@
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
 		FC6A447F22FCC53900410EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */; };
 		FC6A448722FCD49100410EC3 /* GroupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */; };
-		FC6A448922FDC9DF00410EC3 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448822FDC9DF00410EC3 /* Group.swift */; };
 		FC6A448B23049EAC00410EC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448A23049EAC00410EC3 /* User.swift */; };
 		FC6A448D23049F6800410EC3 /* Allegiance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448C23049F6800410EC3 /* Allegiance.swift */; };
 		FC6A448F2304A0FB00410EC3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448E2304A0FB00410EC3 /* Post.swift */; };
@@ -33,6 +34,8 @@
 		FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */; };
 		FC7F0496231066C0000722BB /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7F0495231066C0000722BB /* AuthenticationViewController.swift */; };
 		FC7F04982310A4A8000722BB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC7F04972310A4A8000722BB /* Auth0.plist */; };
+		FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */; };
+		FC9B21AD231991D30088E2FB /* SplashNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B21AC231991D30088E2FB /* SplashNavigationController.swift */; };
 		FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,8 @@
 		1A61FB73C6D952836A494B5D /* Pods-AllegiancePractise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllegiancePractise.release.xcconfig"; path = "Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise.release.xcconfig"; sourceTree = "<group>"; };
 		4246965173825A033C572575 /* Pods-AllegiancePractise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllegiancePractise.debug.xcconfig"; path = "Target Support Files/Pods-AllegiancePractise/Pods-AllegiancePractise.debug.xcconfig"; sourceTree = "<group>"; };
 		44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllegiancePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC0109C52319B57100DA93D2 /* Group+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+Convenience.swift"; sourceTree = "<group>"; };
+		FC0109C72319D6D900DA93D2 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
 		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTeamsSignup1VC.swift; sourceTree = "<group>"; };
 		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
@@ -58,7 +63,6 @@
 		FC6A447E22FCC53900410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6A448022FCC53900410EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewController.swift; sourceTree = "<group>"; };
-		FC6A448822FDC9DF00410EC3 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		FC6A448A23049EAC00410EC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC6A448C23049F6800410EC3 /* Allegiance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allegiance.swift; sourceTree = "<group>"; };
 		FC6A448E2304A0FB00410EC3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		FC6A44952304DD4B00410EC3 /* AllegiancePractise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllegiancePractise.xcdatamodel; sourceTree = "<group>"; };
 		FC7F0495231066C0000722BB /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		FC7F04972310A4A8000722BB /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		FC9B21AC231991D30088E2FB /* SplashNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigationController.swift; sourceTree = "<group>"; };
 		FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +128,7 @@
 				FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */,
 				FC7F0495231066C0000722BB /* AuthenticationViewController.swift */,
 				FCB98DE7230CD6F1008046F4 /* SplashSignupViewController.swift */,
+				FC9B21AC231991D30088E2FB /* SplashNavigationController.swift */,
 			);
 			name = "Authentication Views";
 			path = "MODELS/Authentication Views";
@@ -150,6 +157,7 @@
 			children = (
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
+				FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
 				FC05C8CF230783B300255D7B /* Authentication Views */,
@@ -164,14 +172,15 @@
 			isa = PBXGroup;
 			children = (
 				FC3C2A4C2316FD6400FE65AF /* UserController.swift */,
+				FC0109C72319D6D900DA93D2 /* GroupController.swift */,
 				FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */,
 				FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */,
 				FC6A448C23049F6800410EC3 /* Allegiance.swift */,
 				FC6A448E2304A0FB00410EC3 /* Post.swift */,
 				FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */,
-				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
-				FC6A448822FDC9DF00410EC3 /* Group.swift */,
 				FC6A448A23049EAC00410EC3 /* User.swift */,
+				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
+				FC0109C52319B57100DA93D2 /* Group+Convenience.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -297,11 +306,12 @@
 				FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */,
 				FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */,
 				FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */,
-				FC6A448922FDC9DF00410EC3 /* Group.swift in Sources */,
 				FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
+				FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */,
 				FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */,
 				FC7F0496231066C0000722BB /* AuthenticationViewController.swift in Sources */,
+				FC9B21AD231991D30088E2FB /* SplashNavigationController.swift in Sources */,
 				FC6A448722FCD49100410EC3 /* GroupsCollectionViewController.swift in Sources */,
 				FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */,
 				FC6A448F2304A0FB00410EC3 /* Post.swift in Sources */,
@@ -309,11 +319,13 @@
 				FC3C2A4323147BA900FE65AF /* GroupSearchViewController.swift in Sources */,
 				FC05C8D32307842400255D7B /* FeelPassionSignup4VC.swift in Sources */,
 				FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */,
+				FC0109C82319D6D900DA93D2 /* GroupController.swift in Sources */,
 				FC3C2A4F231714CC00FE65AF /* CoreDataStack.swift in Sources */,
 				FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */,
 				FC3C2A4D2316FD6400FE65AF /* UserController.swift in Sources */,
 				FC3C2A4923160F8900FE65AF /* CreateGroupViewController.swift in Sources */,
 				FC3C2A4523147BDA00FE65AF /* GroupsExistViewController.swift in Sources */,
+				FC0109C62319B57100DA93D2 /* Group+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

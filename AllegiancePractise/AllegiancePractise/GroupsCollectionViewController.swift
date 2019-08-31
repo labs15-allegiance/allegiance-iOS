@@ -13,11 +13,17 @@ private let reuseIdentifier = "GroupsCell"
 
 class GroupsCollectionViewController: UICollectionViewController {
     
+    
+    var groupNamePassed: String?
+    var groupSloganPassed: String?
+    var groupImagePassed: UIImage?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("you have arrived to Groups, nested in TabBarController")
+        print("you have arrived to Groups, nested in TabBarController\n")
+        print("\(groupNamePassed) with \(groupSloganPassed)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

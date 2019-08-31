@@ -20,6 +20,12 @@ class GroupSearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func useLocationButtonTapped(_ sender: Any) {
         
         //authorize user to allow iphone to read location, this will likely require a change in info.plist or file permissions.
