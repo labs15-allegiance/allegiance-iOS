@@ -10,6 +10,9 @@ import UIKit
 
 class CreateGroupViewController: UIViewController {
     
+    
+    var groupController: GroupController!
+    
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var sloganTextField: UITextField!
@@ -21,6 +24,8 @@ class CreateGroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // get creatorCount from server, or you could do it using a didSet above
 
     }
     
@@ -33,16 +38,16 @@ class CreateGroupViewController: UIViewController {
     
     
     @IBAction func createGroupButtonTapped(_ sender: Any) {
-        
+        print("Welcome to create Group button tapped")
         // Get the total Group/Creator count for overall App, and assign an sequential id
-        creatorCount += 1
+        creatorCount += 1              // in the future this will be fetched from server
         let creatorId = creatorCount
-        let moc = CoreDataStack.shared.mainContext
+        //let moc = CoreDataStack.shared.mainContext
 
         // add nameTextField.text and sloganTextField.text and addPhotoButton.image and isPrivate to a newly created Group
         guard let name = nameTextField.text, !name.isEmpty else { return }
-        let group = Group(groupName: name, slogan: sloganTextField.text, privacySetting: privacySetting, location: 11111, creatorId: creatorId, context: moc)
-        
+        let group = Group(groupName: name, slogan: sloganTextField.text, timestamp: Date(), privacySetting: privacySetting, location: 19406, id: UUID(), creatorId: 1)
+        //groupController.put(group: group)
         
         
         do {
@@ -82,7 +87,7 @@ class CreateGroupViewController: UIViewController {
         if segue.identifier == "TabBarSegue" {
             
             let destinationVC = segue.destination as! UITabBarController
-            let groupsTableVC = destinationVC.children[0].next as! GroupsTableViewController
+            let groupsTableVC = destinationVC.children[0].children[0] as! GroupsTableViewController
                 
                 groupsTableVC.groupNamePassed = nameTextField.text
                 groupsTableVC.groupSloganPassed = sloganTextField.text

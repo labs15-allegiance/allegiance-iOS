@@ -602,22 +602,34 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-l9-1ML">
-                                                    <rect key="frame" x="0.0" y="80" width="56" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-l9-1ML">
+                                                    <rect key="frame" x="4" y="68" width="72" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="ebY-Bk-ljg"/>
+                                                        <constraint firstAttribute="height" constant="40" id="sJE-4M-BbK"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-Bg-L0o">
-                                                    <rect key="frame" x="56" y="80" width="56" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-Bg-L0o">
+                                                    <rect key="frame" x="68" y="76" width="40" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="CVh-SD-xKa"/>
+                                                        <constraint firstAttribute="width" constant="40" id="onw-8Q-vmI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Cmq-l9-1ML" secondAttribute="bottom" constant="4" id="2nV-22-n3x"/>
+                                            <constraint firstAttribute="bottom" secondItem="4O5-Bg-L0o" secondAttribute="bottom" constant="4" id="3DP-Xa-P18"/>
+                                            <constraint firstItem="Cmq-l9-1ML" firstAttribute="leading" secondItem="gdj-S7-5Fh" secondAttribute="leading" constant="4" id="Qqz-de-SPZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="4O5-Bg-L0o" secondAttribute="trailing" constant="4" id="Wzy-Q5-hCS"/>
+                                        </constraints>
                                         <size key="customSize" width="112" height="112"/>
                                         <connections>
                                             <outlet property="cellImage" destination="9Y6-r9-7P9" id="eEz-OH-RJ6"/>
@@ -846,7 +858,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Create" id="q2t-yj-gsN">
                             <connections>
                                 <action selector="createGroupButtonTapped:" destination="adj-0g-5Ie" id="7Ya-cQ-XZ9"/>
-                                <segue destination="FMU-kf-kCk" kind="presentation" identifier="TabBarSegue" id="gZY-OS-7aZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -854,6 +865,7 @@
                         <outlet property="addPhotoButton" destination="PMV-vO-JkM" id="EWY-kr-VwP"/>
                         <outlet property="nameTextField" destination="lbh-Nx-cuY" id="R8N-oH-ble"/>
                         <outlet property="sloganTextField" destination="X0j-5h-52S" id="sKd-F9-sNg"/>
+                        <segue destination="FMU-kf-kCk" kind="presentation" identifier="TabBarSegue" id="XYs-lE-zYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-Wp-1UD" userLabel="First Responder" sceneMemberID="firstResponder"/>

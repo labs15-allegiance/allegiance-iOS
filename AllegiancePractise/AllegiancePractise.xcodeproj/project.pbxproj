@@ -172,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				FC3C2A4C2316FD6400FE65AF /* UserController.swift */,
-				FC0109C72319D6D900DA93D2 /* GroupController.swift */,
 				FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */,
 				FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */,
 				FC6A448C23049F6800410EC3 /* Allegiance.swift */,
@@ -180,6 +179,7 @@
 				FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */,
 				FC6A448A23049EAC00410EC3 /* User.swift */,
 				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
+				FC0109C72319D6D900DA93D2 /* GroupController.swift */,
 				FC0109C52319B57100DA93D2 /* Group+Convenience.swift */,
 			);
 			path = MODELS;

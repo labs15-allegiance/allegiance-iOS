@@ -12,12 +12,15 @@ import CoreData
 class GroupsExistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate {
     
     
+    var groupController = GroupController()                     // again, am I allowed to bang this? Instructor says yes.
+    
     @IBOutlet weak var groupsExistCollectionV: UICollectionView!
     
     @IBOutlet weak var groupsFoundLabel: UILabel!
+    
     var favoriteTeam: String?
     var zipcode: Int?
-    var groupsMatched: Group? // = example group
+    var groupsMatched: [Group]? // = example group
     
     lazy var fetchedResultsController: NSFetchedResultsController<Group> = {
         let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
@@ -35,27 +38,33 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         
         self.groupsExistCollectionV.dataSource = self
         self.groupsExistCollectionV.delegate = self
+        
+        
+        groupsMatched = groupController.fetch()
+        
         updateViews()
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return fetchedResultsController.sections?.count ?? 1
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1 //fetchedResultsController.sections?.count ?? 1
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        return groupsMatched?.count ?? 0 //fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupsExistCell", for: indexPath) as! GroupsExistCELL
         
-        let group = fetchedResultsController.object(at: indexPath)
-        let name = group.groupName
+        //let group = fetchedResultsController.object(at: indexPath)
+        //print(group!)
+        
+        guard let name = groupsMatched?[indexPath.item].groupName else { return cell } //group.groupName
         let sampleImage = UIImage(named: "allegianceIcon-76")!
         //let members = group.users.numberOfObjects
             
-        cell.displayCellContent(image: sampleImage, groupName: name!, members: "One")  // will be groupsMatched[indexPath.row].name & .count
+        cell.displayCellContent(image: sampleImage, groupName: name, members: "1")  // will be groupsMatched[indexPath.row].name & .count
         
         return cell
     }
