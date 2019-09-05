@@ -79,15 +79,18 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
-    @IBAction func privateGroupButtonChecked(_ sender: Any) {
+    @IBAction func privateGroupButtonChecked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         
         // make sure publicGroupButtonChecked is cleared of image
         // make isPrivate true
         // else make isPrivate false
     }
     
-    @IBAction func publicGroupButtonChecked(_ sender: Any) {
-        // do the opposite of private above
+    @IBAction func publicGroupButtonChecked(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+
     }
     
     
@@ -119,7 +122,7 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
         }
         print(info)
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
-        addPhotoButton.setImage(image, for: .normal)  // if doesn't work try setBackgroundImage
+        addPhotoButton.setBackgroundImage(image, for: .normal)  // if doesn't work try setBackgroundImage
         groupPhotoData = image.pngData() // in Core IMage = Binary Data, Foundation: NSData, Data
     }
     
