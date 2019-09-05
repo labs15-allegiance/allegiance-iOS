@@ -9,7 +9,7 @@
 import UIKit
 import Auth0
 
-class CreateGroupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateGroupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     var groupController = GroupController()
@@ -28,6 +28,8 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.nameTextField.delegate = self
+        self.sloganTextField.delegate = self
         // get creatorCount from server, or you could do it using a didSet above
 
     }
