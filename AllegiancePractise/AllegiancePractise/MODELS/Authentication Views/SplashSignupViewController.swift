@@ -15,6 +15,7 @@ class SplashSignupViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     var isAuthenticated: Bool = false
     var groupController = GroupController()
+    public let icon: String = "allegianceIcon-76"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +25,16 @@ class SplashSignupViewController: UIViewController {
         
         // is there a way to use isEmpty instead of this cumbersome construction?
         if groupController.fetch().isEmpty {
-            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: false, location: 18925, id: UUID(), creatorId: 1)
-            //groupController?.put(group: group)
+            let image = (UIImage(named: icon)?.pngData())!  //The icon comes with the app
+            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: false, location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
+            groupController.put(group: group)
 
-            do {
-                let moc = CoreDataStack.shared.mainContext
-                try moc.save()
-            } catch {
-                NSLog("Error saving managed object context: \(error)")
-            }
+//            do {
+//                let moc = CoreDataStack.shared.mainContext
+//                try moc.save()
+//            } catch {
+//                NSLog("Error saving managed object context: \(error)")
+//            }
         }
     }
     

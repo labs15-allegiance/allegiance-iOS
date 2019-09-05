@@ -60,11 +60,11 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         //let group = fetchedResultsController.object(at: indexPath)
         //print(group!)
         
-        guard let name = groupsMatched?[indexPath.item].groupName else { return cell } //group.groupName
-        let sampleImage = UIImage(named: "allegianceIcon-76")!
+        guard let name = groupsMatched?[indexPath.item].groupName,
+            let image = UIImage(data: (groupsMatched?[indexPath.item].image)!) else { return cell }
         //let members = group.users.numberOfObjects
             
-        cell.displayCellContent(image: sampleImage, groupName: name, members: "1")  // will be groupsMatched[indexPath.row].name & .count
+        cell.displayCellContent(image: image, groupName: name, members: "1")  // will be groupsMatched[indexPath.row].name & .count
         
         return cell
     }

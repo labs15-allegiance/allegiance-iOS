@@ -22,8 +22,7 @@ class GroupsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("you have arrived to Groups, nested in TabBarController\n")
-        print("\(groupNamePassed) with \(groupSloganPassed)")
+        print("you have arrived to Groups, nested in TabBarController: \(groupNamePassed)\n")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

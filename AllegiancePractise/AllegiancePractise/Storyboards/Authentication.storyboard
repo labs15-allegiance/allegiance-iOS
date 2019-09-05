@@ -716,6 +716,10 @@
                                 <subviews>
                                     <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-vO-JkM" userLabel="Add Group Photo Button">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="1UW-9j-rPt"/>
+                                            <constraint firstAttribute="width" constant="64" id="Zn2-b2-cDz"/>
+                                        </constraints>
                                         <size key="titleShadowOffset" width="4" height="4"/>
                                         <state key="normal" image="AddProfilePhoto128x128">
                                             <color key="titleShadowColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -725,6 +729,9 @@
                                                 <integer key="value" value="32"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addPhotoButtonTapped:" destination="adj-0g-5Ie" eventType="touchUpInside" id="Une-V3-Awc"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yLK-ES-t4i">
                                         <rect key="frame" x="80" y="0.0" width="170" height="64"/>
