@@ -26,7 +26,7 @@ class SplashSignupViewController: UIViewController {
         // is there a way to use isEmpty instead of this cumbersome construction?
         if groupController.fetch().isEmpty {
             let image = (UIImage(named: icon)?.pngData())!  //The icon comes with the app
-            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: false, location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
+            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: "public", location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
             groupController.put(group: group)
 
 //            do {

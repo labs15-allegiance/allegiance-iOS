@@ -14,7 +14,7 @@
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="privacySetting" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="privacySetting" attributeType="String" defaultValueString="public" syncable="YES"/>
         <attribute name="slogan" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="allegiance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Allegiance" inverseName="groups" inverseEntity="Allegiance" syncable="YES"/>
@@ -45,7 +45,7 @@
     </entity>
     <elements>
         <element name="Allegiance" positionX="-190.8046875" positionY="-1120.640625" width="128" height="133"/>
-        <element name="Group" positionX="-10.96875" positionY="-986.15625" width="128" height="208"/>
+        <element name="Group" positionX="-10.96875" positionY="-986.15625" width="128" height="210"/>
         <element name="Post" positionX="-63.33203125" positionY="-754.0390625" width="128" height="148"/>
         <element name="User" positionX="205.87109375" positionY="-1189.4140625" width="128" height="208"/>
     </elements>

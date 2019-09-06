@@ -11,7 +11,7 @@ import CoreData
 
 extension Group {
     
-    convenience init(groupName: String, slogan: String?, timestamp: Date = Date(), privacySetting: Bool = false, location: Int32, id: UUID = UUID(), image: Data, creatorId: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    convenience init(groupName: String, slogan: String?, timestamp: Date = Date(), privacySetting: String = "public", location: Int32, id: UUID = UUID(), image: Data, creatorId: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: context)
         self.image = image

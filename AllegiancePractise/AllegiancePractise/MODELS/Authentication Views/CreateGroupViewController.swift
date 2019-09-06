@@ -22,7 +22,7 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var sloganTextField: UITextField!
     // privacySetting from checkboxes
     
-    var privacySetting: Bool = false
+    var privacySetting: String = "public"
 
     
     override func viewDidLoad() {
@@ -84,15 +84,19 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func privateGroupButtonChecked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         
-        // make sure publicGroupButtonChecked is cleared of image
-        // make isPrivate true
-        // else make isPrivate false
+        // TEST: what happens if user selects both before hitting "create"?
+        // answer: the setting will be affected by whatever button user checked last.
+        if sender.isSelected {
+            privacySetting = "private"
+        }
     }
-    
     @IBAction func publicGroupButtonChecked(_ sender: UIButton) {
-        
         sender.isSelected = !sender.isSelected
-
+        
+        // see comment above in privateGroupButtonChecked
+        if sender.isSelected {
+            privacySetting = "public"
+        }
     }
     
     
