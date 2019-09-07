@@ -10,6 +10,7 @@
 		EEB7481E9C91E9E8CB85EA48 /* Pods_AllegiancePractise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */; };
 		FC0109C62319B57100DA93D2 /* Group+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109C52319B57100DA93D2 /* Group+Convenience.swift */; };
 		FC0109C82319D6D900DA93D2 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109C72319D6D900DA93D2 /* GroupController.swift */; };
+		FC0109CA23232ECC00DA93D2 /* YourGroupsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109C923232ECC00DA93D2 /* YourGroupsCVCell.swift */; };
 		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
 		FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */; };
 		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
@@ -45,6 +46,7 @@
 		44C8F70F2E6B055B2336A2E9 /* Pods_AllegiancePractise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllegiancePractise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0109C52319B57100DA93D2 /* Group+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+Convenience.swift"; sourceTree = "<group>"; };
 		FC0109C72319D6D900DA93D2 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		FC0109C923232ECC00DA93D2 /* YourGroupsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroupsCVCell.swift; sourceTree = "<group>"; };
 		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTeamsSignup1VC.swift; sourceTree = "<group>"; };
 		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
 				FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */,
+				FC0109C923232ECC00DA93D2 /* YourGroupsCVCell.swift */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
 				FC6A447B22FCC53900410EC3 /* Assets.xcassets */,
 				FC05C8CF230783B300255D7B /* Authentication Views */,
@@ -306,6 +309,7 @@
 				FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */,
 				FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */,
 				FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */,
+				FC0109CA23232ECC00DA93D2 /* YourGroupsCVCell.swift in Sources */,
 				FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
 				FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */,

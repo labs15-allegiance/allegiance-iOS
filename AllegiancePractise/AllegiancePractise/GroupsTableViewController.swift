@@ -11,18 +11,24 @@ import UIKit
 class GroupsTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
-    
+    // now that core data is storing the user-created group you prolly don't need any of this anymore
     var groupNamePassed: String?
     var groupSloganPassed: String?
     var groupImagePassed: UIImage?
     
     private let reuseIdentifier = "GroupsCell"
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("you have arrived to Groups, nested in TabBarController\n")
         print("\(groupNamePassed!) with \(groupSloganPassed!)")
+        
+        self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        self.tableView.rowHeight = UITableView.automaticDimension
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,25 +37,59 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        // 0 - "Your Groups" header
+        // 1 - YourGroupsCollectionView
+        // 2 - "Groups Near You" header
+        // 3 - GroupsNearYouCollectionView
+        // 4 - "Discover" header
+        // 5 - DiscoverCollectionView
+        return 6
+    }
+    
+    enum TableCellIdentifiers: String {
+        case yourGroupsHeader
+        case yourGroupsCollectionVC
+        case groupsNearYouHeader
+        case groupsNearYouCollectionVC
+        case discoverHeader
+        case discoverCollectionVC
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.yourGroupsHeader.rawValue, for: indexPath)
+            cell.textLabel?.font = UIFont(name: "SnellRoundhand-Bold", size: 32)
+            cell.textLabel?.text = "Your Groups"
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.yourGroupsCollectionVC.rawValue, for: indexPath) //as! YourGroupsCVCell
+            return cell
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.groupsNearYouHeader.rawValue, for: indexPath)
+            cell.textLabel?.font = UIFont(name: "SnellRoundhand-Bold", size: 32)
+            cell.textLabel?.text = "Groups Near Your"
+            return cell
+        } else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.groupsNearYouCollectionVC.rawValue, for: indexPath) //as! GroupsNearYouCVCell
+            return cell
+        } else if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.discoverHeader.rawValue, for: indexPath)
+            cell.textLabel?.font = UIFont(name: "SnellRoundhand-Bold", size: 32)
+            cell.textLabel?.text = "Discover"
+            return cell
+        } else if indexPath.row == 5 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.discoverCollectionVC.rawValue, for: indexPath) //as! DiscoverCVCell
+            return cell
+        }
+        return UITableViewCell()     // this is the default case i assume?
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
