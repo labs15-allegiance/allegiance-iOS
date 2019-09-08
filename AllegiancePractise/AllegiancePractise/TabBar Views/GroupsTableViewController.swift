@@ -8,8 +8,9 @@
 
 import UIKit
 
-class GroupsTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class GroupsTableViewController: UITableViewController {
     
+    //@IBOutlet weak var discoverCollectionView: UICollectionView!
     
     // now that core data is storing the user-created group you prolly don't need any of this anymore
     var groupNamePassed: String?
@@ -68,9 +69,14 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
             cell.textLabel?.font = UIFont(name: "SnellRoundhand-Bold", size: 32)
             cell.textLabel?.text = "Your Groups"
             return cell
+            
+            
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.yourGroupsCollectionVC.rawValue, for: indexPath) //as! YourGroupsCVCell
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.yourGroupsCollectionVC.rawValue, for: indexPath) //as! YourGroupsTableViewCell
             return cell
+            
+            
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.groupsNearYouHeader.rawValue, for: indexPath)
             cell.textLabel?.font = UIFont(name: "SnellRoundhand-Bold", size: 32)
@@ -89,6 +95,16 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
             return cell
         }
         return UITableViewCell()     // this is the default case i assume?
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            if let cell = cell as? GroupsNearYouTableViewCell {
+                cell.groupsNearYouCollectionView.dataSource = self
+                cell.groupsNearYouCollectionView.reloadData()
+            }
+        }
     }
 
     /*
@@ -111,37 +127,7 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
     }
     */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
-    // MARK: - CollectionView Data Items
-
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-     
-     }
-    
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
-        // Configure the cell
-        
-        return cell
-     
-     }
     
     
     /*
@@ -153,5 +139,28 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+
+
+extension GroupsTableViewController: UICollectionViewDataSource {
+    
+    // MARK: - CollectionView Data Items
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        // Configure the cell
+        
+        return cell
+        
+    }
 
 }
