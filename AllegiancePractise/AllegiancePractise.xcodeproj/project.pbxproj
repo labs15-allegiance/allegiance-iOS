@@ -15,6 +15,7 @@
 		FC0109CE23254BA900DA93D2 /* DiscoverCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109CD23254BA800DA93D2 /* DiscoverCVCell.swift */; };
 		FC0109D02325542900DA93D2 /* YourGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109CF2325542900DA93D2 /* YourGroupsTableViewCell.swift */; };
 		FC0109D2232554B900DA93D2 /* GroupsNearYouTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109D1232554B900DA93D2 /* GroupsNearYouTableViewCell.swift */; };
+		FC0109D62326F58800DA93D2 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0109D52326F58800DA93D2 /* DiscoverTableViewCell.swift */; };
 		FC05C8C923076F7700255D7B /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C8C823076F7700255D7B /* Authentication.storyboard */; };
 		FC05C8CC23077F9700255D7B /* SupportTeamsSignup1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */; };
 		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
@@ -55,6 +56,7 @@
 		FC0109CD23254BA800DA93D2 /* DiscoverCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCVCell.swift; sourceTree = "<group>"; };
 		FC0109CF2325542900DA93D2 /* YourGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		FC0109D1232554B900DA93D2 /* GroupsNearYouTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsNearYouTableViewCell.swift; sourceTree = "<group>"; };
+		FC0109D52326F58800DA93D2 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		FC05C8C823076F7700255D7B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		FC05C8CB23077F9700255D7B /* SupportTeamsSignup1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTeamsSignup1VC.swift; sourceTree = "<group>"; };
 		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
@@ -118,11 +120,12 @@
 		FC0109D3232554DF00DA93D2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FC0109C923232ECC00DA93D2 /* YourGroupsCVCell.swift */,
-				FC0109CF2325542900DA93D2 /* YourGroupsTableViewCell.swift */,
+				FC0109CD23254BA800DA93D2 /* DiscoverCVCell.swift */,
+				FC0109D52326F58800DA93D2 /* DiscoverTableViewCell.swift */,
 				FC0109CB23254B1F00DA93D2 /* GroupsNearYouCVCell.swift */,
 				FC0109D1232554B900DA93D2 /* GroupsNearYouTableViewCell.swift */,
-				FC0109CD23254BA800DA93D2 /* DiscoverCVCell.swift */,
+				FC0109C923232ECC00DA93D2 /* YourGroupsCVCell.swift */,
+				FC0109CF2325542900DA93D2 /* YourGroupsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				FC3C2A4F231714CC00FE65AF /* CoreDataStack.swift in Sources */,
 				FC6A447522FCC53800410EC3 /* AppDelegate.swift in Sources */,
 				FC3C2A4D2316FD6400FE65AF /* UserController.swift in Sources */,
+				FC0109D62326F58800DA93D2 /* DiscoverTableViewCell.swift in Sources */,
 				FC3C2A4923160F8900FE65AF /* CreateGroupViewController.swift in Sources */,
 				FC3C2A4523147BDA00FE65AF /* GroupsExistViewController.swift in Sources */,
 				FC0109C62319B57100DA93D2 /* Group+Convenience.swift in Sources */,

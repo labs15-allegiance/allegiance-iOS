@@ -1,5 +1,5 @@
 //
-//  YourGroupsTableVCELL.swift
+//  YourGroupsTableViewCell.swift
 //  AllegiancePractise
 //
 //  Created by John Pitts on 9/8/19.
@@ -8,17 +8,8 @@
 
 import UIKit
 
-class YourGroupsTableVCELL: UITableViewCell {
+class YourGroupsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var yourGroupsCollectionView: UICollectionView!
     
-    
-
-
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

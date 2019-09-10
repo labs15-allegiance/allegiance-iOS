@@ -42,36 +42,36 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsHeader" rowHeight="48" id="tl5-94-fCM">
-                                <rect key="frame" x="0.0" y="106" width="414" height="48"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsHeader" rowHeight="29" id="tl5-94-fCM">
+                                <rect key="frame" x="0.0" y="106" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tl5-94-fCM" id="COx-f7-njY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="28.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsCollectionVC" rowHeight="142" id="owl-vQ-Kn3" userLabel="yourGroupsTableVCELL" customClass="YourGroupsTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="154" width="414" height="142"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsCollectionVC" rowHeight="80" id="owl-vQ-Kn3" userLabel="yourGroupsTableVCELL" customClass="YourGroupsTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="135" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owl-vQ-Kn3" id="kka-Ya-6dt">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="141.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-oe-1nS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="141.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vnD-iL-ea3">
-                                                <size key="itemSize" width="88" height="88"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="vnD-iL-ea3">
+                                                <size key="itemSize" width="88" height="72"/>
+                                                <size key="headerReferenceSize" width="24" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupIconCell" id="utW-p3-ulG" customClass="YourGroupsCVCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="27" width="88" height="88"/>
+                                                    <rect key="frame" x="26" y="2" width="88" height="75.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="75.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allegianceIcon-40" translatesAutoresizingMaskIntoConstraints="NO" id="40S-dF-l9D">
@@ -88,9 +88,13 @@
                                                         <constraint firstItem="40S-dF-l9D" firstAttribute="centerX" secondItem="utW-p3-ulG" secondAttribute="centerX" id="Lpk-Rs-EDg"/>
                                                         <constraint firstItem="40S-dF-l9D" firstAttribute="top" secondItem="utW-p3-ulG" secondAttribute="topMargin" id="vRC-7t-lqR"/>
                                                     </constraints>
-                                                    <size key="customSize" width="88" height="88"/>
+                                                    <size key="customSize" width="88" height="75.5"/>
                                                 </collectionViewCell>
                                             </cells>
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zss-mX-zGP">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="79.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </collectionReusableView>
                                         </collectionView>
                                     </subviews>
                                     <constraints>
@@ -100,55 +104,88 @@
                                         <constraint firstItem="GG7-oe-1nS" firstAttribute="leading" secondItem="kka-Ya-6dt" secondAttribute="leading" id="rX0-0g-x77"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="yourGroupsCollectionView" destination="GG7-oe-1nS" id="4Gh-VG-hQL"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouHeader" rowHeight="48" id="yTz-jc-uEA">
-                                <rect key="frame" x="0.0" y="296" width="414" height="48"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouHeader" rowHeight="29" id="yTz-jc-uEA">
+                                <rect key="frame" x="0.0" y="215" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yTz-jc-uEA" id="lZb-Nm-353">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="28.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouCollectionVC" rowHeight="163" id="Nek-b2-GUq" userLabel="groupsNearTableVCELL" customClass="GroupsNearYouTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="344" width="414" height="163"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouCollectionVC" rowHeight="179" id="Nek-b2-GUq" userLabel="GroupsNearYouTableVCELL" customClass="GroupsNearYouTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="244" width="414" height="179"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nek-b2-GUq" id="6LV-nj-u4i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="162.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="178.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-dP-2ff">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="162.5"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="groupsNearYouCollectionVC" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-dP-2ff">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mB0-Tq-dRR">
-                                                <size key="itemSize" width="50" height="50"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="24" minimumInteritemSpacing="0.0" id="mB0-Tq-dRR">
+                                                <size key="itemSize" width="128" height="179"/>
+                                                <size key="headerReferenceSize" width="24" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupNearYouCell" id="Z7Y-vb-hr5" customClass="GroupsNearYouCVCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="24" y="-0.5" width="128" height="179"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="179"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phils" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-Ox-G8C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phils" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-Ox-G8C">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="103"/>
                                                             </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Fans" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-1l-Z8u">
+                                                                <rect key="frame" x="8" y="132" width="120" height="29"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="29" id="A2N-V5-uyC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phightin Phils" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htb-H8-bbx">
+                                                                <rect key="frame" x="8" y="103" width="120" height="29"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="29" id="3pU-99-5cO"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Imp-Ox-G8C" secondAttribute="trailing" id="HbG-B2-hkE"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Imp-Ox-G8C" secondAttribute="bottom" id="OFg-F5-CXc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Imp-Ox-G8C" secondAttribute="bottom" constant="76" id="OFg-F5-CXc"/>
+                                                        <constraint firstItem="UDd-1l-Z8u" firstAttribute="top" secondItem="htb-H8-bbx" secondAttribute="bottom" id="OR2-Ue-OEC"/>
+                                                        <constraint firstItem="htb-H8-bbx" firstAttribute="leading" secondItem="Z7Y-vb-hr5" secondAttribute="leading" constant="8" id="OsT-EV-HzZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UDd-1l-Z8u" secondAttribute="trailing" id="Pk3-ga-iM2"/>
+                                                        <constraint firstItem="UDd-1l-Z8u" firstAttribute="leading" secondItem="Z7Y-vb-hr5" secondAttribute="leading" constant="8" id="W6d-ns-t9k"/>
+                                                        <constraint firstItem="htb-H8-bbx" firstAttribute="top" secondItem="Imp-Ox-G8C" secondAttribute="bottom" id="eEk-aH-YPU"/>
                                                         <constraint firstItem="Imp-Ox-G8C" firstAttribute="leading" secondItem="Z7Y-vb-hr5" secondAttribute="leading" id="g7c-jr-9ce"/>
                                                         <constraint firstItem="Imp-Ox-G8C" firstAttribute="top" secondItem="Z7Y-vb-hr5" secondAttribute="top" id="ji5-eJ-LUG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="htb-H8-bbx" secondAttribute="trailing" id="spg-LV-aVv"/>
                                                     </constraints>
                                                     <connections>
                                                         <outlet property="imageView" destination="Imp-Ox-G8C" id="OOe-ho-Bcl"/>
+                                                        <outlet property="membershipLabel" destination="UDd-1l-Z8u" id="YZU-ez-dyT"/>
+                                                        <outlet property="nameLabel" destination="htb-H8-bbx" id="t6p-uH-mZ4"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mzy-QF-u7a">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="178.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </collectionReusableView>
                                         </collectionView>
                                     </subviews>
                                     <constraints>
@@ -159,48 +196,67 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="groupsNearYouCollectionView" destination="hJ5-dP-2ff" id="XuE-71-jHa"/>
+                                    <outlet property="groupsNearYouCollectionView" destination="hJ5-dP-2ff" id="PDB-ww-Aqt"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverHeader" rowHeight="48" id="OIB-tl-HfA">
-                                <rect key="frame" x="0.0" y="507" width="414" height="48"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverHeader" rowHeight="29" id="OIB-tl-HfA">
+                                <rect key="frame" x="0.0" y="423" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIB-tl-HfA" id="7Md-6B-ece">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="28.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverCollectionVC" rowHeight="124" id="wo0-r4-CxE" userLabel="discoverTableVCELL">
-                                <rect key="frame" x="0.0" y="555" width="414" height="124"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverCollectionVC" rowHeight="240" id="wo0-r4-CxE" userLabel="discoverTableVCELL" customClass="DiscoverTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="452" width="414" height="240"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wo0-r4-CxE" id="U2X-rt-fut">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UZf-gg-uIg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NpF-xq-U3d">
-                                                <size key="itemSize" width="50" height="50"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="NpF-xq-U3d">
+                                                <size key="itemSize" width="112" height="112"/>
+                                                <size key="headerReferenceSize" width="24" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiscoverCell" id="Oc5-xj-jDk" customClass="DiscoverCVCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="2" y="2" width="112" height="112"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BaseballNight" translatesAutoresizingMaskIntoConstraints="NO" id="TfS-oB-zCe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaseballNight" translatesAutoresizingMaskIntoConstraints="NO" id="TfS-oB-zCe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="112"/>
                                                             </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baseball Night" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-Pd-nNn">
+                                                                <rect key="frame" x="8" y="98.5" width="100" height="13.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="5Y0-jN-tbk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstItem="TfS-oB-zCe" firstAttribute="leading" secondItem="Oc5-xj-jDk" secondAttribute="leading" id="6rw-Gg-wBr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TfS-oB-zCe" secondAttribute="bottom" id="Cuu-eR-1ql"/>
+                                                        <constraint firstItem="TfS-oB-zCe" firstAttribute="top" secondItem="Oc5-xj-jDk" secondAttribute="top" id="NSh-gE-zT8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kBa-Pd-nNn" secondAttribute="bottom" id="Shl-dz-oqs"/>
+                                                        <constraint firstItem="kBa-Pd-nNn" firstAttribute="leading" secondItem="Oc5-xj-jDk" secondAttribute="leading" constant="8" id="fbm-Mw-zQ3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="TfS-oB-zCe" secondAttribute="trailing" id="saw-k9-Q0N"/>
+                                                    </constraints>
                                                 </collectionViewCell>
                                             </cells>
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fw2-GM-SRG">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </collectionReusableView>
                                         </collectionView>
                                     </subviews>
                                     <constraints>
@@ -210,6 +266,9 @@
                                         <constraint firstAttribute="bottom" secondItem="UZf-gg-uIg" secondAttribute="bottom" id="j1G-ej-fc4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="discoverCollectionView" destination="UZf-gg-uIg" id="7Ji-vr-e0r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
