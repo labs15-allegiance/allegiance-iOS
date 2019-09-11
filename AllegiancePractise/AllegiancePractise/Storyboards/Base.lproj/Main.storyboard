@@ -50,45 +50,63 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsCollectionVC" rowHeight="80" id="owl-vQ-Kn3" userLabel="yourGroupsTableVCELL" customClass="YourGroupsTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yourGroupsCollectionVC" rowHeight="80" id="owl-vQ-Kn3" userLabel="yourGroupsTableVCELL" customClass="YourGroupsTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="135" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owl-vQ-Kn3" id="kka-Ya-6dt">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-oe-1nS">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-oe-1nS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="vnD-iL-ea3">
-                                                <size key="itemSize" width="88" height="72"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="8" id="vnD-iL-ea3">
+                                                <size key="itemSize" width="56" height="72"/>
                                                 <size key="headerReferenceSize" width="24" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                                <inset key="sectionInset" minX="2" minY="1" maxX="2" maxY="2"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupIconCell" id="utW-p3-ulG" customClass="YourGroupsCVCell" customModule="AllegiancePractise" customModuleProvider="target">
-                                                    <rect key="frame" x="26" y="2" width="88" height="75.5"/>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YourGroupsCell" id="utW-p3-ulG" customClass="YourGroupsCVCell" customModule="AllegiancePractise" customModuleProvider="target">
+                                                    <rect key="frame" x="26" y="1.5" width="88" height="75.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="75.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allegianceIcon-40" translatesAutoresizingMaskIntoConstraints="NO" id="40S-dF-l9D">
-                                                                <rect key="frame" x="24" y="44" width="40" height="40"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="allegianceIcon-40" translatesAutoresizingMaskIntoConstraints="NO" id="40S-dF-l9D">
+                                                                <rect key="frame" x="22" y="1.5" width="45" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="Rii-9u-lbe"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="wuL-uF-heS"/>
+                                                                </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="64"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mattie Chapsticks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ1-8N-Wlu">
+                                                                <rect key="frame" x="0.0" y="46.5" width="88" height="29"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="29" id="gr8-ot-cGa"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
-                                                        <constraint firstItem="40S-dF-l9D" firstAttribute="centerX" secondItem="utW-p3-ulG" secondAttribute="centerX" id="Lpk-Rs-EDg"/>
-                                                        <constraint firstItem="40S-dF-l9D" firstAttribute="top" secondItem="utW-p3-ulG" secondAttribute="topMargin" id="vRC-7t-lqR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GJ1-8N-Wlu" secondAttribute="trailing" id="9pi-Kl-CRx"/>
+                                                        <constraint firstItem="GJ1-8N-Wlu" firstAttribute="leading" secondItem="utW-p3-ulG" secondAttribute="leading" id="DG5-8Z-tmh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="GJ1-8N-Wlu" secondAttribute="bottom" id="LYd-1B-Aqd"/>
+                                                        <constraint firstItem="GJ1-8N-Wlu" firstAttribute="top" secondItem="40S-dF-l9D" secondAttribute="bottom" id="jrj-B7-DFN"/>
                                                     </constraints>
                                                     <size key="customSize" width="88" height="75.5"/>
+                                                    <connections>
+                                                        <segue destination="cHB-xh-Kqh" kind="show" identifier="ShowYourGroup" id="hTm-Sm-Fle"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                             <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zss-mX-zGP">
@@ -108,7 +126,7 @@
                                     <outlet property="yourGroupsCollectionView" destination="GG7-oe-1nS" id="4Gh-VG-hQL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouHeader" rowHeight="29" id="yTz-jc-uEA">
+                            <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouHeader" rowHeight="29" id="yTz-jc-uEA">
                                 <rect key="frame" x="0.0" y="215" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yTz-jc-uEA" id="lZb-Nm-353">
@@ -116,14 +134,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouCollectionVC" rowHeight="179" id="Nek-b2-GUq" userLabel="GroupsNearYouTableVCELL" customClass="GroupsNearYouTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" tag="3" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsNearYouCollectionVC" rowHeight="179" id="Nek-b2-GUq" userLabel="GroupsNearYouTableVCELL" customClass="GroupsNearYouTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="244" width="414" height="179"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nek-b2-GUq" id="6LV-nj-u4i">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="178.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="groupsNearYouCollectionVC" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-dP-2ff">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" restorationIdentifier="groupsNearYouCollectionVC" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-dP-2ff">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="178.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="24" minimumInteritemSpacing="0.0" id="mB0-Tq-dRR">
@@ -179,6 +197,7 @@
                                                         <outlet property="imageView" destination="Imp-Ox-G8C" id="OOe-ho-Bcl"/>
                                                         <outlet property="membershipLabel" destination="UDd-1l-Z8u" id="YZU-ez-dyT"/>
                                                         <outlet property="nameLabel" destination="htb-H8-bbx" id="t6p-uH-mZ4"/>
+                                                        <segue destination="cHB-xh-Kqh" kind="show" identifier="ShowAGroupNearYou" id="8Uk-zN-HfN"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -199,7 +218,7 @@
                                     <outlet property="groupsNearYouCollectionView" destination="hJ5-dP-2ff" id="PDB-ww-Aqt"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverHeader" rowHeight="29" id="OIB-tl-HfA">
+                            <tableViewCell clipsSubviews="YES" tag="4" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverHeader" rowHeight="29" id="OIB-tl-HfA">
                                 <rect key="frame" x="0.0" y="423" width="414" height="29"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIB-tl-HfA" id="7Md-6B-ece">
@@ -207,14 +226,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverCollectionVC" rowHeight="240" id="wo0-r4-CxE" userLabel="discoverTableVCELL" customClass="DiscoverTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" tag="5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="discoverCollectionVC" rowHeight="240" id="wo0-r4-CxE" userLabel="discoverTableVCELL" customClass="DiscoverTableViewCell" customModule="AllegiancePractise" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="452" width="414" height="240"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wo0-r4-CxE" id="U2X-rt-fut">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UZf-gg-uIg">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UZf-gg-uIg">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="NpF-xq-U3d">
                                                 <size key="itemSize" width="112" height="112"/>
@@ -282,6 +301,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPt-in-PdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="-358.25892857142856"/>
+        </scene>
+        <!--BUWP-->
+        <scene sceneID="g3P-7B-tNy">
+            <objects>
+                <tableViewController title="BUWP" id="cHB-xh-Kqh" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mQw-qK-2ky">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="iMB-Bi-CxP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iMB-Bi-CxP" id="Jif-uP-df5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="123.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="allegianceIcon-60" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-E9-ntB">
+                                            <rect key="frame" x="36" y="0.0" width="48" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="24"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGZ-YC-Np7">
+                                            <rect key="frame" x="36" y="46" width="48" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <state key="normal" title="Member"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUWP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btC-Oe-RYL">
+                                            <rect key="frame" x="104" y="0.0" width="265" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bison Banter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCl-AZ-mQA">
+                                            <rect key="frame" x="104" y="27" width="265" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Private groups - 5 fans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92e-GW-P8d">
+                                            <rect key="frame" x="104" y="51" width="265" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2q-Om-Hkk">
+                                            <rect key="frame" x="377" y="16" width="30" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <state key="normal" title="..."/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="122" id="LNv-LJ-Bkb">
+                                <rect key="frame" x="0.0" y="152" width="414" height="122"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LNv-LJ-Bkb" id="n8Q-Ds-bTP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="121.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cHB-xh-Kqh" id="m3a-6r-NHN"/>
+                            <outlet property="delegate" destination="cHB-xh-Kqh" id="hkI-aZ-heQ"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vT-pP-C3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305.7971014492755" y="-358.25892857142856"/>
         </scene>
         <!--Your Profile-->
         <scene sceneID="jaB-EA-Bws">
@@ -424,6 +524,10 @@
         <image name="CowboyRed" width="91.5" height="137.5"/>
         <image name="Phils" width="91.5" height="137.5"/>
         <image name="allegianceIcon-40" width="40" height="40"/>
+        <image name="allegianceIcon-60" width="60" height="60"/>
         <image name="basketballArenaPurplenPink" width="273" height="191"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Uk-zN-HfN"/>
+    </inferredMetricsTieBreakers>
 </document>

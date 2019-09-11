@@ -19,15 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Calls Signup View Controller as initial ViewController, for testing purposes
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignupVC")
-        
-        self.window?.rootViewController = initialViewController
-        
-        self.window?.makeKeyAndVisible()
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
+//        
+//        
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+//        
+//        self.window?.rootViewController = initialViewController
+//        
+//        self.window?.makeKeyAndVisible()
         
         return true
     }
