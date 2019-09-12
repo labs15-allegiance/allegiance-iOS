@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Auth0
 
 class GROUPTableViewController: UITableViewController {
 
+    var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +22,14 @@ class GROUPTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+        if credentialsManager.clear() {
+            performSegue(withIdentifier: "LogoutFromUserProfile", sender: nil)
+        }
+        
+        
     }
     
 

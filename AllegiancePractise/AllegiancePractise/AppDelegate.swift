@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
+        // Auth0 directions:   When the user opens your application, check for valid credentials. If they exist, you can log the user in automatically and redirect them to the app's main flow without any additional login steps.  First, you check if the credentials manager has valid credentials:
+        print("Valid Credentials were found from last time?  \(credentialsManager.hasValid())")
         guard credentialsManager.hasValid() else {
             
             // This opens Registration/Login page
