@@ -31,13 +31,13 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="posts" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="bannerImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bannerImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" attributeType="String" syncable="YES"/>
-        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="location" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="allegiances" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Allegiance" inverseName="users" inverseEntity="Allegiance" syncable="YES"/>
         <relationship name="groups" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="users" inverseEntity="Group" syncable="YES"/>
@@ -47,6 +47,6 @@
         <element name="Allegiance" positionX="-190.8046875" positionY="-1120.640625" width="128" height="133"/>
         <element name="Group" positionX="-10.96875" positionY="-986.15625" width="128" height="210"/>
         <element name="Post" positionX="-63.33203125" positionY="-754.0390625" width="128" height="148"/>
-        <element name="User" positionX="205.87109375" positionY="-1189.4140625" width="128" height="208"/>
+        <element name="User" positionX="205.87109375" positionY="-1189.4140625" width="128" height="210"/>
     </elements>
 </model>
