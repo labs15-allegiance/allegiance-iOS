@@ -33,7 +33,7 @@
 		FC6A447C22FCC53900410EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447B22FCC53900410EC3 /* Assets.xcassets */; };
 		FC6A447F22FCC53900410EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A447D22FCC53900410EC3 /* LaunchScreen.storyboard */; };
 		FC6A448722FCD49100410EC3 /* GroupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */; };
-		FC6A448B23049EAC00410EC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448A23049EAC00410EC3 /* User.swift */; };
+		FC6A448B23049EAC00410EC3 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448A23049EAC00410EC3 /* User+Convenience.swift */; };
 		FC6A448D23049F6800410EC3 /* Allegiance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448C23049F6800410EC3 /* Allegiance.swift */; };
 		FC6A448F2304A0FB00410EC3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A448E2304A0FB00410EC3 /* Post.swift */; };
 		FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */; };
@@ -77,7 +77,7 @@
 		FC6A447E22FCC53900410EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6A448022FCC53900410EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewController.swift; sourceTree = "<group>"; };
-		FC6A448A23049EAC00410EC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC6A448A23049EAC00410EC3 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 		FC6A448C23049F6800410EC3 /* Allegiance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allegiance.swift; sourceTree = "<group>"; };
 		FC6A448E2304A0FB00410EC3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsAllegiances.swift; sourceTree = "<group>"; };
@@ -208,14 +208,14 @@
 		FC6A44972304E0E800410EC3 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
-				FC3C2A4C2316FD6400FE65AF /* UserController.swift */,
 				FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */,
 				FC3C2A4E231714CC00FE65AF /* CoreDataStack.swift */,
 				FC6A448C23049F6800410EC3 /* Allegiance.swift */,
 				FC6A448E2304A0FB00410EC3 /* Post.swift */,
 				FC6A44902304B2AB00410EC3 /* GroupsAllegiances.swift */,
-				FC6A448A23049EAC00410EC3 /* User.swift */,
 				FC6A44922304B3B900410EC3 /* GroupsUsers.swift */,
+				FC3C2A4C2316FD6400FE65AF /* UserController.swift */,
+				FC6A448A23049EAC00410EC3 /* User+Convenience.swift */,
 				FC0109C72319D6D900DA93D2 /* GroupController.swift */,
 				FC0109C52319B57100DA93D2 /* Group+Convenience.swift */,
 			);
@@ -339,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6A448B23049EAC00410EC3 /* User.swift in Sources */,
+				FC6A448B23049EAC00410EC3 /* User+Convenience.swift in Sources */,
 				FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */,
 				FCB98DE8230CD6F1008046F4 /* SplashSignupViewController.swift in Sources */,
 				FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */,

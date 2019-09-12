@@ -119,22 +119,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrD-dU-idq">
-                                <rect key="frame" x="171" y="757" width="72" height="40"/>
+                                <rect key="frame" x="122" y="757" width="170" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="oTT-Om-9Ai"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Log In / Register">
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="signInButtonPressed:" destination="UDr-xs-ffa" eventType="touchUpInside" id="Suo-ux-v1A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4j-MJ-BCn">
-                                <rect key="frame" x="128" y="813" width="158" height="33"/>
+                                <rect key="frame" x="180" y="813" width="54" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Have an invite code?"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="inviteCodeButtonPressed:" destination="UDr-xs-ffa" eventType="touchUpInside" id="Fvs-mq-OAl"/>
                                 </connections>

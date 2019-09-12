@@ -176,18 +176,6 @@ extension GroupsTableViewController: UICollectionViewDataSource {
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupNearYouCell", for: indexPath) as! GroupsNearYouCVCell
 
-            cell.contentView.layer.cornerRadius = 8.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
-            
-            cell.layer.shadowColor = UIColor.lightGray.cgColor
-            cell.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-            cell.layer.shadowRadius = 8.0
-            cell.layer.shadowOpacity = 1.0
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-            cell.layer.backgroundColor = UIColor.clear.cgColor
             
             // Grab full list of all groups, for now, until filtering is implemented
             let groups = groupController.fetch()
@@ -207,6 +195,18 @@ extension GroupsTableViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
+        //            cell.contentView.layer.cornerRadius = 8.0
+        //            cell.contentView.layer.borderWidth = 1.0
+        //            cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        //            cell.contentView.layer.masksToBounds = true
+        //
+        //            cell.layer.shadowColor = UIColor.lightGray.cgColor
+        //            cell.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        //            cell.layer.shadowRadius = 8.0
+        //            cell.layer.shadowOpacity = 1.0
+        //            cell.layer.masksToBounds = false
+        //            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        //            cell.layer.backgroundColor = UIColor.clear.cgColor
         
     }
 
