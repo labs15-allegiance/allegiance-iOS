@@ -16,7 +16,7 @@ class SplashSignupViewController: UIViewController {
     var isAuthenticated: Bool = false
     var groupController = GroupController()
     var userController = UserController()
-    public let icon: String = "allegianceIcon-76"
+    public let icon: String = "FansRejoice"
     var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class SplashSignupViewController: UIViewController {
         // This will only occur if the back-end goes bad or its the first time ever the app is run
         if groupController.fetch().isEmpty {
             let image = (UIImage(named: icon)?.pngData())!  //The icon comes with the app
-            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: "public", location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
+            let group = Group(groupName: "Allegiance Enthusiasts Unite!", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: "public", location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
             groupController.put(group: group)
         }
     }

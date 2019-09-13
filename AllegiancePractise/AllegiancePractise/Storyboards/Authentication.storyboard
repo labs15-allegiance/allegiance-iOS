@@ -88,7 +88,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="GroupsNavController" id="Ntv-aW-xFI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bT-v9-nDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="21"/>
+            <point key="canvasLocation" x="1539" y="315"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="t8P-1b-KmF">
@@ -922,7 +922,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="TabBarC" id="FMU-kf-kCk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXm-HX-5HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8759.4202898550739" y="594.64285714285711"/>
+            <point key="canvasLocation" x="8542" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1c-qi-OmM">
@@ -955,7 +955,7 @@
         <!--Navigation Controller-->
         <scene sceneID="p0g-Rp-Xe1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hl4-bX-EeT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavC" automaticallyAdjustsScrollViewInsets="NO" id="Hl4-bX-EeT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ypX-UF-uHu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

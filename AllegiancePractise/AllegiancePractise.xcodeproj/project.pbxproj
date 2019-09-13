@@ -22,6 +22,7 @@
 		FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */; };
 		FC05C8D1230783F600255D7B /* BuildCommunitiesSignup3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */; };
 		FC05C8D32307842400255D7B /* FeelPassionSignup4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */; };
+		FC0A9070232B275D00E51374 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A906F232B275D00E51374 /* ProfileViewController.swift */; };
 		FC3C2A4323147BA900FE65AF /* GroupSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4223147BA900FE65AF /* GroupSearchViewController.swift */; };
 		FC3C2A4523147BDA00FE65AF /* GroupsExistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A4423147BDA00FE65AF /* GroupsExistViewController.swift */; };
 		FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C2A462315B5CE00FE65AF /* GroupsExistCELL.swift */; };
@@ -64,6 +65,7 @@
 		FC05C8CD230783A400255D7B /* FindFansSignup2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFansSignup2VC.swift; sourceTree = "<group>"; };
 		FC05C8D0230783F600255D7B /* BuildCommunitiesSignup3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildCommunitiesSignup3VC.swift; sourceTree = "<group>"; };
 		FC05C8D22307842400255D7B /* FeelPassionSignup4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelPassionSignup4VC.swift; sourceTree = "<group>"; };
+		FC0A906F232B275D00E51374 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FC3C2A4223147BA900FE65AF /* GroupSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSearchViewController.swift; sourceTree = "<group>"; };
 		FC3C2A4423147BDA00FE65AF /* GroupsExistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsExistViewController.swift; sourceTree = "<group>"; };
 		FC3C2A462315B5CE00FE65AF /* GroupsExistCELL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsExistCELL.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
 				FC6A448622FCD49100410EC3 /* GroupsCollectionViewController.swift */,
 				FC0109D723282ED100DA93D2 /* GROUPTableViewController.swift */,
+				FC0A906F232B275D00E51374 /* ProfileViewController.swift */,
 				FC0109D4232554F100DA93D2 /* TabBar Views */,
 				FC0109D3232554DF00DA93D2 /* Cells */,
 				FC6A44972304E0E800410EC3 /* MODELS */,
@@ -345,6 +348,7 @@
 				FC3C2A472315B5CE00FE65AF /* GroupsExistCELL.swift in Sources */,
 				FC0109CA23232ECC00DA93D2 /* YourGroupsCVCell.swift in Sources */,
 				FC05C8CE230783A400255D7B /* FindFansSignup2VC.swift in Sources */,
+				FC0A9070232B275D00E51374 /* ProfileViewController.swift in Sources */,
 				FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */,
 				FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */,
 				FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */,

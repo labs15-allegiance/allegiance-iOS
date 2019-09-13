@@ -64,7 +64,7 @@ class GroupsTableViewController: UITableViewController {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.yourGroupsHeader.rawValue, for: indexPath)
             cell.textLabel?.font = UIFont(name: "Heebo-Bold", size: 14)
-            cell.textLabel?.text = "Your Groups"
+            cell.textLabel?.text = "YOUR GROUPS"
             return cell
             
         } else if indexPath.row == 1 {
@@ -74,7 +74,7 @@ class GroupsTableViewController: UITableViewController {
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.groupsNearYouHeader.rawValue, for: indexPath)
             cell.textLabel?.font = UIFont(name: "Heebo-Bold", size: 14)
-            cell.textLabel?.text = "Groups Near You"
+            cell.textLabel?.text = "GROUPS NEAR YOU"
             return cell
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.groupsNearYouCollectionVC.rawValue, for: indexPath) as! GroupsNearYouTableViewCell
@@ -82,7 +82,7 @@ class GroupsTableViewController: UITableViewController {
         } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.discoverHeader.rawValue, for: indexPath)
             cell.textLabel?.font = UIFont(name: "Heebo-Bold", size: 14)
-            cell.textLabel?.text = "Discover"
+            cell.textLabel?.text = "DISCOVER"
             return cell
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TableCellIdentifiers.discoverCollectionVC.rawValue, for: indexPath) as! DiscoverTableViewCell
@@ -92,6 +92,7 @@ class GroupsTableViewController: UITableViewController {
     }
     
     
+    // This willDisplay cell forRowAt datasource method allows each TableView Cell to adopt its respective collectionView (see ...CVCell files) and become the datasource for it. It overrides/reloads the TVcell with the collectionView.
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 1 {
             if let cell = cell as? YourGroupsTableViewCell {
@@ -114,24 +115,19 @@ class GroupsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         switch indexPath.row {
-        case 1,3,5:
-            return tableView.bounds.width
+        // why is this not working for "Your Groups" CV and "Discover" CV?
+        case 1:
+            return 80.0
+        case 3:
+            return 179.0
+        case 5:
+            return 236
         default:
             return UITableView.automaticDimension
         }
-//        if indexPath.row == 1 {
-//            return tableView.bounds.width
-//        } else {
-//            return UITableView.automaticDimension
-//        }
-//        if indexPath.row == 3 {
-//            return tableView.bounds.width
-//        } else {
-//            return UITableView.automaticDimension
-//        }
     }
-
 
     /*
     // MARK: - Navigation
@@ -146,7 +142,7 @@ class GroupsTableViewController: UITableViewController {
 
 
 
-extension GroupsTableViewController: UICollectionViewDataSource {
+extension GroupsTableViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - CollectionView Data Items
     
@@ -157,15 +153,13 @@ extension GroupsTableViewController: UICollectionViewDataSource {
         case 3:
             return groupController.fetch().count
         default:
-            return 1
+            return groupController.fetch().count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // Warning: Detected a case where constraints ambiguously suggest a height of zero for tableview cell's content view.  We're considering the collapse unintentional and using standard height instead.
-        
-        // I need a switch statement which will set the correct (of the 3 collectionViews) dequeueResusable IDENTIFIER for the collectionView
+        //sets the correct (of the 3 collectionViews) dequeueResusable IDENTIFIER for the collectionView
         switch collectionView.tag {
             //if tableView is doing cell == 1, then "YourGroupsCell"
             //if ...                cell == 3, then "GroupNearYouCell"
@@ -176,6 +170,18 @@ extension GroupsTableViewController: UICollectionViewDataSource {
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupNearYouCell", for: indexPath) as! GroupsNearYouCVCell
 
+            cell.contentView.layer.cornerRadius = 8.0
+            cell.contentView.layer.borderWidth = 1.0
+            cell.contentView.layer.borderColor = UIColor.clear.cgColor
+            cell.contentView.layer.masksToBounds = true
+            
+            cell.layer.shadowColor = UIColor.lightGray.cgColor
+            cell.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            cell.layer.shadowRadius = 8.0
+            cell.layer.shadowOpacity = 1.0
+            cell.layer.masksToBounds = false
+            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+            cell.layer.backgroundColor = UIColor.clear.cgColor
             
             // Grab full list of all groups, for now, until filtering is implemented
             let groups = groupController.fetch()
@@ -190,23 +196,21 @@ extension GroupsTableViewController: UICollectionViewDataSource {
             return cell
         case 5:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscoverCell", for: indexPath) as! DiscoverCVCell
+            // Grab full list of all groups, for now, until filtering is implemented
+            let groups = groupController.fetch()
+            cell.name = groups[indexPath.item].groupName
+            
+            // use optional conditioning here
+            if let image = UIImage(data: groups[indexPath.item].image!) {
+                
+                cell.image = image
+                cell.members = /* groups[indexPath.item].members */ "2 Fans"
+            }
             return cell
         default:
             return UICollectionViewCell()
         }
         
-        //            cell.contentView.layer.cornerRadius = 8.0
-        //            cell.contentView.layer.borderWidth = 1.0
-        //            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        //            cell.contentView.layer.masksToBounds = true
-        //
-        //            cell.layer.shadowColor = UIColor.lightGray.cgColor
-        //            cell.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        //            cell.layer.shadowRadius = 8.0
-        //            cell.layer.shadowOpacity = 1.0
-        //            cell.layer.masksToBounds = false
-        //            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        //            cell.layer.backgroundColor = UIColor.clear.cgColor
         
     }
 
