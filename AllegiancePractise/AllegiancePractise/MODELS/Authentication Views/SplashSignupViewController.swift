@@ -33,6 +33,12 @@ class SplashSignupViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func signInButtonPressed(_ sender: Any) {
         
         // This Login call is performed with a background thread, so you must DispatchMain for UI actions directly afterwards
@@ -49,11 +55,13 @@ class SplashSignupViewController: UIViewController {
                     
                     self.isAuthenticated = true
                     
-                    self.credentialsManager.store(credentials: credentials)
-                    
-                    guard let id = credentials.idToken else { return }
-                    let user = User(id: id)
-                    self.userController.put(user: user)
+                    if self.credentialsManager.store(credentials: credentials) {
+                        
+                        
+                        guard let id = credentials.idToken else { return }
+                        let user = User(id: id)
+                        self.userController.put(user: user)
+                    }
                     
 //                    let defaults = UserDefaults.standard
 //                    defaults.set(credentials, forKey: "credentials")
@@ -78,12 +86,14 @@ class SplashSignupViewController: UIViewController {
     @IBAction func inviteCodeButtonPressed(_ sender: Any) {
         print("Have an invite code will be implemented in a later release, and be in place of this button")
         
-        credentialsManager.clear()
-        
-        DispatchQueue.main.async {
-            self.signInButton.isHidden = false
-            self.isAuthenticated = false
+        if credentialsManager.clear() {
+            
+            DispatchQueue.main.async {
+                self.signInButton.isHidden = false
+                self.isAuthenticated = false
+            }
         }
+        
     }
     
 }

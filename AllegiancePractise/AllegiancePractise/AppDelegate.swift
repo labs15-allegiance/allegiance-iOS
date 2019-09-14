@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // retrieve the credentials
         credentialsManager.credentials { error, credentials in
             guard error == nil, let credentials = credentials else {
-                NSLog("Error: \(error)")
+                if let error = error {
+                    
+                    NSLog("Error: \(error)")
+                }
                 return
             }
             // You now have a valid credentials object, you might want to store this locally for easy access.
@@ -42,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // me: create a user here, or you can just wait to create the user in Profile when they are ready to reveal more information about themselves.  There you can search to see if the user already exists in the database.
             
-            print("why am i bothering with credentialsManager? i already should have the credentials so what's teh point?")
+            print("Segueing to Groups TabBar page thanks to \(credentials) being valid")
         }
 
         //Opens to TabBar Controller "Groups" tab (aka tab 0)
