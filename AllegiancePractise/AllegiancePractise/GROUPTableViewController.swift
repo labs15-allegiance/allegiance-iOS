@@ -11,7 +11,12 @@ import UIKit
 
 class GROUPTableViewController: UITableViewController {
 
-
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var memberButton: UIButton!
+    @IBOutlet weak var groupNameLabel: UILabel!
+    @IBOutlet weak var groupSloganLabel: UILabel!
+    @IBOutlet weak var membershipLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +27,18 @@ class GROUPTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
     
 
+    @IBAction func editButtonTapped(_ sender: Any) {
+        print("edit button tapped")
+    }
+    
+    
+    @IBAction func memberButtonTapped(_ sender: Any) {
+        print("member button tapped")
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 2

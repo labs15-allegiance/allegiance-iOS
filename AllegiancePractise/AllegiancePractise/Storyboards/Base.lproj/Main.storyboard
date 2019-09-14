@@ -374,6 +374,9 @@
                                                             <rect key="frame" x="0.0" y="68" width="60" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                             <state key="normal" title="Member"/>
+                                                            <connections>
+                                                                <action selector="memberButtonTapped:" destination="cHB-xh-Kqh" eventType="touchUpInside" id="zFx-4e-DE4"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -410,6 +413,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                     <state key="normal" title="..."/>
+                                                    <connections>
+                                                        <action selector="editButtonTapped:" destination="cHB-xh-Kqh" eventType="touchUpInside" id="SGO-Da-IdJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -440,6 +446,13 @@
                     <navigationItem key="navigationItem" title="Group" id="iVm-En-G4L"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="groupNameLabel" destination="btC-Oe-RYL" id="Ikd-nZ-R9L"/>
+                        <outlet property="groupSloganLabel" destination="CCl-AZ-mQA" id="cc0-Xw-iye"/>
+                        <outlet property="iconImageView" destination="Z5s-E9-ntB" id="H9S-jn-ezv"/>
+                        <outlet property="memberButton" destination="IGZ-YC-Np7" id="A4T-Uq-6Lr"/>
+                        <outlet property="membershipLabel" destination="92e-GW-P8d" id="IbR-ag-7NC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vT-pP-C3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
