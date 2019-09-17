@@ -13,23 +13,23 @@ class GROUPTableViewController: UITableViewController {
     
     var group: Group?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//    }
     
 
     @IBAction func editButtonTapped(_ sender: Any) {
+        
         print("edit button tapped")
     }
     
     
     @IBAction func memberButtonTapped(_ sender: Any) {
+        
         print("member button tapped")
-        
-        
         
         
     }

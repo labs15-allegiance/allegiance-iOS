@@ -128,7 +128,6 @@ class GroupsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
 
         if segue.identifier == "ShowYourGroup" {
             
