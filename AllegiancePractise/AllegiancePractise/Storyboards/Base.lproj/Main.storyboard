@@ -634,12 +634,14 @@
                     <tabBarItem key="tabBarItem" title="Item" id="J3Q-iy-qIx"/>
                     <navigationItem key="navigationItem" title="Your Profile" id="aS9-wv-IYt">
                         <barButtonItem key="leftBarButtonItem" title="logout" id="39P-6Z-8I5">
+                            <color key="tintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logoutButtonTapped:" destination="Ja3-nS-4q6" id="DSe-cS-wio"/>
                                 <segue destination="1Nx-ik-iae" kind="show" id="ajK-N8-N3B"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="15e-J0-ZCW">
+                            <color key="tintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="qKf-4p-D7J" kind="show" identifier="EditProfile" id="reG-WV-l1m"/>
                             </connections>
