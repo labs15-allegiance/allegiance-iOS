@@ -151,8 +151,6 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
             let destinationVC = segue.destination as! UITabBarController
             let groupsTableVC = destinationVC.children[0].children[0] as! GroupsTableViewController
                 
-                groupsTableVC.groupNamePassed = nameTextField.text
-                groupsTableVC.groupSloganPassed = sloganTextField.text
             // Pass addPhotoButton.image to GroupsCollectionVC.image
             
         }

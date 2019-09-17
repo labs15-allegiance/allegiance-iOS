@@ -9,14 +9,6 @@
 import UIKit
 
 class GroupsTableViewController: UITableViewController {
-
-    
-    // now that core data is storing the user-created group you prolly don't need any of this anymore
-    var groupNamePassed: String?
-    var groupSloganPassed: String?
-    var groupImagePassed: UIImage?
-    
-//    private let reuseIdentifier = "GroupsCell"
     
     var groupController = GroupController()
     
@@ -97,18 +89,21 @@ class GroupsTableViewController: UITableViewController {
         if indexPath.row == 1 {
             if let cell = cell as? YourGroupsTableViewCell {
                 cell.yourGroupsCollectionView.dataSource = self
+                cell.yourGroupsCollectionView.delegate = self
                 cell.yourGroupsCollectionView.reloadData()
             }
         }
         if indexPath.row == 3 {
             if let cell = cell as? GroupsNearYouTableViewCell {
                 cell.groupsNearYouCollectionView.dataSource = self
+                cell.groupsNearYouCollectionView.delegate = self
                 cell.groupsNearYouCollectionView.reloadData()
             }
         }
         if indexPath.row == 5 {
             if let cell = cell as? DiscoverTableViewCell {
                 cell.discoverCollectionView.dataSource = self
+                cell.discoverCollectionView.delegate = self
                 cell.discoverCollectionView.reloadData()
             }
         }
@@ -132,17 +127,34 @@ class GroupsTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "ShowYourGroup" {
+            
+        }
+        if segue.identifier == "ShowAGroupNearYou" {
+            let groupTVC = segue.destination as! GROUPTableViewController
+            guard let indexPath = sender as? IndexPath else { return }
+            
+            let groups = groupController.fetch()
+            groupTVC.group = groups[indexPath.row]    // is this item or row?
+        }
+        if segue.identifier == "ShowADiscoverGroup" {
+           // do not repeat code here, you can prolly put groupTVC and indexPath above the if statements and get away with just changing the groupController.fetch() type.  for now we'll just repeat the same code 3 times...
+//            let groupTVC = segue.destination as! GROUPTableViewController
+//            guard let indexPath = sender as? NSIndexPath else { return }
+//            
+//            let groups = groupController.fetch()
+//            groupTVC.group = groups[indexPath.item]
+        }
     }
  
-}
+}  //end TableView
 
 
 
-extension GroupsTableViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension GroupsTableViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     // MARK: - CollectionView Data Items
     
@@ -209,9 +221,21 @@ extension GroupsTableViewController: UICollectionViewDataSource, UICollectionVie
             return cell
         default:
             return UICollectionViewCell()
+        } // switch
+    } // cellForItemAt
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.tag {
+        case 1:
+            performSegue(withIdentifier: "ShowYourGroup", sender: indexPath)
+        case 3:
+            performSegue(withIdentifier: "ShowAGroupNearYou", sender: indexPath)
+        case 5:
+            performSegue(withIdentifier: "ShowADiscoverGroup", sender: indexPath)
+        default:
+            fatalError()
         }
-        
-        
     }
 
 }

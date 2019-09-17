@@ -10,19 +10,11 @@ import UIKit
 
 
 class GROUPTableViewController: UITableViewController {
-
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var memberButton: UIButton!
-    @IBOutlet weak var groupNameLabel: UILabel!
-    @IBOutlet weak var groupSloganLabel: UILabel!
-    @IBOutlet weak var membershipLabel: UILabel!
     
+    var group: Group?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -36,6 +28,10 @@ class GROUPTableViewController: UITableViewController {
     
     @IBAction func memberButtonTapped(_ sender: Any) {
         print("member button tapped")
+        
+        
+        
+        
     }
     
     
@@ -47,7 +43,9 @@ class GROUPTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Header", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Header", for: indexPath) as! GroupTableVCell
+            guard let group = group else { return cell }
+            cell.group = group
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath)
