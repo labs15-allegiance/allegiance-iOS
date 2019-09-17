@@ -11,12 +11,21 @@ import Auth0
 
 class ProfileViewController: UIViewController {
     
-        var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hashtagLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.alpha = 0.0
+        navigationController?.setTitleForgroundTitleColor(.white)
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -37,4 +46,10 @@ class ProfileViewController: UIViewController {
     }
     */
 
+}
+
+extension UINavigationController {
+    func setTitleForgroundTitleColor(_ color: UIColor) {
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): color]
+    }
 }

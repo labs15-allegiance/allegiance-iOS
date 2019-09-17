@@ -40,6 +40,7 @@
 		FC6A44932304B3B900410EC3 /* GroupsUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44922304B3B900410EC3 /* GroupsUsers.swift */; };
 		FC6A44962304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A44942304DD4B00410EC3 /* AllegiancePractise.xcdatamodeld */; };
 		FC798BE523306F930053A907 /* GroupTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC798BE423306F930053A907 /* GroupTableVCell.swift */; };
+		FC798BE723315F0D0053A907 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC798BE623315F0D0053A907 /* EditProfileViewController.swift */; };
 		FC7F0496231066C0000722BB /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7F0495231066C0000722BB /* AuthenticationViewController.swift */; };
 		FC7F04982310A4A8000722BB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC7F04972310A4A8000722BB /* Auth0.plist */; };
 		FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */; };
@@ -85,6 +86,7 @@
 		FC6A44922304B3B900410EC3 /* GroupsUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsUsers.swift; sourceTree = "<group>"; };
 		FC6A44952304DD4B00410EC3 /* AllegiancePractise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllegiancePractise.xcdatamodel; sourceTree = "<group>"; };
 		FC798BE423306F930053A907 /* GroupTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableVCell.swift; sourceTree = "<group>"; };
+		FC798BE623315F0D0053A907 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		FC7F0495231066C0000722BB /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		FC7F04972310A4A8000722BB /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
+				FC798BE623315F0D0053A907 /* EditProfileViewController.swift */,
 				FC0A906F232B275D00E51374 /* ProfileViewController.swift */,
 				FC798BE423306F930053A907 /* GroupTableVCell.swift */,
 				FC0109D723282ED100DA93D2 /* GROUPTableViewController.swift */,
@@ -353,6 +356,7 @@
 				FC9B21AB23196A7C0088E2FB /* GroupsTableViewController.swift in Sources */,
 				FC6A44912304B2AB00410EC3 /* GroupsAllegiances.swift in Sources */,
 				FC0109CC23254B1F00DA93D2 /* GroupsNearYouCVCell.swift in Sources */,
+				FC798BE723315F0D0053A907 /* EditProfileViewController.swift in Sources */,
 				FC0109D02325542900DA93D2 /* YourGroupsTableViewCell.swift in Sources */,
 				FC0109CE23254BA900DA93D2 /* DiscoverCVCell.swift in Sources */,
 				FC7F0496231066C0000722BB /* AuthenticationViewController.swift in Sources */,
