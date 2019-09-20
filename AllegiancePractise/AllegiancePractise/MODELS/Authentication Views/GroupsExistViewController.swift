@@ -11,7 +11,7 @@ import CoreData
 
 class GroupsExistViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate {
     
-    
+    var userController = UserController()
     var groupController = GroupController()                     // again, am I allowed to bang this? Instructor says yes.
     
     @IBOutlet weak var groupsExistCollectionV: UICollectionView!
@@ -19,8 +19,13 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var groupsFoundLabel: UILabel!
     
     var favoriteTeam: String?
-    var zipcode: Int?
-    var groupsMatched: [Group]? // = example group
+    var zipcode: Int16? {
+        didSet {
+            
+        }
+    }
+    var groupsMatched: [Group]?              // this one is CoreData (for show, thus possibly temporary)
+    var groupsMatchedFromServer: [GroupRepresentation]?
     
     lazy var fetchedResultsController: NSFetchedResultsController<Group> = {
         let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
@@ -39,15 +44,31 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         self.groupsExistCollectionV.dataSource = self
         self.groupsExistCollectionV.delegate = self
         
-        
-        groupsMatched = groupController.fetch()
-        
+        // get matching groups from the back-end using self.zipcode or keyword self.favoriteTeam
+        if let favoriteTeam = favoriteTeam {
+            
+            groupController.fetchGroupsMatchingSearch(with: favoriteTeam, andWith: zipcode ?? 11111) { (matchingGroups, error) in
+                if let error = error {
+                    NSLog("Error fetching matching groups, will present full list \(error)")
+                    self.groupsMatched = self.groupController.fetch()
+                } else {
+                    self.groupsMatchedFromServer = matchingGroups
+                }
+            }
+        }
         updateViews()
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1 //fetchedResultsController.sections?.count ?? 1
-//    }
+    
+    func updateViews() {
+        
+        guard let userTeamEntry = favoriteTeam else {print("user entered nil for group search, segue back to previous view?"); return}
+        groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
+        groupsExistCollectionV.reloadData()
+    }
+    
+    
+    //MARK: COLLECTIONVIEW DATASOURCES:
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return groupsMatched?.count ?? 0 //fetchedResultsController.sections?[section].numberOfObjects ?? 0
@@ -63,18 +84,10 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         guard let name = groupsMatched?[indexPath.item].groupName,
             let image = UIImage(data: (groupsMatched?[indexPath.item].image)!) else { return cell }
         //let members = group.users.numberOfObjects
-            
+        
         cell.displayCellContent(image: image, groupName: name, members: "1")  // will be groupsMatched[indexPath.row].name & .count
         
         return cell
-    }
-    
-    
-    func updateViews() {
-        
-        guard let userTeamEntry = favoriteTeam else {print("user entered nil for group search, segue back to previous view?"); return}
-        groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
-        groupsExistCollectionV.reloadData()
     }
    
     // not sure this is even needed given the button can be made to segue to Create Groups controller via interface builder drag/drop

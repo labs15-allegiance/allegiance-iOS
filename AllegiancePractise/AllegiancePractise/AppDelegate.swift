@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Valid Credentials were found from last time?  \(credentialsManager.hasValid())")
         guard credentialsManager.hasValid() else {
             
-            // This opens Registration/Login page
+            // This opens Registration/Login page bc no credentials were found in stored Auth0 files (in framework/pods)
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignupVC")
@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             return true
         }
-        // retrieve the credentials
+        // retrieve the credentials, and do something with them, or in this case just we just bypass Authentication Storyboard and go right to Main Storyboard!
+        // below we COULD use the stored credentials for something (like storing them in User.id) but why not wait til later since an iOS app really only needs to be a gatekeeper preventing access to rest of app if no credentials are found.  So consider deleting the credentialsManager.... code below as unneeded
         credentialsManager.credentials { error, credentials in
             guard error == nil, let credentials = credentials else {
                 if let error = error {
@@ -40,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 return
             }
+            // copied from Auth0....
             // You now have a valid credentials object, you might want to store this locally for easy access.
             // You will use this later to retrieve the user's profile
             

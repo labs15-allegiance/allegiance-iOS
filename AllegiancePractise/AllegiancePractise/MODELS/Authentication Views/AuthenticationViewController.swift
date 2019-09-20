@@ -18,6 +18,11 @@ import Auth0
 
 class AuthenticationViewController: UIViewController {
     
+    // This login page has been deprecated,but it's left here to use in case Auth0 is mercifully cut out of the project.  Auth0 sucks, so they SHOULD be cut out of the project.
+    
+    
+    
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerLoginButton: UIButton!

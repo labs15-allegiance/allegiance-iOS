@@ -149,6 +149,8 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
         if segue.identifier == "TabBarSegue" {
             
             let destinationVC = segue.destination as! UITabBarController
+            
+            // this is here in case you want to pass some data to Groups view inside TabBarController in the main storyboard
             let groupsTableVC = destinationVC.children[0].children[0] as! GroupsTableViewController
                 
             // Pass addPhotoButton.image to GroupsCollectionVC.image

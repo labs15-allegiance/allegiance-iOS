@@ -39,6 +39,13 @@ class SplashSignupViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    // TO DO:
+    // we will need to implement some logic in getStartedButtonTapped, whereas right now it just segues quickly to the intro pages starting with "Support Teams"
+    //        but getStarted should first check to see if credentials are authentic, otherwise deny entry to intro pages.
+    
+    
+    
+    
     @IBAction func signInButtonPressed(_ sender: Any) {
         
         // This Login call is performed with a background thread, so you must DispatchMain for UI actions directly afterwards
@@ -82,7 +89,7 @@ class SplashSignupViewController: UIViewController {
     }
     
     
-    
+    // this was changed to the logout button, but didn't change the name bc eventually it should go back to being an invite-code button
     @IBAction func inviteCodeButtonPressed(_ sender: Any) {
         print("Have an invite code will be implemented in a later release, and be in place of this button")
         

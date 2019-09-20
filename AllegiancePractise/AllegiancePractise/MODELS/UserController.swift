@@ -35,6 +35,12 @@ class UserController {
         }
     }
     
+    func getThisDevicesUserWithLogin(id: String, in context: NSManagedObjectContext) {
+        // so CoreData's User model has a method for free called fetchRequest()
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id as String)
+    }
+    
     // create a user
     //func createUser(credentials: credentials) {
         

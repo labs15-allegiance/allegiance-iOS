@@ -44,6 +44,8 @@ class GroupSearchViewController: UIViewController, UITextFieldDelegate {
         //using favoriteTeamTextField.text locate all Groups which have that favorite team words (like Dallas or Mavericks) in the Group name, OR locate nearby groups via zipcode proximity.
         
         
+        
+        
     }
     
 
@@ -52,7 +54,7 @@ class GroupSearchViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let groupExistVC = segue.destination as? GroupsExistViewController,
-            let zipcode = Int(zipcodeTextField.text!) {
+            let zipcode = Int16(zipcodeTextField.text!) {
             
             groupExistVC.favoriteTeam = favoriteTeamTextField.text
             groupExistVC.zipcode = zipcode

@@ -340,10 +340,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-lD-iJf">
-                                <rect key="frame" x="127" y="264" width="160" height="64"/>
+                                <rect key="frame" x="134.5" y="264" width="145" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="TtI-mz-L9S"/>
-                                    <constraint firstAttribute="width" constant="160" id="dEX-bR-LiX"/>
                                 </constraints>
                                 <state key="normal" title="My Profile" image="AddProfilePhoto128x128">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,7 +358,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2T-U9-ukW">
-                                <rect key="frame" x="169" y="104" width="229" height="80"/>
+                                <rect key="frame" x="0.0" y="88" width="398" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="UsE-HJ-Qsl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="hVz-4r-IPJ"/>
@@ -390,12 +389,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0I7-lD-iJf" firstAttribute="centerX" secondItem="Wor-ab-eOb" secondAttribute="centerX" id="3Yb-1A-NQG"/>
-                            <constraint firstItem="f2T-U9-ukW" firstAttribute="top" secondItem="edh-z1-TyB" secondAttribute="top" constant="16" id="HWg-w3-qTs"/>
+                            <constraint firstItem="f2T-U9-ukW" firstAttribute="top" secondItem="edh-z1-TyB" secondAttribute="top" id="HWg-w3-qTs"/>
                             <constraint firstItem="gaN-IW-ar9" firstAttribute="top" secondItem="edh-z1-TyB" secondAttribute="top" id="LhJ-FI-Qbk"/>
                             <constraint firstItem="gaN-IW-ar9" firstAttribute="leading" secondItem="edh-z1-TyB" secondAttribute="leading" id="M5z-xT-9Tv"/>
                             <constraint firstItem="0I7-lD-iJf" firstAttribute="top" secondItem="gaN-IW-ar9" secondAttribute="bottom" constant="8" id="V3F-n5-8QH"/>
                             <constraint firstItem="EUE-Fo-aZJ" firstAttribute="top" secondItem="0I7-lD-iJf" secondAttribute="bottom" constant="16" id="WHy-3a-jBn"/>
                             <constraint firstItem="edh-z1-TyB" firstAttribute="trailing" secondItem="f2T-U9-ukW" secondAttribute="trailing" constant="16" id="Yol-EE-hiA"/>
+                            <constraint firstItem="f2T-U9-ukW" firstAttribute="leading" secondItem="edh-z1-TyB" secondAttribute="leading" id="a0a-wG-TRb"/>
                             <constraint firstItem="edh-z1-TyB" firstAttribute="trailing" secondItem="gaN-IW-ar9" secondAttribute="trailing" id="kMO-8V-VgJ"/>
                             <constraint firstItem="EUE-Fo-aZJ" firstAttribute="centerX" secondItem="Wor-ab-eOb" secondAttribute="centerX" id="vxO-uC-Ogq"/>
                         </constraints>

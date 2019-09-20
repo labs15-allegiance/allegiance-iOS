@@ -26,6 +26,14 @@ class ProfileViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.alpha = 0.0
         navigationController?.setTitleForgroundTitleColor(.white)
+        
+        updateViews()
+    }
+    
+    
+    private func updateViews() {
+        print("updating Profile Page views")
+        
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {

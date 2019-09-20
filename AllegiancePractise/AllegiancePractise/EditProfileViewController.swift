@@ -44,8 +44,15 @@ class EditProfileViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
+        // locate user via id, then add new information
+        guard let name = nameTextField.text else { return }
+        print("code not yet written to save \(name)")
+        
+        
         // save user
         //        name, hashtag, profile image
+        
+        
         // segue background image back to profile page
         
         

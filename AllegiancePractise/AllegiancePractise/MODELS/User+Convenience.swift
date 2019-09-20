@@ -20,9 +20,20 @@ extension User {
         
         self.init(context: context)
         self.id = id
-
-
+    }
+    
+    convenience init?(id: String, username: String, bio: String?, image: Data?, bannerImage: Data?, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
+        self.init(context: context)
+        self.id = id
+        self.username = username
+        self.bio = bio
+        self.image = image
+        self.bannerImage = bannerImage
+    }
+
+
+    
         // another init might use... , username: String?, email: String?, password: String?, location: Int16 = 19406, image: Data?, bio: String?, bannerImage: Data?,
 //        self.username = username
 //        self.email = email
@@ -31,5 +42,4 @@ extension User {
 //        self.image = image
 //        self.bio = bio
 //        self.bannerImage = bannerImage
-    }
 }
