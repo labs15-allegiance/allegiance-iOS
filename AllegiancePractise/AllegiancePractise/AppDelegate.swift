@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // me: create a user here, or you can just wait to create the user in Profile when they are ready to reveal more information about themselves.  There you can search to see if the user already exists in the database.
             
-            print("Segueing to Groups TabBar page thanks to \(credentials) being valid")
+            print("Segueing to Groups TabBar page thanks to \(String(describing: credentials.idToken))) being valid")
         }
 
         //Opens to TabBar Controller "Groups" tab (aka tab 0)

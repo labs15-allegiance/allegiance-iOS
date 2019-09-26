@@ -150,7 +150,7 @@ class CreateGroupViewController: UIViewController, UIImagePickerControllerDelega
             
             let destinationVC = segue.destination as! UITabBarController
             
-            // this is here in case you want to pass some data to Groups view inside TabBarController in the main storyboard
+            // this line below is here in case you want to pass some data to Groups view inside TabBarController in the main storyboard.  Took me a long time to figure this one out, so I"m not deleting it quite yet, just in case something needs to be passed after getting rid of Core Data 
             let groupsTableVC = destinationVC.children[0].children[0] as! GroupsTableViewController
                 
             // Pass addPhotoButton.image to GroupsCollectionVC.image

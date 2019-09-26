@@ -35,8 +35,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="GkM-Ad-YsP" firstAttribute="centerY" secondItem="Z40-xi-udI" secondAttribute="centerY" id="Nje-Yl-E2U"/>
                                 <constraint firstAttribute="trailing" secondItem="GkM-Ad-YsP" secondAttribute="trailing" constant="8" id="fC5-f6-Ofb"/>
-                                <constraint firstItem="GkM-Ad-YsP" firstAttribute="centerY" secondItem="Z40-xi-udI" secondAttribute="centerY" id="k28-ab-RrS"/>
                                 <constraint firstItem="GkM-Ad-YsP" firstAttribute="leading" secondItem="Z40-xi-udI" secondAttribute="leading" constant="8" id="zVs-C4-qX4"/>
                             </constraints>
                         </view>

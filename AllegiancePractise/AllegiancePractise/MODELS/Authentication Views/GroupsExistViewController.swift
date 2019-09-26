@@ -53,10 +53,12 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
                     self.groupsMatched = self.groupController.fetch()
                 } else {
                     self.groupsMatchedFromServer = matchingGroups
+                    print(self.groupsMatchedFromServer![0].groupName, self.groupsMatchedFromServer![0].image)    // if you search for "Dolphins" you can get it to print out "Miami Dolphins Fans"
+                    
                 }
+                self.updateViews()
             }
         }
-        updateViews()
     }
     
     
@@ -64,14 +66,17 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         
         guard let userTeamEntry = favoriteTeam else {print("user entered nil for group search, segue back to previous view?"); return}
         groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
-        groupsExistCollectionV.reloadData()
+        DispatchQueue.main.async {
+            
+            self.groupsExistCollectionV.reloadData()
+        }
     }
     
     
     //MARK: COLLECTIONVIEW DATASOURCES:
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return groupsMatched?.count ?? 0 //fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        return groupsMatchedFromServer?.count ?? 0 //fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,10 +85,20 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
         
         //let group = fetchedResultsController.object(at: indexPath)
         //print(group!)
+
+//        getImageFromCloudinary(urlString: (groupsMatchedFromServer?[indexPath.item].image)!) { (dataOfImage, error) in
+//            if let error = error {
+//                NSLog("Error attempting to get photo from Cloudinary, no data returned \(error)")
+//            }
+//
+//        }  // end of image-call
         
-        guard let name = groupsMatched?[indexPath.item].groupName,
-            let image = UIImage(data: (groupsMatched?[indexPath.item].image)!) else { return cell }
-        //let members = group.users.numberOfObjects
+        let dataOfImage = getImageFromCloudinary(urlString: groupsMatchedFromServer![indexPath.item].image!)
+        
+        // Group images from back-end are strings-- of a URL; must make a new network call here to load the image from the internet.  If you get it into data format, then your guard let statement below will work.
+        guard let name = self.groupsMatchedFromServer?[indexPath.item].groupName,
+              let image = UIImage(data: dataOfImage) else { return cell }
+        //let members = group.users.numberOfObjects   // this must be changed to a groupsMatchedFromServer[indexPath.item].members.count
         
         cell.displayCellContent(image: image, groupName: name, members: "1")  // will be groupsMatched[indexPath.row].name & .count
         
@@ -96,7 +111,7 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     
-    //MARK: - NSFetchedResultsControllerDelegate methods
+    //MARK: - NSFetchedResultsControllerDelegate methods.  You can most likely drop these after all the groups above are fed with networked calls from Web's back-end.
     
 //    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
 //        groupsExistCollectionV.performBatchUpdates(<#T##updates: (() -> Void)?##(() -> Void)?##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
@@ -137,5 +152,30 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
             break
         }
     }
+    
+    
+    func getImageFromCloudinary(urlString: String) -> Data {
+        let url = URL(string: urlString)
+        if let data = try? Data(contentsOf: url!) {
+            return data
+        } else { return Data.init() }
+    }
+    
+    
+    
+    
+//    func getImageFromCloudinary(urlString: String, completion: @escaping (Data?, Error?) -> Void) {
+//
+//        DispatchQueue.global(qos: .background).async {
+//            do {
+//                let data = try Data.init(contentsOf: URL.init(string: urlString)!)
+//                completion(data, nil)
+//                return
+//            } catch {
+//                NSLog("Error getting image data from Cloudinary URL: \(error)")
+//                completion(nil, error)
+//            }
+//        }
+//    }
     
 }

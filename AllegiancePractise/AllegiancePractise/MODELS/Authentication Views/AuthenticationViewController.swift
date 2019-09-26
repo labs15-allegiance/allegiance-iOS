@@ -8,7 +8,7 @@
 // NOTES:
 //OpenID Connect (OIDC**) is an authentication layer on top of OAuth 2.0, an authorization framework. The standard is controlled by the OpenID Foundation
 
-
+// These are deprecated Auth0 domain/clientID, switched to versions in Auth0.plist to match Web Dev's Auth0 account so user's can go cross-platform
 // Auth0 clientID =  mZFvU0TMKMpEi6lUkNTCxUuz986y4luR called "Default App" GENERIC
 
 // Logout URL was:   com.lambdaSchool.AllegiancePractise.jtaylor://dev-iunfzciz.auth0.com/ios/com.lambdaSchool.AllegiancePractise.jtaylor/callback
@@ -16,9 +16,10 @@
 import UIKit
 import Auth0
 
+// DEPRECATED viewController, also see AppDelegate and SplashSignupViewController
 class AuthenticationViewController: UIViewController {
     
-    // This login page has been deprecated,but it's left here to use in case Auth0 is mercifully cut out of the project.  Auth0 sucks, so they SHOULD be cut out of the project.
+    // This login page has been DEPRECATED,but it's left here to use in case Auth0 is mercifully cut out of the project.  Auth0 sucks, so they SHOULD be cut out of the project.
     
     
     
