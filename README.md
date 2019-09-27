@@ -1,29 +1,18 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
-
-🚫 The numbers 1️⃣ through 5️⃣ next to each item represent the week that part of the docs needs to be comepleted by.  Make sure to delete the numbers by the end of Labs.
-
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric.  Contributing to docs does NOT count as a PR to meet your weekly requirements.
-
-# Title of project goes here
-
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+# Allegiance iOS
+You can find the deployed project on Test Flight if you have an invite.  See Joshua Kaunert or your section's Section Leader for help with connecting to Test Flight.  Test Flight operations are conducted from appstoreconnect.apple.com/login .  Log in to access Allegiance and gain the ability to manipulate testing invites as well as version control.
 
 ## 4️⃣ Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add or delete these place-holders as needed
-
-|                                       [Student 1](https://github.com/)                                        |                                       [Student 2](https://github.com/)                                        |                                       [Student 3](https://github.com/)                                        |                                       [Student 4](https://github.com/)                                        |                                       [Student 5](https://github.com/)                                        |
+|                                       [John Pitts](https://github.com/johnpitts)                                        |                                                                              |
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
 |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/)                       |                      [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/)                       |
 |                 [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                 |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)             |           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)            |          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)           |            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)             |
 | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/) |
 
-🚫 Optional examples of using badges with links for your tech stack, make sure to change these to fit your project
 
-[![Swift Version][swift-image]][swift-url]
+[![Swift Version 5][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -32,67 +21,52 @@
 
 ## Project Overview
 
-1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
+1️⃣ [Trello Board](https://trello.com/b/2L0hcHSc/labs-15-allegiance)
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+1️⃣ [Product Canvas](https://www.notion.so/8e91d090efe3418e8e82e870c97c36b2?v=6d4840f710954cf29477aa255e8e3b89)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+1️⃣ [UI/UX Figma Design files](https://www.figma.com/file/2IOo1GVvRaR7FkxpeU8xFq/🏀-Allegiance?node-id=0%3A12) 
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+Initially Allegiance should replace iMessage (group text) as the best way for folks with shared sports allegiances to converse about a single topic.  Groups are the foundation of Allegiance Sports App, as users will be able to find like-minded sports fans inside groups which match their fandom.  Not only can a user join a group, but can also create one.  Inside the group, users should be able to exchange posts/messages, similar to iMessage or even Twitter.  Groups will contain special items like Events.  Groups are an especially great way for remote fans to find each other.  Imagine Oakland Athletics fans living in Philadelphia-- there are so few of them they'd never find each other.  With Allegiance app they can not only find each other but begin to bond over their favorite sports topic online, while potentially building a tight community who could do more together offline as well.  What's special about Allegiance is the ability to create groups which reach OUTSIDE a person's normal local sphere of influence.  So instead of simply chatting about the Eagles with a few old pals over group-chat, the Allegiance fan can find fans who are even closer to their line of thinking.  Each Group will have a personality and culture of it's own, even when groups are following the same team!  Optimistic Phillies fans could be in a group; salty Phillies fans would have another group entirely.  After a sports society is formed, a kernel of usage, the app could take on a life of its own as user's gave feedback on their most desired features.  The important things are:
 
-🚫 One to two paragraph statement about your product and what it does.
 
-Quis hendrerit dolor magna eget. Pretium quam vulputate dignissim suspendisse. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Orci dapibus ultrices in iaculis nunc sed augue. Euismod in pellentesque massa placerat duis ultricies. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Lectus quam id leo in vitae. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor.
 
-Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Donec et odio pellentesque diam volutpat. Id diam maecenas ultricies mi eget mauris. Est pellentesque elit ullamcorper dignissim. Orci dapibus ultrices in iaculis nunc.
+
+
 
 ![](header.png)
 
 ### Features
 
--    Feature 1
--    Feature 2
--    Feature 3
--    Feature 4
--    Feature 5
+-    User's can join or create Groups.
+-    Groups are a focal point of communication amongst it's members.
+-    Groups can be private or public groups, and have a moderator/creator.
+-    Groups can also be generalized-- and these are called "Allegiances".   An example of an Allegiance would be the New Orleans Pelicans.  This NBA basketball allegiance could be shared by MANY fans of the team, but underneath the umbrella of the NO Pels Allegiance would be all the Groups which form to support the team.  In this respect, the Allegiance is the Father of many Groups.
+-    Groups can have posts, events, and possibly other features of interest to fans of those groups.
 
 ### Authentication API here
 
-🚫Replace text below with a description of the API
+Unfortunately, an early choice was made to use Auth0 for authentication.  Auth0 is a major headache, the support is pretty awful, and the instructions aren't super clear.  Auth0 has been offered help to improve their interface with iOS developers, but they didn't really take the bait and have changed nothing.  Good luck.  Recommendation would be to drop them rapidly.  Allegiance is a sports-chat app, basically, authentication of a super serious nature really isn't needed, and it will take iOS devs 5 to 10x more time to understand how it works and exploit it, than it would for those devs to simply write ("roll") their own.  There are 3 imporant pieces to Auth0 already in the app in this repository, and you'll find them in the code.
+a). domain
+b). clientID
+c). seperate URLs which will be used, if you are getting a user's idToken or obtaining an accessToken to allow the app to make API calls to the back-end "securely".
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+Authentication was done with Auth0 mainly for Web Devs, as they have a bigger security issue bc each page in their app is a public url which could potentially be exploited.  iOS is a gated community, so realistically the iOS app could get by with a UUID-generated token using a common cloud back end you build yourself.  But since this is a combined effort, and the back-end and authentication are shared, Auth0 was chosen to allow a user to log in via either a browser OR iOS app.
+
+The best instructions for iOS on Auth0 aren't on the site, but can be found by doing a search for the gitHub version of the instructions.  
 
 ### Payment API here
 
-🚫Replace text below with a description of the API
+If you add payments, they should be micropayments, and the best micropayments service is Money Button using BitCoin S.V. (BSV)
 
-This is the way you take out your frustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
+### Back-end (https://documenter.getpostman.com/view/8269848/SVmpYhbT?version=latest#0a938091-098e-4d87-9d9c-7e93e18cb18f)
+The back-end was built by the Web devs using Postman, a PostgreSQL structured database.  This was chosen due to the many inter-relationships of Groups with Users and Allegiances and Posts.  Should the need arise for local persistent storage of any kind, a Core Data local SQL-lite-like back-end has been written into the project.  At first it was used to allow development without a back-end when the Web Dev back-end wasn't complete.  This allowed development of iOS's app to continue with actual user-generated data.  The first integration with the back-end for iOS was the search for Groups done after the initiation sequences (see the Authentication Storyboard in the app) were finished.  This is the hardest network call as it involves search parameters and headers set up specifically in a POST format to get matching Groups to the user's search terms (an allegiance or favorite team, and zipcode).  The zipcode hasn't been fully implemented in this network call but the groupName search terms have been implemented and adding zipcode will be a simple addition from there.
 
-### Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-### Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-### Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
 
 ## Requirements
 
-🚫 These are examples, make sure this matches your project's requirements
-
--   iOS 8.0+
--   Xcode 7.3
--   Cocoa Pods
+-   Xcode 12 or 13
+-   Cocoa Pods dependency manager for the Auth0 framework
 
 ## Contributing
 
