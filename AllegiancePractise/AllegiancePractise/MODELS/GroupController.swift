@@ -51,7 +51,7 @@ class GroupController {
     
     func fetchGroupsMatchingSearch(with groupName: String, andWith zipcode: Int16, completion: @escaping ([GroupRepresentation]?, Error?) -> Void) {
 
-        let zipcodeString = String(zipcode)
+        //let zipcodeString = String(zipcode)
         
         credentialsManager.credentials { error, credentials in
             guard error == nil, let credentials = credentials else {   // credentials.accessToken or credentials.idToken will need to be sent in a header for the groups search call below, but right now I'm using a verified token that works for SURE given to me by Web Dev team.
@@ -107,13 +107,17 @@ class GroupController {
                     completion(nil, error)
                     return
                 }
-                
+                print("if you're here you got back data of some sort \n")
                 let ourData = String(data: data, encoding: String.Encoding.utf8)
                 print(ourData as Any)
                 
                 do {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    
+                    // I suspect the web guys changed something or maybe the back-end was taken down entirely?  Add it to the list of not getting anything done bc Lambda School Labs doesn't give a shit about iOS developers, and the anti-iOS choices made the entire time (Auth0, PostGresql, the seperate image library) I was i Labs.  Anyway, the network call gets "data" back which is essentially nil, so catch statement prints up with 'an error occured while processing your request'.  fuck you web jockeys, fuck you Lambda Labs.
+                    
                     
                     let dictionaryOfGroups = try decoder.decode([String: [GroupRepresentation]].self, from: data)
                     print("dictionaryOfGroups's number of returns/count0 is this:  \(dictionaryOfGroups["groupByFilter"]?.count ?? 0)\nb")

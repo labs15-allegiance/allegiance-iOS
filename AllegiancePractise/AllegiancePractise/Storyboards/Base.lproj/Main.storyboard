@@ -678,11 +678,11 @@
             </objects>
             <point key="canvasLocation" x="690" y="186"/>
         </scene>
-        <!--Groups-->
+        <!--Navigation Controller-->
         <scene sceneID="Dam-68-sFt">
             <objects>
                 <navigationController storyboardIdentifier="GroupsNavController" automaticallyAdjustsScrollViewInsets="NO" id="2lE-yh-Ujf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" image="iconfinder_group2_309041" id="FYS-8G-1Qf"/>
+                    <tabBarItem key="tabBarItem" title="" image="groupIconTabBar" id="FYS-8G-1Qf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Tjw-Fz-LXR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -698,11 +698,11 @@
             </objects>
             <point key="canvasLocation" x="1603" y="-376"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="i8X-j5-k6S">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="aLd-FA-EfR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-head-profile-30" id="vV2-Ku-kLO"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-head-profile-30" id="vV2-Ku-kLO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8C8-fg-JUD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -726,7 +726,7 @@
         <image name="allegianceIcon-40" width="40" height="40"/>
         <image name="allegianceIcon-60" width="60" height="60"/>
         <image name="basketballArenaPurplenPink" width="273" height="191"/>
-        <image name="iconfinder_group2_309041" width="24" height="24"/>
+        <image name="groupIconTabBar" width="32" height="32"/>
         <image name="icons8-head-profile-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

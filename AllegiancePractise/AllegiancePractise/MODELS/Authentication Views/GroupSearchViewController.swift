@@ -19,11 +19,13 @@ class GroupSearchViewController: UIViewController, UITextFieldDelegate {
         
         self.favoriteTeamTextField.delegate = self
         self.zipcodeTextField.delegate = self
+        hideKeyboardWhenTappedAround()
     }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        hideKeyboardWhenTappedAround()
         return true
     }
 
@@ -40,12 +42,7 @@ class GroupSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func findGroupsButtonTapped(_ sender: Any) {
-        
-        //using favoriteTeamTextField.text locate all Groups which have that favorite team words (like Dallas or Mavericks) in the Group name, OR locate nearby groups via zipcode proximity.
-        
-        
-        
-        
+        // didn't need this as "Find a Group" button segues via storyboard to GroupsExistVC where back-end call is made with zip and favorite team.  See prepare(for segue:) below
     }
     
 
@@ -59,5 +56,18 @@ class GroupSearchViewController: UIViewController, UITextFieldDelegate {
             groupExistVC.favoriteTeam = favoriteTeamTextField.text
             groupExistVC.zipcode = zipcode
         }
+    }
+}
+
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 }
