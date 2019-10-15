@@ -682,7 +682,7 @@
         <scene sceneID="Dam-68-sFt">
             <objects>
                 <navigationController storyboardIdentifier="GroupsNavController" automaticallyAdjustsScrollViewInsets="NO" id="2lE-yh-Ujf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="FYS-8G-1Qf"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="iconfinder_group2_309041" id="FYS-8G-1Qf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Tjw-Fz-LXR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -702,7 +702,7 @@
         <scene sceneID="i8X-j5-k6S">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="aLd-FA-EfR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="vV2-Ku-kLO"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-head-profile-30" id="vV2-Ku-kLO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8C8-fg-JUD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -726,6 +726,8 @@
         <image name="allegianceIcon-40" width="40" height="40"/>
         <image name="allegianceIcon-60" width="60" height="60"/>
         <image name="basketballArenaPurplenPink" width="273" height="191"/>
+        <image name="iconfinder_group2_309041" width="24" height="24"/>
+        <image name="icons8-head-profile-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mo8-Kg-WCr"/>

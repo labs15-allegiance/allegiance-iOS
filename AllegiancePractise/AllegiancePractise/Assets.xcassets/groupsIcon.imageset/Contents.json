@@ -2,21 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "CowboyRed.jpg",
+      "filename" : "groupsIcon.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "CowboyRed-1.jpg",
+      "filename" : "groupsIcon-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "CowboyRed-2.jpg",
+      "filename" : "groupsIcon-2.jpg",
       "scale" : "3x"
     }
   ],

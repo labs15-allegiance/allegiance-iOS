@@ -49,6 +49,7 @@ class SplashSignupViewController: UIViewController {
     @IBAction func signInButtonPressed(_ sender: Any) {
         
         // This Login call is performed with a background thread, so you must DispatchMain for UI actions directly afterwards
+        //NOTE: This ONLY does login for the user.  When network calls are made, the .audience domain switches to ....com/api/v2
         Auth0
             .webAuth()
             .scope("openid profile")

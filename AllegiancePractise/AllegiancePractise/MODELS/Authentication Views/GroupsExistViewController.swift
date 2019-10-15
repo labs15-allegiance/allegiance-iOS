@@ -53,7 +53,7 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
                     self.groupsMatched = self.groupController.fetch()
                 } else {
                     self.groupsMatchedFromServer = matchingGroups
-                    print(self.groupsMatchedFromServer![0].groupName, self.groupsMatchedFromServer![0].image)    // if you search for "Dolphins" you can get it to print out "Miami Dolphins Fans"
+                    //print(self.groupsMatchedFromServer![0].groupName, self.groupsMatchedFromServer![0].image)    // if you search for "Dolphins" you can get it to print out "Miami Dolphins Fans"
                     
                 }
                 self.updateViews()
@@ -65,9 +65,9 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
     func updateViews() {
         
         guard let userTeamEntry = favoriteTeam else {print("user entered nil for group search, segue back to previous view?"); return}
-        groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
         DispatchQueue.main.async {
             
+            self.groupsFoundLabel.text = "Check out some \(userTeamEntry) groups near you!"
             self.groupsExistCollectionV.reloadData()
         }
     }

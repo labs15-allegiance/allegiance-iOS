@@ -76,17 +76,17 @@ class GroupController {
             //print(String(data: jsonData, encoding: String.Encoding.utf8)!)
  
             var request = URLRequest(url: requestURL)
-//            guard let token = credentials.accessToken else {
-//                NSLog("bearer token = nil, network call failed, matching groups unable to be queried")
-//                completion(nil, nil)
-//                return }
+            guard let token = credentials.accessToken else {
+                NSLog("bearer token = nil, network call failed, matching groups unable to be queried")
+                completion(nil, nil)
+                return }
             
             // this token given to me by Web Dev team works, and allows real data to be sequestered from the back-end.  Now I just have to figure out how to let "credentials" issue my accessToken to allow me to make network calls.
-            let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik9EQTRSamhHT1RNMU56ZzVOemhHUVRrNFJEWkNSVGhGTWpjM09EUXpRelU0TVRaRE9Ea3hNUSJ9.eyJpc3MiOiJodHRwczovL2Rldi11emRtdDA1bi5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTI4NTkzOTg5NzczOTExODIzODMiLCJhdWQiOlsiaHR0cHM6Ly9kZXYtdXpkbXQwNW4uYXV0aDAuY29tL2FwaS92Mi8iLCJodHRwczovL2Rldi11emRtdDA1bi5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTY4MTMzNTQ4LCJleHAiOjE1NzA3MjU1NDgsImF6cCI6InZXNVZGY2dJaXBTOERBWGZGZDJRSzJrSmo3dHhXY1RlIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCJ9.Y8bVX-tprlomRS5Kx40D1boHHCFTgk7V6d0UfSfQ00rkqoGJsDBwFu8eo1kIHVjtgybu1lCXSy1xPCjcukzQ_nDobj02yTpUtlMLoZUHpXv3tVIEkwFlCcqRhwX8fgtHt-NjHZ7K-4DZIV_GoWTbgZRXn7JtukMMpnczgletvzdtSpH0UzOR4K4yRcEDihKVH2uo06NVtSUmdbZCpMYdC9XsFI6X5Lg18RgC3D71lOgVZJCR1KAVzT_jVymE4331gWEfNkZc4xK4LUbQchRU-DLVUZkhGIFoVtStTjMUVzsUakx9TAdHsB_unKP01P-pcqsd07KrfzaMx7OkD7Z_rA"
+            //let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik9EQTRSamhHT1RNMU56ZzVOemhHUVRrNFJEWkNSVGhGTWpjM09EUXpRelU0TVRaRE9Ea3hNUSJ9.eyJpc3MiOiJodHRwczovL2Rldi11emRtdDA1bi5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDQ2Mzg2ODIxMDY5OTczMDc3MjEiLCJhdWQiOlsiaHR0cHM6Ly9kZXYtdXpkbXQwNW4uYXV0aDAuY29tL2FwaS92Mi8iLCJodHRwczovL2Rldi11emRtdDA1bi5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTY5NTM2NTg4LCJleHAiOjE1NzIxMjg1ODgsImF6cCI6InZXNVZGY2dJaXBTOERBWGZGZDJRSzJrSmo3dHhXY1RlIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCJ9.oNXA9_DyuFBo1ppsSEnqiO-I5bgrCadT6vz_micWPLIuHxtohRXcNoNiTqTxwNlCdF2WqZHx-en3cCXyI5ZGEh75ZqikbkRvPf_AyEIawu8RD5d5APgilfzH1E7u2rSaxuvcqVb9EYBOTNZtra5cWBRhAGK_nEbZp7t6r6eJ3p1Tr-JgxkDI5WMfnftJg4uVLC13KkmEhMMvl_VBDeb3odQOh2ssb7CDiMaExdV8eRnDRj4R3tzBPdxtkDk70A8D-AkfD5q25CPLXYDPZ8JCbYdnxIzgnNejid_73OS2_Se6drImbwTPK8Z4MmOUahA8lwl3bmfQJqWdphi92taA_Q"
 
             
             //credentials.accessToken
-            //print(String(token!))
+            print(String(token))
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
             request.httpBody = jsonData
