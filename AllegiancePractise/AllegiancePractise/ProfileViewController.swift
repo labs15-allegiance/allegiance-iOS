@@ -32,27 +32,18 @@ class ProfileViewController: UIViewController {
     
     
     private func updateViews() {
-        print("updating Profile Page views")
+        print("you've reached Profile \n")
         
     }
     
+    
     @IBAction func logoutButtonTapped(_ sender: Any) {
         
+        print("User logging out from Profile \n")
         if credentialsManager.clear() {
             performSegue(withIdentifier: "LogoutFromUserProfile", sender: nil)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Auth0 directions:   When the user opens your application, check for valid credentials. If they exist, you can log the user in automatically and redirect them to the app's main flow without any additional login steps.  First, you check if the credentials manager has valid credentials:
-        print("Valid Credentials were found from last time?  \(credentialsManager.hasValid())")
+        print("Valid Credentials were found from last time?  \(credentialsManager.hasValid()) \n")
         guard credentialsManager.hasValid() else {
             
-            // This opens Registration/Login page bc no credentials were found in stored Auth0 files (in framework/pods)
+            // This SEGUES to Registration/Login page bc no credentials were found in stored Auth0 files (in framework/pods)
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "Authentication", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "SignupVC")
@@ -33,21 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         // retrieve the credentials, and do something with them, or in this case just we just bypass Authentication Storyboard and go right to Main Storyboard!
         // below we COULD use the stored credentials for something (like storing them in User.id) but why not wait til later since an iOS app really only needs to be a gatekeeper preventing access to rest of app if no credentials are found.  So consider deleting the credentialsManager.... code below as unneeded
+
         credentialsManager.credentials { error, credentials in
-            guard error == nil, let credentials = credentials else {
+            
+            guard error == nil,
+                let credentials = credentials else {
                 if let error = error {
                     
                     NSLog("Error: \(error)")
                 }
                 return
             }
+            
             // copied from Auth0....
             // You now have a valid credentials object, you might want to store this locally for easy access.
             // You will use this later to retrieve the user's profile
             
             // me: create a user here, or you can just wait to create the user in Profile when they are ready to reveal more information about themselves.  There you can search to see if the user already exists in the database.
             
-            print("Segueing to Groups TabBar page thanks to \(String(describing: credentials.idToken))) being valid")
+            print("Segueing to Groups TabBar page thanks to idToken \(String(describing: credentials.idToken))) being valid \n and accessToken is: \(String(describing: credentials.accessToken))")
         }
 
         //Opens to TabBar Controller "Groups" tab (aka tab 0)

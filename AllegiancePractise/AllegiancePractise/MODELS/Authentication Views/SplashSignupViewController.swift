@@ -13,7 +13,7 @@ import Auth0
 class SplashSignupViewController: UIViewController {
 
     @IBOutlet weak var signInButton: UIButton!
-    var isAuthenticated: Bool = false
+    
     var groupController = GroupController()
     var userController = UserController()
     public let icon: String = "FansRejoice"
@@ -44,54 +44,47 @@ class SplashSignupViewController: UIViewController {
     //        but getStarted should first check to see if credentials are authentic, otherwise deny entry to intro pages.
     
     
-    
-    
     @IBAction func signInButtonPressed(_ sender: Any) {
         
         // This Login call is performed with a background thread, so you must DispatchMain for UI actions directly afterwards
         //NOTE: This ONLY does login for the user.  When network calls are made, the .audience domain switches to ....com/api/v2
-        Auth0
-            .webAuth()
-            .scope("openid profile")
-            .audience("https://dev-uzdmt05n.auth0.com/userinfo")
-            .start {                                              // background que (closure)
-                switch $0 {
-                case .failure(let error):
-                    print("Error: \(error)")
-                    self.isAuthenticated = false
-                case .success(let credentials):
-                    
-                    self.isAuthenticated = true
-                    
-                    if self.credentialsManager.store(credentials: credentials) {
+        
+        guard credentialsManager.hasValid() else /* open Auth0 login popup/page */ {
+            
+            Auth0
+                .webAuth()
+                .scope("openid profile")                               // should this be appended with "offline_access"?
+                .audience("https://dev-uzdmt05n.auth0.com/userinfo")
+                .start {                                              //Here begins a background que (closure)
+                    switch $0 {
+                    case .failure(let error):
+                        print("Auth0 failed somehow: \(error)")
+                    case .success(let credentials):
                         
-                        
-                        guard let id = credentials.idToken else { return }
-                        let user = User(id: id)
-                        self.userController.put(user: user)
-                        
+                        self.credentialsManager.store(credentials: credentials)    // this is supposed to return a boolean true/false, but I don't know why?  isn't it to store the credentials??
+
+                        //                    if self.credentialsManager.store(credentials: credentials) {
+                        //                        guard let id = credentials.idToken else { return }
+                        //                        let user = User(id: id)
+                        //                        self.userController.put(user: user)
                         // you will need to add the network call to Postman PostgreSQL back-end here, and possibly erase the CoreData code as it really won't be needed to be stored locally.
+                        //                    }
+                        //                    let defaults = UserDefaults.standard
+                        //                    defaults.set(credentials, forKey: "credentials")
+                        print("AUTH0 accessToken Credential from splashSignupVC, different?: \(String(describing: credentials.accessToken)) \n")
+                        // Auth0 will automatically dismiss the login page; write code to direct app to advanced view with which the user would interact if he wasn't a newb to the app.
                         
-                        
-                    }
-                    
-//                    let defaults = UserDefaults.standard
-//                    defaults.set(credentials, forKey: "credentials")
-                    print("F'G AUTH0 Credentials: \(String(describing: credentials.idToken))")
-                    
-                    if self.isAuthenticated {
-                        DispatchQueue.main.async {    // i don't think i need to call main here as it's outside the closure, experiement with this later.
-                            
-                            self.signInButton.isHidden = true
-                            // we will want to segue to Groups or Feed when user isn't a new-register, after logging in
-                            //self.performSegue(withIdentifier: "UserAlreadyHasLoginCredentials", sender: self)
-                        }
-                    }     // else, encourage Registration? or does Auth0 do that for me automatically?
-                    
-                    // Auth0 will automatically dismiss the login page; write code to direct app to advanced view with which the user would interact if he wasn't a newb to the app.
-                  }
-              }
-    }
+                    } // end switch
+            }  // end .start Auth0 login page
+            return
+        } // end guard-else hasValid
+
+            
+            self.signInButton.isHidden = true
+            // we will want to segue to Groups or Feed when user isn't a new-register, after logging in
+            //self.performSegue(withIdentifier: "UserAlreadyHasLoginCredentials", sender: self)
+    } // end signInButton
+    
     
     
     // this was changed to the logout button, but didn't change the name bc eventually it should go back to being an invite-code button.   See the original FIGMA design to understand better
@@ -102,7 +95,6 @@ class SplashSignupViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.signInButton.isHidden = false
-                self.isAuthenticated = false
             }
         }
         

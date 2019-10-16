@@ -28,7 +28,8 @@ class FeelPassionSignup4VC: UIViewController {
     @IBAction func swipeHandler(_ sender: UISwipeGestureRecognizer) {
         
         if (sender.direction == .left) {
-            // Goto "enterZipcodeVC" storyboardID viewController
+            print("Favorite Team & Zipcode request \n")
+            // Goto "GroupSearchVC" storyboardID viewController
             performSegue(withIdentifier: "SwipeLeft4", sender: nil)
         }
         if (sender.direction == .right) {

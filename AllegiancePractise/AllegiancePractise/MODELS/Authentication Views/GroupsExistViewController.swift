@@ -53,7 +53,7 @@ class GroupsExistViewController: UIViewController, UICollectionViewDataSource, U
                     self.groupsMatched = self.groupController.fetch()
                 } else {
                     self.groupsMatchedFromServer = matchingGroups
-                    print(self.groupsMatchedFromServer![0].groupName, self.groupsMatchedFromServer![0].image)    // if you search for "Dolphins" you can get it to print out "Miami Dolphins Fans"
+                    //print(self.groupsMatchedFromServer![0].groupName, self.groupsMatchedFromServer![0].image)    // if you search for "Dolphins" you can get it to print out "Miami Dolphins Fans", fails if credentials' accessToken doesn't work for API search call
                     
                 }
                 self.updateViews()
