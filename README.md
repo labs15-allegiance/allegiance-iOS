@@ -1,5 +1,8 @@
 # Allegiance iOS
-You can find the deployed project on Test Flight if you have an invite.  See Joshua Kaunert or your section's Section Leader for help with connecting to Test Flight.  Test Flight operations are conducted from appstoreconnect.apple.com/login .  Log in to access Allegiance and gain the ability to manipulate testing invites as well as version control.
+
+Allegiance is a sports-niche social app designed around the concept of GROUPS.  Each group covers a single topic (Fans of Lonzo Ball, Mike Leach fans, LaSalle College swimming, etc...) and allows multiple contributors like reddit but with a more attractive user interface.  This project is not yet complete, but the current rendition was done in about 4 weeks by one coder.
+
+You can find the deployed project on Test Flight if you have an invite.  .
 
 ## 4️⃣ Contributors
 
