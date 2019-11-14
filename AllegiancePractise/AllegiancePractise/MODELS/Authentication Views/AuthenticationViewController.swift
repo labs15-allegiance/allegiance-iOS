@@ -13,6 +13,11 @@
 
 // Logout URL was:   com.lambdaSchool.AllegiancePractise.jtaylor://dev-iunfzciz.auth0.com/ios/com.lambdaSchool.AllegiancePractise.jtaylor/callback
 
+// AUTH0 login for WebDev account (where all the data lies) is "Login with Google".  First login to google, THEN login to Auth0.  what a pain in the ass.
+// email:  labsallegiance@gmail.com
+// pw:     Labsallegiance!
+
+
 import UIKit
 import Auth0
 

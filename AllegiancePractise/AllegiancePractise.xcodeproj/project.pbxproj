@@ -130,6 +130,7 @@
 		FC0109D3232554DF00DA93D2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FC798BE423306F930053A907 /* GroupTableVCell.swift */,
 				FC0109CD23254BA800DA93D2 /* DiscoverCVCell.swift */,
 				FC0109D52326F58800DA93D2 /* DiscoverTableViewCell.swift */,
 				FC0109CB23254B1F00DA93D2 /* GroupsNearYouCVCell.swift */,
@@ -143,6 +144,7 @@
 		FC0109D4232554F100DA93D2 /* TabBar Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC0A906F232B275D00E51374 /* ProfileViewController.swift */,
 				FC9B21AA23196A7C0088E2FB /* GroupsTableViewController.swift */,
 			);
 			path = "TabBar Views";
@@ -200,8 +202,6 @@
 			children = (
 				FC6A447422FCC53800410EC3 /* AppDelegate.swift */,
 				FC798BE623315F0D0053A907 /* EditProfileViewController.swift */,
-				FC0A906F232B275D00E51374 /* ProfileViewController.swift */,
-				FC798BE423306F930053A907 /* GroupTableVCell.swift */,
 				FC0109D723282ED100DA93D2 /* GROUPTableViewController.swift */,
 				FC0109D4232554F100DA93D2 /* TabBar Views */,
 				FC0109D3232554DF00DA93D2 /* Cells */,

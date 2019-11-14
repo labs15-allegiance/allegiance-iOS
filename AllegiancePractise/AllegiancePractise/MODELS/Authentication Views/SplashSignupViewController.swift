@@ -61,14 +61,18 @@ class SplashSignupViewController: UIViewController {
                         print("Auth0 failed somehow: \(error)")
                     case .success(let credentials):
                         
-                        self.credentialsManager.store(credentials: credentials)    // this is supposed to return a boolean true/false, but I don't know why?  isn't it to store the credentials??
+                        // this is supposed to return a boolean true/false, but I don't know why?  isn't it to store the credentials??
+                        
+                        if self.credentialsManager.store(credentials: credentials) {
+                            guard let id = credentials.idToken else { return }
+                            let user = User(id: id)
+                            self.userController.put(user: user)
+                            
+                            //you will need to add the network call to Postman PostgreSQL back-end here, and possibly erase the CoreData code as it really won't be needed to be stored locally.
+                        }
 
-                        //                    if self.credentialsManager.store(credentials: credentials) {
-                        //                        guard let id = credentials.idToken else { return }
-                        //                        let user = User(id: id)
-                        //                        self.userController.put(user: user)
-                        // you will need to add the network call to Postman PostgreSQL back-end here, and possibly erase the CoreData code as it really won't be needed to be stored locally.
-                        //                    }
+                        
+
                         //                    let defaults = UserDefaults.standard
                         //                    defaults.set(credentials, forKey: "credentials")
                         print("AUTH0 accessToken Credential from splashSignupVC, different?: \(String(describing: credentials.accessToken)) \n")
