@@ -7,8 +7,33 @@
 //
 
 import Foundation
+import CoreData
 
 class UserController {
+    
+    
+    func put(user: User) {
+        
+        do {
+            let moc = CoreDataStack.shared.mainContext
+            try moc.save()
+        } catch {
+            NSLog("Error saving the user to persistent store \(error)")
+            return
+        }
+    }
+    
+    func fetch() -> [User] {
+        
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        do {
+            let moc = CoreDataStack.shared.mainContext
+            return try moc.fetch(fetchRequest)
+        } catch {
+            NSLog("Error fetching groups from iPhone memory \(error)")
+            return []
+        }
+    }
     
     // create a user
     //func createUser(credentials: credentials) {

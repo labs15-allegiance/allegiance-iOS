@@ -14,7 +14,7 @@ class GroupController {
     //var groups: [Group] = []     We only do this when NOT using CoreData (I think)
     
     func put(group: Group) {
-        _ = group
+        
         do {
             let moc = CoreDataStack.shared.mainContext
             try moc.save()

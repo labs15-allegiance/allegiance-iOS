@@ -1,55 +1,58 @@
 //
-//  GroupsTableViewController.swift
+//  GROUPTableViewController.swift
 //  AllegiancePractise
 //
-//  Created by John Pitts on 8/30/19.
+//  Created by John Pitts on 9/10/19.
 //  Copyright © 2019 johnpitts. All rights reserved.
 //
 
 import UIKit
+import Auth0
 
-class GroupsTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    
-    
-    var groupNamePassed: String?
-    var groupSloganPassed: String?
-    var groupImagePassed: UIImage?
-    
-    private let reuseIdentifier = "GroupsCell"
+class GROUPTableViewController: UITableViewController {
 
+    var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("you have arrived to Groups, nested in TabBarController\n")
-        print("\(groupNamePassed!) with \(groupSloganPassed!)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+        if credentialsManager.clear() {
+            performSegue(withIdentifier: "LogoutFromUserProfile", sender: nil)
+        }
+        
+        
     }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Header", for: indexPath)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath)
+            
+            // Configure the cell...
+            
+            return cell
+            
+        }
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -67,7 +70,7 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 
@@ -85,25 +88,7 @@ class GroupsTableViewController: UITableViewController, UICollectionViewDataSour
         return true
     }
     */
-    
-    // MARK: - CollectionView Data Items
 
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-     
-     }
-    
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
-        // Configure the cell
-        
-        return cell
-     
-     }
-    
-    
     /*
     // MARK: - Navigation
 

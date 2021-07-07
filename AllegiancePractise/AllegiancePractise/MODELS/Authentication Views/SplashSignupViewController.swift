@@ -15,6 +15,9 @@ class SplashSignupViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     var isAuthenticated: Bool = false
     var groupController = GroupController()
+    var userController = UserController()
+    public let icon: String = "allegianceIcon-76"
+    var credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +25,11 @@ class SplashSignupViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Allegiance Background")!)  // "
         signInButton.isHidden = false
         
-        // is there a way to use isEmpty instead of this cumbersome construction?
+        // This will only occur if the back-end goes bad or its the first time ever the app is run
         if groupController.fetch().isEmpty {
-            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: false, location: 18925, id: UUID(), creatorId: 1)
-            //groupController?.put(group: group)
-
-            do {
-                let moc = CoreDataStack.shared.mainContext
-                try moc.save()
-            } catch {
-                NSLog("Error saving managed object context: \(error)")
-            }
+            let image = (UIImage(named: icon)?.pngData())!  //The icon comes with the app
+            let group = Group(groupName: "Philly Athletics", slogan: "Bring'em Back!", timestamp: Date(), privacySetting: "public", location: 18925, id: UUID(), image: image, creatorId: "johnpittsisyouroverlord")
+            groupController.put(group: group)
         }
     }
     
@@ -51,10 +48,16 @@ class SplashSignupViewController: UIViewController {
                 case .success(let credentials):
                     
                     self.isAuthenticated = true
-                    // Do something with credentials e.g.: save them.
                     
-                    //userController.createUser(credentials: credentials)
-                    print("Credentials: \(credentials)")
+                    self.credentialsManager.store(credentials: credentials)
+                    
+                    guard let id = credentials.idToken else { return }
+                    let user = User(id: id)
+                    self.userController.put(user: user)
+                    
+//                    let defaults = UserDefaults.standard
+//                    defaults.set(credentials, forKey: "credentials")
+                    print("FUCKING AUTH0 Credentials: \(String(describing: credentials.idToken))")
                     
                     if self.isAuthenticated {
                         DispatchQueue.main.async {    // i don't think i need to call main here as it's outside the closure, experiement with this later.
@@ -73,6 +76,14 @@ class SplashSignupViewController: UIViewController {
     
     
     @IBAction func inviteCodeButtonPressed(_ sender: Any) {
-        print("Invite Codes will be implemented in a later release")
+        print("Have an invite code will be implemented in a later release, and be in place of this button")
+        
+        credentialsManager.clear()
+        
+        DispatchQueue.main.async {
+            self.signInButton.isHidden = false
+            self.isAuthenticated = false
+        }
     }
+    
 }

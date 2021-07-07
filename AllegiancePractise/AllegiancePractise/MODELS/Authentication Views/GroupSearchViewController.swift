@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupSearchViewController: UIViewController {
+class GroupSearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var favoriteTeamTextField: UITextField!
     @IBOutlet weak var zipcodeTextField: UITextField!
@@ -16,8 +16,9 @@ class GroupSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.favoriteTeamTextField.delegate = self
+        self.zipcodeTextField.delegate = self
     }
     
     
@@ -25,6 +26,7 @@ class GroupSearchViewController: UIViewController {
         textField.resignFirstResponder()
         return true
     }
+
     
     @IBAction func useLocationButtonTapped(_ sender: Any) {
         
